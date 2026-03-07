@@ -1,0 +1,207 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/branding/pinkpayroll favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans text-brand-black bg-white antialiased">
+
+    <!-- Top Banner -->
+    <div class="bg-pink text-white text-center text-sm py-2 px-4">
+      <span>Special Offer — Copy TBD &nbsp;&bull;&nbsp;</span>
+      <a href="/contact" class="underline font-semibold hover:no-underline">Contact us for a Detailed Quote &rarr;</a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-brand-light-gray">
+      <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
+
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/branding/pinkpayroll standard logo rectangle.png" alt="Pink Payroll" class="h-14 w-auto" />
+        </a>
+
+        <!-- Primary Nav Links -->
+        <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-brand-gray">
+
+          <li>
+            <a href="/why-us" class="hover:text-pink transition-colors">Why Us?</a>
+          </li>
+
+          <!-- Our Services Dropdown -->
+          <li class="relative group">
+            <button class="flex items-center gap-1 hover:text-pink transition-colors py-2">
+              Our Services
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <li><a href="/payroll"         class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Services</a></li>
+              <li><a href="/software-demos"  class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software &amp; Demos</a></li>
+              <li><a href="/timekeeping"     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Timekeeping</a></li>
+              <li><a href="/workers-comp"    class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Workers Comp Insurance</a></li>
+              <li><a href="/hr-people"       class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">HR | People</a></li>
+            </ul>
+          </li>
+
+          <!-- Discover Dropdown -->
+          <li class="relative group">
+            <button class="flex items-center gap-1 hover:text-pink transition-colors py-2">
+              Discover
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <li><a href="/switching" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">How to Switch</a></li>
+              <li><a href="/learn"     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Learn About Payroll</a></li>
+              <li><a href="/who"       class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Who We Serve</a></li>
+              <li><a href="/client"   class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Client Resources</a></li>
+              <li><a href="/employee" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Employee Resources</a></li>
+              <li><a href="/partners" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Partners &amp; Affiliates</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="/contact" class="hover:text-pink transition-colors">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Right: Login + Phone + CTA -->
+        <div class="flex items-center gap-4">
+
+          <!-- Client Login Dropdown -->
+          <div class="relative group hidden lg:block">
+            <button class="text-sm font-medium text-brand-gray hover:text-pink flex items-center gap-1 transition-colors py-2">
+              Client Login
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <ul class="absolute right-0 top-full mt-1 w-52 bg-white border border-brand-light-gray rounded-xl shadow-lg
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <li><a href="https://payrollrx.myisolved.com/UserLogin.aspx" target="_blank" rel="noopener noreferrer"
+                     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software</a></li>
+              <li><a href="/client-set-up"
+                     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">New Client Setup</a></li>
+            </ul>
+          </div>
+
+          <a href="tel:8009950308"
+             class="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-pink transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            (800) 995-0308
+          </a>
+
+          <a href="/contact"
+             class="bg-pink text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-pink-dark transition-colors">
+            Get Started
+          </a>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-gray-400">
+      <div class="max-w-7xl mx-auto px-6 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
+
+          <!-- Brand -->
+          <div>
+            <img src="/branding/pinkpayroll logo dark rectangle.png" alt="Pink Payroll" class="h-10 w-auto mb-4" />
+            <p class="text-sm leading-relaxed">Professional payroll services for California small businesses.</p>
+            <div class="flex gap-3 mt-5">
+              <a href="#" aria-label="LinkedIn"  class="w-8 h-8 rounded bg-gray-700 flex items-center justify-center text-xs font-bold hover:bg-pink hover:text-white transition-colors">in</a>
+              <a href="#" aria-label="Facebook"  class="w-8 h-8 rounded bg-gray-700 flex items-center justify-center text-xs font-bold hover:bg-pink hover:text-white transition-colors">fb</a>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-white font-semibold text-sm mb-4">Our Services</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/payroll"        class="hover:text-white transition-colors">Payroll Services</a></li>
+              <li><a href="/software-demos" class="hover:text-white transition-colors">Payroll Software &amp; Demos</a></li>
+              <li><a href="/timekeeping"    class="hover:text-white transition-colors">Timekeeping</a></li>
+              <li><a href="/workers-comp"   class="hover:text-white transition-colors">Workers Comp Insurance</a></li>
+              <li><a href="/hr-people"      class="hover:text-white transition-colors">HR | People</a></li>
+            </ul>
+          </div>
+
+          <!-- Discover -->
+          <div>
+            <h4 class="text-white font-semibold text-sm mb-4">Discover</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/why-us"    class="hover:text-white transition-colors">Why Us?</a></li>
+              <li><a href="/switching" class="hover:text-white transition-colors">How to Switch</a></li>
+              <li><a href="/learn"     class="hover:text-white transition-colors">Learn About Payroll</a></li>
+              <li><a href="/who"       class="hover:text-white transition-colors">Who We Serve</a></li>
+              <li><a href="/partners"  class="hover:text-white transition-colors">Partners &amp; Affiliates</a></li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <h4 class="text-white font-semibold text-sm mb-4">Resources</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/client"    class="hover:text-white transition-colors">Client Resources</a></li>
+              <li><a href="/employee"  class="hover:text-white transition-colors">Employee Resources</a></li>
+              <li><a href="/contact"   class="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="/book-call" class="hover:text-white transition-colors">Book a Call</a></li>
+              <li><a href="https://payrollrx.myisolved.com/UserLogin.aspx" target="_blank" rel="noopener noreferrer"
+                     class="hover:text-white transition-colors">Client Login</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs text-gray-500">
+          <span>&copy; {new Date().getFullYear()} Pink Payroll. All rights reserved. Proudly serving small businesses across California.</span>
+          <div class="flex gap-6">
+            <a href="/terms-of-service" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy-policy"   class="hover:text-white transition-colors">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chatbot Widget Placeholder -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <button
+        class="w-14 h-14 bg-pink rounded-full shadow-xl flex items-center justify-center text-white hover:bg-pink-dark transition-colors"
+        title="Chat with us (coming soon)">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+      </button>
+    </div>
+
+  </body>
+</html>

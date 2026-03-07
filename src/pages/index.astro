@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pink Payroll — Payroll Services for California Small Businesses">
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center gap-16">
+    <div class="flex-1">
+      <div class="inline-flex items-center gap-2 bg-pink-light text-pink-dark text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        &#9733; California Small Business Specialists
+      </div>
+      <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-brand-black mb-6">
+        You're a business owner,<br>not <span class="text-pink">Account&nbsp;#8492.</span>
+      </h1>
+      <p class="text-xl text-brand-gray max-w-lg mb-10 leading-relaxed">
+        Stop crossing your fingers every time you hit "Submit." We handle payroll details and the tax math, so you can just focus on your team.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#quote" class="bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
+          Get Your Price Now
+        </a>
+        <a href="/contact" class="bg-gray-100 text-brand-black font-semibold px-8 py-4 rounded-full hover:bg-brand-light-gray transition-colors text-base">
+          Get Started
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Visual Placeholder -->
+    <div class="flex-1 max-w-md w-full bg-brand-light-gray rounded-2xl h-80 flex items-center justify-center text-brand-gray text-sm font-medium">
+      Hero Graphic — Coming Soon
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <div class="border-y border-brand-light-gray py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-center text-xs font-bold uppercase tracking-widest text-brand-gray mb-6">
+        Trusted by California businesses across every industry
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-5">
+        {Array.from({length: 6}).map(() => (
+          <div class="w-32 h-12 bg-gray-100 border border-brand-light-gray rounded-lg flex items-center justify-center text-xs text-brand-gray font-medium">
+            Client Logo
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Reality Check + Get a Quote -->
+  <section id="quote" class="bg-brand-black text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+
+      <!-- Left: Reality Check (2/3) -->
+      <div class="lg:col-span-2">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">The Hard Truth</p>
+        <h2 class="text-4xl font-extrabold tracking-tight leading-tight mb-10">
+          Is your current payroll provider a Partner or just a <span class="text-pink">Call Center?</span>
+        </h2>
+        <div class="flex flex-col gap-4">
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+            <h3 class="font-bold text-white mb-2">The Deadline Panic</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <strong class="text-white">40 minutes to nowhere.</strong> You're stuck on hold while your payroll deadline is ticking. You can't afford to be late.
+            </p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+            <h3 class="font-bold text-white mb-2">The Rep Runaround</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <strong class="text-white">New rep, every time.</strong> You're tired of explaining your business over and over to a stranger reading a script.
+            </p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+            <h3 class="font-bold text-white mb-2">The Black Hole</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              The "Post and Pray." You send an urgent request and hope it actually gets fixed. You deserve <strong class="text-white">real answers</strong>, not a prayer.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Get a Quote Box (1/3) -->
+      <div class="bg-white text-brand-black rounded-2xl p-8 shadow-2xl sticky top-24">
+        <h3 class="text-xl font-extrabold mb-1">Get Your Price</h3>
+        <p class="text-brand-gray text-sm mb-6">Fast, no-obligation quote in under 60 seconds.</p>
+
+        <form class="flex flex-col gap-3">
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Full Name</label>
+            <input type="text" placeholder="Jane Smith"
+              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Business Email</label>
+            <input type="email" placeholder="jane@yourbusiness.com"
+              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Phone Number</label>
+            <input type="tel" placeholder="(555) 000-0000"
+              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Company Name</label>
+            <input type="text" placeholder="Acme Co."
+              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Number of Employees</label>
+            <select class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10">
+              <option value="" disabled selected>Select a range</option>
+              <option>1–5</option>
+              <option>6–20</option>
+              <option>21–50</option>
+              <option>51–100</option>
+              <option>100+</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1 text-brand-black">Current Payroll Provider</label>
+            <input type="text" placeholder="e.g. ADP, Gusto, None"
+              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
+          </div>
+          <button type="submit"
+            class="w-full bg-pink text-white font-semibold py-3 rounded-full hover:bg-pink-dark transition-colors mt-1 text-sm">
+            Get My Free Quote &rarr;
+          </button>
+          <p class="text-center text-xs text-brand-gray">No spam. No pressure. Just a price.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pink Payroll Process -->
+  <section id="process" class="bg-gray-50 border-y border-brand-light-gray py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">The Pink Payroll Process</p>
+      <h2 class="text-4xl font-extrabold tracking-tight mb-4">High-Tech Simplicity. Human Oversight.</h2>
+      <p class="text-brand-gray text-lg max-w-xl mb-14">
+        Three steps designed to take payroll completely off your plate — without losing the human touch.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-light-gray">
+        <div class="p-8">
+          <div class="w-9 h-9 bg-pink rounded-full flex items-center justify-center text-white font-bold text-sm mb-5">1</div>
+          <h3 class="font-bold text-lg mb-3">The 3-Minute Entry</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            Log in, enter your hours, and close. Our platform is built for speed, not for "data entry." It's designed to be the easiest three minutes of your work week — so you can cross payroll off your list and move on.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="w-9 h-9 bg-pink rounded-full flex items-center justify-center text-white font-bold text-sm mb-5">2</div>
+          <h3 class="font-bold text-lg mb-3">The Expert Safety Net</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            You manage the entry; we manage the accuracy. If you're running tight on a deadline or have a complex question, you don't call a center — you reach out to your dedicated manager. We catch the "weird" stuff before it becomes a problem.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="w-9 h-9 bg-pink rounded-full flex items-center justify-center text-white font-bold text-sm mb-5">3</div>
+          <h3 class="font-bold text-lg mb-3">Hand-Off the Headache</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            From tax filings to historical data migration, we handle the high-stakes heavy lifting that keeps you up at night. Nearly 20 years of experience, and a team that treats your business like their own.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cert Badge -->
+      <div class="flex flex-col md:flex-row items-center gap-8 mt-14 pt-12 border-t border-brand-light-gray">
+        <img src="/assets/California Payroll Certification Badge 2026-V1.png"
+             alt="California Payroll Certification Badge 2026"
+             class="h-28 w-auto flex-shrink-0" />
+        <div>
+          <h4 class="font-bold text-lg mb-2">California Certified. Nearly 20 Years of Experience.</h4>
+          <p class="text-brand-gray text-sm leading-relaxed max-w-2xl">
+            Pink Payroll holds current California payroll certification, keeping your business compliant with every state and local requirement — year after year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Switching Section -->
+  <section class="bg-pink-light py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Switching Providers</p>
+      <h2 class="text-4xl font-extrabold tracking-tight mb-5">Switching shouldn't be a second job.</h2>
+      <p class="text-brand-gray text-lg leading-relaxed mb-10">
+        Most business owners stay with a provider they don't like because they dread the migration. We've turned "switching" into a science. From auditing your year-to-date data to verifying your tax history, we handle the heavy lifting so your transition is seamless.
+      </p>
+      <a href="/switching" class="bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors inline-block">
+        See Our Painless Switch Process
+      </a>
+    </div>
+  </section>
+
+</Layout>
