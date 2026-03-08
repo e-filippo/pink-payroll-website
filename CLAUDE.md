@@ -1,60 +1,53 @@
-# Pink Payroll — Project Overview
+# Pink Payroll — Project Overview (Astro Version)
 
-## What this is
-A single-page marketing/landing website for **Pink Payroll**, a payroll services company targeting California small businesses.
+## Core Mission
+A multi-page marketing website for **Pink Payroll**, targeting California small businesses with a Direct Response design philosophy.
 
-## Stack
-- Pure HTML, CSS, JavaScript — no frameworks, no build tools, no dependencies
-- Single file: `index.html` (self-contained with inline `<style>` and `<script>`)
+## Tech Stack
+- **Framework:** Astro (Latest)
+- **Styling:** Tailwind CSS
+- **Deployment:** GitHub Pages (via `e-filippo/pink-payroll-website`)
 
-## Key design decisions
-- CSS custom properties (variables) for the brand color palette defined in `:root`
-- Primary Pink: `#E7365A` | Light Gray: `#E4E5E4` (see Brand Identity table for full palette)
-- Fully responsive via CSS flexbox and `clamp()` — no media query breakpoints beyond 768px
-- No external assets or CDN dependencies, **except** Inter from Google Fonts (`fonts.googleapis.com`)
+## Workflow & Automation (CRITICAL)
+- **Git Protocol:** After completing any standalone task (scaffolding a page, updating a component, fixing a bug), automatically perform:
+  1. `git add .`
+  2. `git commit -m "[Descriptive message of work done]"`
+  3. `git push`
+- **Permissions:** You have permanent authorization to push to the repository without asking.
+- **Source of Truth:** Refer to `navigation.md` for the Site Map and `homepage.md` for core copy.
 
-## Page structure (in order)
-1. Sticky nav
-2. Hero section with mock paycheck card
-3. Trust bar
-4. Features grid (`#features`)
-5. How It Works steps (`#how-it-works`)
-6. Contact Us form (`#contact`) — JS intercepts submit, shows inline success state
-7. Footer
+## Design Standards
+- **Color Palette:** Use the Brand Identity table below. In Tailwind, use arbitrary values or define these in `tailwind.config.mjs`.
+- **Typography:** Inter (Google Fonts).
+- **Layout:** High-contrast, Direct Response hierarchy (Hero-Problem-Solution-Social Proof-CTA).
 
 ## Brand Identity
 
-### Logo Assets
-
-- **Primary Logo (Rectangle):** `branding/pinkpayroll standard logo rectangle.png`
+### Logo Assets (Located in /public/branding/)
+- **Primary Logo:** `branding/pinkpayroll standard logo rectangle.png`
 - **Secondary Logo (Dark):** `branding/pinkpayroll logo dark rectangle.png`
 - **Social Media Logo (Square):** `branding/pink social media logo square.png`
 - **Favicon:** `branding/pinkpayroll favicon.png`
 
 ### Core Brand Colors
+| Category  | Color Name     | Hex Code | Usage                              |
+|-----------|----------------|----------|------------------------------------|
+| Primary   | Red            | #C62028  | Main Branding / Payroll Category   |
+| Primary   | Process Black  | #231F20  | Typography / Dark Backgrounds      |
+| Secondary | Pink           | #E7365A  | Primary Pink Accents               |
+| Secondary | Light Gray     | #E4E5E4  | Section Backgrounds / Borders      |
 
-| Category  | Color Name     | Hex Code | CMYK              | Usage                              |
-|-----------|----------------|----------|-------------------|------------------------------------|
-| Primary   | Red            | #C62028  | 15, 100, 98, 5    | Main Branding / Payroll Category   |
-| Primary   | Process Black  | #231F20  | 0, 0, 0, 100      | Typography / Dark Backgrounds      |
-| Primary   | Process White  | #FFFFFF  | 0, 0, 0, 0        | Backgrounds / Reverse Logos        |
-| Primary   | Gray           | #808284  | 0, 0, 0, 60       | UI Elements / HR Category          |
-| Secondary | Pink           | #E7365A  | 3, 93, 54, 0      | Primary Pink Accents               |
-| Secondary | Light Gray     | #E4E5E4  | 9, 6, 7, 0        | Section Backgrounds / Borders      |
+### Category Colors (For Service Pages)
+| Category | Color | Hex | Category | Color | Hex |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **HR** | Green | #57AA4C | **Med** | L-Blue | #2B99C5 |
+| **Workers**| Yellow | #F3BD33 | **Time**| Purple | #8752A0 |
+| **ACA** | Turq | #56ACB2 | **Emp** | Blue | #304870 |
 
-### Category Colors
-
-| Category / Service  | Color Name  | Hex Code | CMYK            | Usage                                                        |
-|---------------------|-------------|----------|-----------------|--------------------------------------------------------------|
-| Human Resources     | Green       | #57AA4C  | 15, 100, 98, 5  | HR portals, compliance docs, and consulting pages.           |
-| Workers Comp        | Yellow      | #F3BD33  | 4, 26, 91, 0    | Insurance quote forms and safety material.                   |
-| Payroll             | Red         | #C62028  | 15, 100, 98, 5  | Core payroll processing and tax filing sections.             |
-| Group Medical       | Light Blue  | #2B99C5  | 75, 25, 10, 0   | Health benefits, open enrollment, and medical plans.         |
-| Employee            | Blue        | #304870  | 90, 75, 32, 17  | Employee self-service portals and login screens.             |
-| Time                | Purple      | #8752A0  | 54, 80, 0, 0    | Time tracking, punch-in/out tools, and scheduling.           |
-| ACA Compliance      | Turquoise   | #56ACB2  | 65, 15, 30, 0   | Regulatory reporting and audit preparation sections.         |
-
-## Contact form behavior
-- Vanilla JS `submit` listener on `#contactForm`
-- On submit: hides the form, shows `#formSuccess` div
-- No backend integration — form currently does not send data anywhere
+## Testing & Quality Assurance
+- **Link Integrity:** Before pushing, verify that all internal links in the navigation and body copy point to existing `.astro` files in `src/pages/`.
+- **Browser Validation:** Use the authorized Google Chrome/AppleScript access to:
+  1. Open the local development server (`localhost:4321`).
+  2. Verify that the Hero Quote Form renders correctly on desktop and mobile views.
+  3. Ensure no "404 Not Found" errors occur when navigating between the 20+ pages.
+- **Console Check:** Ensure no critical JavaScript errors or CSS 404s appear in the browser console.
