@@ -54,6 +54,11 @@ iframe,
   width: 100%;
 }
 
+/* Cap GHL quote form iframe so it never creates a "pink tail" below the box */
+iframe[src*="leadconnectorhq.com"] {
+  max-height: 850px !important;
+}
+
 /* ── Container Safety Padding ───────────────────────────────────────────── */
 /* Guarantee 1.5rem (24px) horizontal breathing room on small screens.
    Tailwind's px-6 already covers this; this catches any unstyled containers. */
