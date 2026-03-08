@@ -109,10 +109,13 @@ import Layout from '../layouts/Layout.astro';
           { title: 'Multi-State Payroll', desc: 'Employees in more than one state? We handle the complexity of multi-state payroll and tax obligations.' },
           { title: 'Amended Returns', desc: 'Tax amendments and corrections filed correctly — including 941 amendments that have saved our clients thousands.' },
           { title: 'HR & Benefits Integration', desc: 'Payroll that connects seamlessly with your HR, timekeeping, and workers\' comp policies.' },
-        ].map(({ title, desc }) => (
-          <div class="bg-white border border-brand-light-gray rounded-xl p-6">
-            <div class="w-2 h-2 rounded-full bg-pink mb-4"></div>
-            <h3 class="font-bold text-brand-black mb-2">{title}</h3>
+        ].map(({ title, desc }, i) => (
+          <div class="group relative bg-white border-2 border-[#231F20] rounded-xl p-6 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-pink hover:bg-pink/5 cursor-default overflow-hidden">
+            <span class="absolute top-3 right-4 text-5xl font-extrabold text-gray-100 group-hover:text-pink/20 transition-colors duration-200 leading-none select-none">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <div class="w-7 h-1 rounded-full bg-[#231F20] group-hover:bg-pink transition-colors duration-200 mb-4"></div>
+            <h3 class="font-extrabold text-brand-black group-hover:text-pink transition-colors duration-200 mb-2 leading-snug">{title}</h3>
             <p class="text-brand-gray text-sm leading-relaxed">{desc}</p>
           </div>
         ))}
