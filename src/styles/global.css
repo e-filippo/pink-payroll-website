@@ -13,3 +13,53 @@
 
 html { scroll-behavior: smooth; }
 body { line-height: 1.6; }
+
+/* ── Typography ─────────────────────────────────────────────────────────── */
+/* Safety-net: clamp h1 so it never wraps awkwardly on small screens.
+   Tailwind's text-4xl (2.25rem) already hits the mobile target;
+   this ensures it even on pages that skip the responsive prefix. */
+h1 {
+  font-size: clamp(2rem, 5vw + 0.5rem, 4rem);
+}
+
+/* ── Touch / Hover ──────────────────────────────────────────────────────── */
+/* Disable translate-y lift on devices that don't support true hover
+   (touch screens). Replace with a soft static shadow so cards still
+   feel interactive without broken half-hover states on tap. */
+@media (hover: none) {
+  [class*="hover:-translate-y"] {
+    transform: none !important;
+    transition: none !important;
+  }
+  /* Give touch-tapped cards a subtle shadow instead */
+  [class*="hover:shadow"]:active {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    border-color: #E7365A;
+  }
+}
+
+/* ── Tap Targets ────────────────────────────────────────────────────────── */
+/* WCAG 2.5.5 — minimum 48 × 48 px tap target for all buttons and pill links */
+a[class*="rounded-full"],
+button[class*="rounded-full"] {
+  min-height: 48px;
+}
+
+/* ── Iframe / Embed Containment ─────────────────────────────────────────── */
+/* Prevent GHL calendar or any embedded widget from causing horizontal scroll */
+iframe,
+[class*="ghl"],
+[class*="hs-beacon"] {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ── Container Safety Padding ───────────────────────────────────────────── */
+/* Guarantee 1.5rem (24px) horizontal breathing room on small screens.
+   Tailwind's px-6 already covers this; this catches any unstyled containers. */
+@media (max-width: 640px) {
+  main > section:not([class*="px-"]) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
