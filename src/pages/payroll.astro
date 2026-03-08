@@ -120,6 +120,105 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-10">
+      <div class="flex justify-center gap-1 mb-3">
+        {[...Array(5)].map(() => (
+          <svg class="w-5 h-5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        ))}
+      </div>
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-gray mb-2">40+ Five-Star Reviews on Google &amp; Yelp</p>
+      <h2 class="text-3xl font-extrabold text-brand-black">What California Business Owners Are Saying</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+      <figure class="border-l-4 border-pink bg-white rounded-xl shadow-sm p-6 flex flex-col">
+        <div class="flex gap-0.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <blockquote class="text-brand-black text-base leading-relaxed flex-1 mb-4">
+          "They make all my payments on time and keep great records. After COVID, they filed amended 941 returns and <strong>saved me thousands of dollars.</strong> Whole staff is friendly and helpful!"
+        </blockquote>
+        <figcaption class="text-xs text-brand-gray">
+          <span class="font-bold text-brand-black">Brian</span> &bull; San Diego, CA &bull; <span class="italic">Yelp</span>
+        </figcaption>
+      </figure>
+
+      <figure class="border-l-4 border-pink bg-white rounded-xl shadow-sm p-6 flex flex-col">
+        <div class="flex gap-0.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <blockquote class="text-brand-black text-base leading-relaxed flex-1 mb-4">
+          "Working with Pink Payroll was honestly <strong>such a breath of fresh air.</strong> After years with a horrible payroll company, I was scared to switch — but they were so patient. I truly feel Pink Payroll wants their customers to be successful and will do whatever it takes to make that happen!"
+        </blockquote>
+        <figcaption class="text-xs text-brand-gray">
+          <span class="font-bold text-brand-black">Jamie</span> &bull; San Diego, CA &bull; <span class="italic">Yelp, 2026</span>
+        </figcaption>
+      </figure>
+
+      <figure class="border-l-4 border-[#C62028] bg-white rounded-xl shadow-sm p-6 flex flex-col">
+        <div class="flex gap-0.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <blockquote class="text-brand-black text-base leading-relaxed flex-1 mb-4">
+          "I get approached by other payroll service providers on a fairly regular basis, and I always tell them <strong>I would not even consider changing providers.</strong> Their ongoing hard work, attention to detail, and outstanding customer service is unmatched."
+        </blockquote>
+        <figcaption class="text-xs text-brand-gray">
+          <span class="font-bold text-brand-black">Amy</span> &bull; Bennett Glass, Inc. &bull; Escondido, CA &bull; <span class="italic">Client since 2008</span>
+        </figcaption>
+      </figure>
+
+      <figure class="border-l-4 border-[#C62028] bg-white rounded-xl shadow-sm p-6 flex flex-col">
+        <div class="flex gap-0.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <blockquote class="text-brand-black text-base leading-relaxed flex-1 mb-4">
+          "I've been using Pink Payroll for years. They are <strong>incredibly easy to work with,</strong> and always quick to respond with my (many!) questions with accurate answers. I've recommended them to other businesses, and will continue to do so."
+        </blockquote>
+        <figcaption class="text-xs text-brand-gray">
+          <span class="font-bold text-brand-black">Eric</span> &bull; Law Firm &bull; San Diego, CA &bull; <span class="italic">Google &amp; Yelp</span>
+        </figcaption>
+      </figure>
+
+      <figure class="border-l-4 border-pink bg-white rounded-xl shadow-sm p-6 flex flex-col md:col-span-2">
+        <div class="flex gap-0.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <blockquote class="text-brand-black text-base leading-relaxed flex-1 mb-4">
+          "Pink Payroll is top notch in service. They are not expensive and <strong>definitely worth saving the headache of doing it ourselves.</strong> There are times when I go to their team for general questions over my own accountant — that's how much I trust them."
+        </blockquote>
+        <figcaption class="text-xs text-brand-gray">
+          <span class="font-bold text-brand-black">Tom</span> &bull; San Diego, CA &bull; <span class="italic">Yelp &bull; Client since 2014</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
   <!-- ===== THE HUMAN DIFFERENCE ===== -->
   <section class="max-w-5xl mx-auto px-6 py-20">
     <div class="grid md:grid-cols-2 gap-14 items-center">
@@ -150,7 +249,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Stats / Trust Signals -->
       <div class="grid grid-cols-2 gap-5">
         {[
-          { stat: '15+', label: 'Years serving California small businesses' },
+          { stat: '20+', label: 'Years serving California small businesses' },
           { stat: '5.0★', label: 'Average rating across 40+ verified reviews' },
           { stat: '100%', label: 'US-based payroll team — no offshore outsourcing' },
           { stat: '$0', label: 'Hidden fees. Transparent pricing, always.' },
@@ -165,92 +264,6 @@ import Layout from '../layouts/Layout.astro';
             Get a Payroll Quote &rarr;
           </a>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== SOCIAL PROOF ===== -->
-  <section class="bg-brand-black text-white">
-    <div class="max-w-5xl mx-auto px-6 py-20">
-
-      <div class="text-center mb-14">
-        <div class="flex justify-center gap-1 mb-4">
-          {[...Array(5)].map(() => (
-            <svg class="w-6 h-6 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          ))}
-        </div>
-        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">40+ Five-Star Reviews</p>
-        <h2 class="text-3xl font-extrabold">What California Business Owners Are Saying</h2>
-      </div>
-
-      <!-- 3 featured quotes -->
-      <div class="grid md:grid-cols-3 gap-5 mb-8">
-        {[
-          {
-            quote: '"They make all my payments on time and keep great records. After COVID, they filed amended returns that saved me thousands of dollars. The whole staff is friendly and helpful!"',
-            attr: 'San Diego Business Owner',
-            source: 'Yelp, 2025',
-          },
-          {
-            quote: '"Working with Pink Payroll was honestly such a breath of fresh air. After years with a horrible payroll company, I was scared to switch — but they were so patient and kind. I truly feel Pink Payroll wants their customers to be successful."',
-            attr: 'San Diego Business Owner',
-            source: 'Yelp, 2026',
-          },
-          {
-            quote: '"I get approached by other payroll service providers on a fairly regular basis, and I always tell them I would not even consider changing providers. Their attention to detail and outstanding customer service is unmatched."',
-            attr: 'President, Construction Company',
-            source: 'Client since 2008',
-          },
-        ].map(({ quote, attr, source }) => (
-          <figure class="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col">
-            <div class="flex gap-0.5 mb-4">
-              {[...Array(5)].map(() => (
-                <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-              ))}
-            </div>
-            <blockquote class="text-gray-300 text-sm leading-relaxed flex-1 mb-5">{quote}</blockquote>
-            <figcaption>
-              <p class="text-white text-xs font-bold">{attr}</p>
-              <p class="text-gray-500 text-xs">{source}</p>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-
-      <!-- 2 more quotes, wider -->
-      <div class="grid md:grid-cols-2 gap-5">
-        {[
-          {
-            quote: '"Pink Payroll is a true local gem. As a restaurant owner, payroll is one of those things you need to be 100% accurate every single time. I\'ve been with Pink Payroll for over 5 years — they have never let me down."',
-            attr: 'Restaurant Owner, San Diego',
-            source: 'Google Review',
-          },
-          {
-            quote: '"I have worked with multiple payroll companies over the years and no one comes close to the quality of service they provide. They go above and beyond — every single time."',
-            attr: 'San Diego Business Owner',
-            source: 'Google Review, 2025',
-          },
-        ].map(({ quote, attr, source }) => (
-          <figure class="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col">
-            <div class="flex gap-0.5 mb-4">
-              {[...Array(5)].map(() => (
-                <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-              ))}
-            </div>
-            <blockquote class="text-gray-300 text-sm leading-relaxed flex-1 mb-5">{quote}</blockquote>
-            <figcaption>
-              <p class="text-white text-xs font-bold">{attr}</p>
-              <p class="text-gray-500 text-xs">{source}</p>
-            </figcaption>
-          </figure>
-        ))}
       </div>
 
     </div>
