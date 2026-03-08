@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Meet the Team — Pink Payroll">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Our Story</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-3xl">
+        The Story Behind<br class="hidden md:block" />
+        <span class="text-pink">the Pink Promise.</span>
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        Pink Payroll wasn't built in a corporate boardroom — it was born from the frustration of a small business owner who just wanted to pay her people without the headache.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER MESSAGE ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-14 items-start">
+
+      <div>
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-4">A Message from Our Founder</p>
+        <h2 class="text-3xl font-extrabold text-brand-black mb-6">Why Erica Built This Company</h2>
+        <p class="text-brand-gray text-lg leading-relaxed mb-5">
+          Erica Filippo started Pink Payroll after experiencing the same payroll frustrations you face today. She wanted quick answers — but instead was stuck with 50-digit security codes, endless hold music, and "support" reps who didn't know a payroll report from a bowl of spaghetti.
+        </p>
+        <p class="text-brand-gray leading-relaxed mb-5">
+          Erica believed that if you call your provider, the person who answers should actually have the answer. No transfers, no "case numbers," just help.
+        </p>
+        <p class="text-brand-gray leading-relaxed">
+          Nearly 18 years later, that simple promise is why our very first clients are still with us.
+        </p>
+      </div>
+
+      <!-- Pull quote -->
+      <div class="bg-pink/5 border-l-4 border-pink rounded-xl p-8 mt-4 md:mt-12">
+        <blockquote class="text-brand-black text-xl font-semibold leading-relaxed mb-4">
+          "If you call your provider, the person who answers should actually have the answer. No transfers, no case numbers — just help."
+        </blockquote>
+        <figcaption class="text-brand-gray text-sm font-semibold">
+          Erica Filippo &mdash; Founder &amp; CEO, Pink Payroll
+        </figcaption>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="text-center mb-14">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Expert-Led. Human-Powered.</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">The Experts Behind Your Payroll</h2>
+        <p class="text-brand-gray text-lg max-w-2xl mx-auto">
+          While we provide the technical horsepower of a national provider, we keep our heart in the boutique service model. Every account is personally overseen by our senior experts to ensure total precision.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Erica -->
+        <div class="bg-white border border-brand-light-gray rounded-2xl p-8 shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-pink flex items-center justify-center text-white font-extrabold text-lg mb-5">E</div>
+          <h3 class="text-xl font-extrabold text-brand-black mb-1">Erica Filippo</h3>
+          <p class="text-pink text-xs font-bold uppercase tracking-widest mb-4">Founder &amp; CEO</p>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            Erica provides the strategic vision for Pink Payroll, ensuring we remain the "Anti-Call-Center" choice for California businesses that value partnership over automation. Her founding conviction — that every client deserves a real answer from a real expert — drives every decision we make.
+          </p>
+        </div>
+
+        <!-- Laura & Sarah -->
+        <div class="bg-white border border-brand-light-gray rounded-2xl p-8 shadow-sm md:col-span-2">
+          <div class="flex gap-3 mb-5">
+            <div class="w-12 h-12 rounded-full bg-[#C62028] flex items-center justify-center text-white font-extrabold text-lg">L</div>
+            <div class="w-12 h-12 rounded-full bg-[#C62028] flex items-center justify-center text-white font-extrabold text-lg">S</div>
+          </div>
+          <h3 class="text-xl font-extrabold text-brand-black mb-1">Laura &amp; Sarah</h3>
+          <p class="text-[#C62028] text-xs font-bold uppercase tracking-widest mb-4">Senior Payroll Managers</p>
+          <p class="text-brand-gray text-sm leading-relaxed mb-4">
+            Laura and Sarah lead our specialized support team. They are the guardians of your compliance — managing the day-to-day tax filings and complex reporting that keep your business protected and your employees paid on time.
+          </p>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            As Senior Payroll Managers, they personally oversee every client account and lead a hand-picked, US-based team trained to know your business inside and out. When you have a question, their team has the answer — without putting you on hold.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HISTORY / TRUST ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+
+      <div class="grid grid-cols-2 gap-5">
+        {[
+          { stat: '18+', label: 'Years of California Payroll Expertise' },
+          { stat: '5.0★', label: 'Average Rating, Google & Yelp' },
+          { stat: '50', label: 'U.S. States Supported' },
+          { stat: '100%', label: 'US-Based Expert Team' },
+        ].map(({ stat, label }) => (
+          <div class="bg-white border border-brand-light-gray rounded-2xl p-6 text-center shadow-sm">
+            <p class="text-3xl font-extrabold text-pink mb-2">{stat}</p>
+            <p class="text-brand-gray text-xs leading-snug">{label}</p>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Track Record</p>
+        <h2 class="text-3xl font-extrabold text-brand-black mb-5">18+ Years of California History</h2>
+        <p class="text-brand-gray text-lg leading-relaxed mb-5">
+          We've navigated nearly two decades of shifting labor laws, EDD updates, and California tax codes so you don't have to.
+        </p>
+        <p class="text-brand-gray leading-relaxed">
+          Experience the difference that 18+ years of boutique expertise makes — from your very first payroll run to your year-end filings.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="bg-pink text-white">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Work With a Team That Actually Cares?</h2>
+      <p class="text-pink-light text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        See why California businesses have trusted us for nearly two decades.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/payroll" class="bg-white text-pink font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-base">
+          See Our Services
+        </a>
+        <a href="/contact" class="border-2 border-white/60 text-white font-semibold px-8 py-4 rounded-full hover:border-white hover:bg-white/10 transition-colors text-base">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
