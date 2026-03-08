@@ -50,43 +50,48 @@ import GHLQuoteForm from '../components/GHLQuoteForm.astro';
   </div>
 
   <!-- Reality Check + Get a Quote -->
-  <section id="quote" class="bg-brand-black text-white py-20 px-6">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+  <section id="quote" class="bg-[#F9F9F9] py-20 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-0 items-start">
 
-      <!-- Left: Reality Check (2/3) -->
-      <div class="lg:col-span-2">
+      <!-- Left (40%): Hard Truth copy -->
+      <div class="w-full lg:w-[40%]">
         <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">The Hard Truth</p>
-        <h2 class="text-4xl font-extrabold tracking-tight leading-tight mb-10">
+        <h2 class="text-4xl font-extrabold tracking-tight leading-tight mb-10 text-[#2D2D2D]">
           Is your current payroll provider a Partner or just a <span class="text-pink">Call Center?</span>
         </h2>
         <div class="flex flex-col gap-4">
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 class="font-bold text-white mb-2">The Deadline Panic</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              <strong class="text-white">40 minutes to nowhere.</strong> You're stuck on hold while your payroll deadline is ticking. You can't afford to be late.
+          <div class="bg-white border border-brand-light-gray rounded-xl p-6 shadow-sm">
+            <h3 class="font-bold text-[#2D2D2D] mb-2">The Deadline Panic</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">
+              <strong class="text-[#2D2D2D]">40 minutes to nowhere.</strong> You're stuck on hold while your payroll deadline is ticking. You can't afford to be late.
             </p>
           </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 class="font-bold text-white mb-2">The Rep Runaround</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              <strong class="text-white">New rep, every time.</strong> You're tired of explaining your business over and over to a stranger reading a script.
+          <div class="bg-white border border-brand-light-gray rounded-xl p-6 shadow-sm">
+            <h3 class="font-bold text-[#2D2D2D] mb-2">The Rep Runaround</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">
+              <strong class="text-[#2D2D2D]">New rep, every time.</strong> You're tired of explaining your business over and over to a stranger reading a script.
             </p>
           </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 class="font-bold text-white mb-2">The Black Hole</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              The "Post and Pray." You send an urgent request and hope it actually gets fixed. You deserve <strong class="text-white">real answers</strong>, not a prayer.
+          <div class="bg-white border border-brand-light-gray rounded-xl p-6 shadow-sm">
+            <h3 class="font-bold text-[#2D2D2D] mb-2">The Black Hole</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">
+              The "Post and Pray." You send an urgent request and hope it actually gets fixed. You deserve <strong class="text-[#2D2D2D]">real answers</strong>, not a prayer.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Right: GHL Quote Form (1/3) -->
-      <div class="bg-white text-brand-black rounded-2xl p-8 shadow-2xl">
+      <!-- Center (15%): breathing room -->
+      <div class="hidden lg:block lg:w-[15%]"></div>
+
+      <!-- Right (35%): GHL Quote Form -->
+      <div class="w-full lg:w-[35%] mt-12 lg:mt-0">
         <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2 text-center">Get Started</p>
-        <h3 class="text-2xl font-extrabold text-center text-brand-black mb-1">Simplified Payroll Starts Here.</h3>
+        <h3 class="text-2xl font-extrabold text-center text-[#2D2D2D] mb-1">Simplified Payroll Starts Here.</h3>
         <p class="text-brand-gray text-sm text-center mb-6">Fast, no-obligation quote — we'll reach out within one business day.</p>
-        <GHLQuoteForm />
+        <div class="bg-white border border-brand-light-gray rounded-2xl shadow-md p-6">
+          <GHLQuoteForm />
+        </div>
       </div>
 
     </div>
