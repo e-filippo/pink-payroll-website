@@ -1,13 +1,135 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const industries = [
+  {
+    emoji: '⚖️',
+    name: 'Legal & Professional Services',
+    body: 'You expect the same level of confidentiality and precision from your partners that you provide to your clients. We handle the complex partner draws and multi-state compliance that law firms require.',
+    linkLabel: 'Learn more about Payroll for Attorneys',
+    linkHref: '/industries/attorneys',
+  },
+  {
+    emoji: '🏗️',
+    name: 'Construction & Skilled Trades',
+    body: 'Prevailing wage, union reporting, and multi-state tax nexus can sink a project\'s profitability. We provide the "Back-Office Shield" that keeps your crews moving.',
+    linkLabel: 'Learn more about Construction Payroll',
+    linkHref: '/industries/construction',
+  },
+  {
+    emoji: '🍷',
+    name: 'Restaurants & Hospitality',
+    body: 'Between tipped-wage credits and high seasonal turnover, California hospitality payroll is a minefield. We help you navigate the chaos so you can focus on the guest experience.',
+    linkLabel: 'Learn more about Restaurant Payroll',
+    linkHref: '/industries/restaurants',
+  },
+  {
+    emoji: '🏥',
+    name: 'Healthcare & Assisted Living',
+    body: 'Managing 24/7 shifts and specialized regulatory reporting requires more than just software. It requires senior oversight to ensure every hour is tracked and every tax is filed.',
+    linkLabel: 'Learn more about Healthcare Payroll',
+    linkHref: '/industries/healthcare',
+  },
+];
+
+const sweetSpot = [
+  { label: 'The Organized Owner', body: 'You value a "set-it-and-forget-it" system overseen by experts.' },
+  { label: 'The High-Growth Team', body: 'Our average client has 10 to 50 employees and is scaling fast.' },
+  { label: 'The California-First Company', body: 'You need a partner who speaks "EDD" and "Labor Code" fluently.' },
+];
 ---
 <Layout title="Who We Serve — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Discover</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Who We Serve</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Who We Serve</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-3xl">
+        Specialized Payroll for<br class="hidden md:block" />
+        <span class="text-pink">High-Stakes Industries.</span>
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        Generic payroll is for generic businesses. We partner with owners who operate in complex, regulated, or high-growth environments where a single mistake can lead to a massive compliance headache.
+      </p>
     </div>
   </section>
+
+  <!-- ===== INDUSTRY CARDS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-14">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Industries We Lead</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">
+        Where Precision Isn't a Goal — It's a Requirement.
+      </h2>
+      <p class="text-brand-gray text-lg max-w-2xl mx-auto">
+        We have built deep-rooted expertise in the sectors where getting payroll wrong has real consequences.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {industries.map(({ emoji, name, body, linkLabel, linkHref }) => (
+        <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-4">
+          <div class="text-4xl">{emoji}</div>
+          <h3 class="text-xl font-extrabold text-brand-black">{name}</h3>
+          <p class="text-brand-gray leading-relaxed flex-1">{body}</p>
+          <a
+            href={linkHref}
+            class="inline-flex items-center gap-1.5 text-pink font-semibold text-sm hover:gap-2.5 transition-all group"
+          >
+            {linkLabel}
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== SWEET SPOT ===== -->
+  <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="text-center mb-12">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Sweet Spot</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">The Pink Payroll Partnership Profile</h2>
+        <p class="text-brand-gray text-lg max-w-2xl mx-auto">
+          While we support diverse businesses across all 50 states, our most successful partnerships share these traits.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {sweetSpot.map(({ label, body }) => (
+          <div class="bg-white border border-brand-light-gray rounded-2xl p-8 text-center shadow-sm">
+            <div class="w-10 h-10 rounded-full bg-pink/10 flex items-center justify-center mx-auto mb-5">
+              <svg class="w-5 h-5 text-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-extrabold text-brand-black mb-3">{label}</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAN DIEGO HEART / NATIONAL REACH ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-4">San Diego Heart. National Reach.</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-6 max-w-2xl mx-auto">
+      Your Team Is Everywhere.<br />We've Got Them Covered.
+    </h2>
+    <p class="text-brand-gray text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+      We are proud to be a San Diego staple. Whether your team is all in Mission Valley or spread across the country, we provide the same boutique level of care — in all 50 states.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact" class="bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-[#C62028] transition-colors text-base">
+        See if We're a Fit
+      </a>
+      <a href="/contact" class="bg-white border-2 border-brand-light-gray text-brand-black font-semibold px-8 py-4 rounded-full hover:border-pink hover:text-pink transition-colors text-base">
+        Request a Quote
+      </a>
+    </div>
+  </section>
+
 </Layout>
