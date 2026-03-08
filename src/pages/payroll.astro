@@ -1,99 +1,277 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Payroll Services — Pink Payroll">
+<Layout title="Payroll Services for California Small Businesses — Pink Payroll">
 
-  <!-- Page Header (placeholder until copy is finalized) -->
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Services</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Payroll Services</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-24 text-center">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Payroll Services</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+        The Precision of a Powerhouse.<br class="hidden md:block" />
+        <span class="text-pink">The Service of a Boutique Agency.</span>
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Full-service payroll and tax filing for California small businesses — where every account is personally overseen by a senior expert, not handed off to a call center.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
+          Get a Payroll Quote
+        </a>
+        <a href="/switching" class="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:border-white hover:bg-white/10 transition-colors text-base">
+          See How Switching Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PROBLEM ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-14">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Sound Familiar?</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black">Tired of Being Just a Ticket Number?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Big Box Pain -->
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">The Big Box Experience</p>
+        <ul class="space-y-4">
+          {[
+            'You call and get a different rep every time — one who has never seen your account.',
+            'Simple questions take days to resolve through a ticket queue.',
+            'Errors surface at tax time, not when they happen.',
+            'You\'re paying enterprise pricing for entry-level service.',
+            'They automated your account. You became a number.',
+          ].map((item) => (
+            <li class="flex items-start gap-3 text-brand-gray text-sm leading-relaxed">
+              <svg class="w-5 h-5 text-gray-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-xs text-gray-400 italic border-t border-gray-200 pt-4">
+          "I thought I'd go with one of those 'big' payroll companies… big mistake. I was right back with Pink Payroll as soon as I could get away from them."
+          <span class="block font-semibold mt-1 not-italic">— San Diego Business Owner</span>
+        </p>
+      </div>
+
+      <!-- Pink Payroll Solution -->
+      <div class="bg-pink/5 border border-pink/20 rounded-2xl p-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-pink mb-5">The Pink Payroll Difference</p>
+        <ul class="space-y-4">
+          {[
+            'A dedicated, US-based team that knows your business by name — not by ticket.',
+            'Every account is personally overseen by a senior payroll expert.',
+            'Questions answered accurately, fast — not routed through a queue.',
+            'Proactive compliance monitoring, so problems are caught before they cost you.',
+            'Boutique attention with enterprise-grade systems backing every payroll run.',
+          ].map((item) => (
+            <li class="flex items-start gap-3 text-brand-black text-sm leading-relaxed">
+              <svg class="w-5 h-5 text-pink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-xs text-brand-gray italic border-t border-pink/20 pt-4">
+          "Pink payroll is top notch. There are times when I go to their team for general questions over my own accountant."
+          <span class="block font-semibold mt-1 not-italic">— San Diego Business Owner, Client since 2014</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FULL-SERVICE SOLUTION ===== -->
+  <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="text-center mb-14">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">What We Handle</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">Full-Service Payroll, Built Around Your Business</h2>
+        <p class="text-brand-gray text-lg max-w-2xl mx-auto">
+          Every payroll run is audited by a human expert — not just a software algorithm. We catch discrepancies before they become compliance problems.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {[
+          { title: 'Payroll Processing', desc: 'Weekly, biweekly, semi-monthly, or monthly — we run payroll on your schedule, accurately, every time.' },
+          { title: 'Payroll Tax Filing', desc: 'Federal and California state tax deposits and filings handled on your behalf. We track deadlines so you don\'t have to.' },
+          { title: 'Direct Deposit', desc: 'Fast, reliable direct deposit for your entire team. Employees paid on time, every pay period.' },
+          { title: 'New Hire Reporting', desc: 'California new hire reporting submitted automatically. Stay compliant from day one.' },
+          { title: 'Year-End W-2 & 1099', desc: 'We prepare and file all year-end forms. Your employees and contractors receive accurate documents on time.' },
+          { title: 'Compliance Monitoring', desc: 'California labor law is complex and constantly changing. We monitor updates so your payroll stays compliant.' },
+          { title: 'Multi-State Payroll', desc: 'Employees in more than one state? We handle the complexity of multi-state payroll and tax obligations.' },
+          { title: 'Amended Returns', desc: 'Tax amendments and corrections filed correctly — including 941 amendments that have saved our clients thousands.' },
+          { title: 'HR & Benefits Integration', desc: 'Payroll that connects seamlessly with your HR, timekeeping, and workers\' comp policies.' },
+        ].map(({ title, desc }) => (
+          <div class="bg-white border border-brand-light-gray rounded-xl p-6">
+            <div class="w-2 h-2 rounded-full bg-pink mb-4"></div>
+            <h3 class="font-bold text-brand-black mb-2">{title}</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE HUMAN DIFFERENCE ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+
+      <!-- Copy -->
+      <div>
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Team</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-6">
+          Expert Oversight.<br />Not Call Center Roulette.
+        </h2>
+        <p class="text-brand-gray text-lg mb-6 leading-relaxed">
+          Pink Payroll was founded on a single conviction: small businesses deserve the same caliber of payroll expertise as the Fortune 500 — without the impersonal, ticket-number treatment.
+        </p>
+        <p class="text-brand-gray text-base mb-6 leading-relaxed">
+          <strong class="text-brand-black">Erica, our Founder & CEO,</strong> built this company around that standard. Every operational decision, service offering, and team member reflects her commitment to precision and personalized service.
+        </p>
+        <p class="text-brand-gray text-base mb-8 leading-relaxed">
+          <strong class="text-brand-black">Laura and Sarah, our Senior Payroll Managers,</strong> personally oversee every client account. They lead a hand-picked, US-based support team trained to know your business — your industry, your pay schedule, your compliance needs — not just your account number.
+        </p>
+        <div class="bg-brand-light-gray/60 border border-brand-light-gray rounded-xl p-5">
+          <p class="text-sm text-brand-black font-semibold mb-1">Our Promise</p>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            Every Pink Payroll client is personally overseen by a senior expert and supported by a dedicated team that actually knows their business. You will never explain your situation from scratch to a stranger.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats / Trust Signals -->
+      <div class="grid grid-cols-2 gap-5">
+        {[
+          { stat: '15+', label: 'Years serving California small businesses' },
+          { stat: '5.0★', label: 'Average rating across 40+ verified reviews' },
+          { stat: '100%', label: 'US-based payroll team — no offshore outsourcing' },
+          { stat: '$0', label: 'Hidden fees. Transparent pricing, always.' },
+        ].map(({ stat, label }) => (
+          <div class="bg-white border border-brand-light-gray rounded-2xl p-6 text-center">
+            <p class="text-3xl font-extrabold text-pink mb-2">{stat}</p>
+            <p class="text-brand-gray text-xs leading-snug">{label}</p>
+          </div>
+        ))}
+        <div class="col-span-2">
+          <a href="/contact" class="block w-full bg-pink text-white font-semibold text-center py-4 rounded-full hover:bg-pink-dark transition-colors">
+            Get a Payroll Quote &rarr;
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===== SOCIAL PROOF ===== -->
-  <section class="bg-brand-light-gray/40 border-t border-brand-light-gray">
+  <section class="bg-brand-black text-white">
     <div class="max-w-5xl mx-auto px-6 py-20">
 
-      <!-- Header -->
       <div class="text-center mb-14">
-        <!-- Stars -->
         <div class="flex justify-center gap-1 mb-4">
           {[...Array(5)].map(() => (
-            <svg class="w-7 h-7 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-6 h-6 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
             </svg>
           ))}
         </div>
-        <p class="text-4xl font-extrabold text-brand-black mb-2">5.0 / 5.0</p>
-        <p class="text-brand-gray text-base mb-5">Based on 40+ verified reviews</p>
-        <!-- Platform badges -->
-        <div class="flex justify-center items-center gap-4">
-          <span class="inline-flex items-center gap-2 bg-white border border-brand-light-gray rounded-full px-4 py-1.5 text-sm font-semibold text-brand-black shadow-sm">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            Google Reviews
-          </span>
-          <span class="inline-flex items-center gap-2 bg-white border border-brand-light-gray rounded-full px-4 py-1.5 text-sm font-semibold text-brand-black shadow-sm">
-            <svg class="w-4 h-4 text-[#FF1A1A]" fill="currentColor" viewBox="0 0 24 24"><path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.59.23-1.163.199-1.593-.109-.265-.195-2.058-1.348-4.428-2.932l-.001-.001c-.004.003-.009.006-.013.01l-1.754 1.578c-.19.172-.38.263-.565.272a.604.604 0 01-.424-.162l.081-3.809-5.993-4.278c-.963-.687-.763-1.75.457-2.494.418-.252.96-.437 1.608-.487l.003-.001 14.516-5.348c1.413-.521 2.71.366 2.499 1.895l-.001.003-1.363 11.015zM9.891 17.96l.05-2.352 9.348-8.41-10.934 7.353 1.536 3.409z"/></svg>
-            Yelp
-          </span>
-        </div>
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">40+ Five-Star Reviews</p>
+        <h2 class="text-3xl font-extrabold">What California Business Owners Are Saying</h2>
       </div>
 
-      <!-- Pull Quotes -->
-      <div class="grid md:grid-cols-3 gap-6 mb-14">
-
-        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
-          <div class="flex gap-0.5 mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
-            "They make all my payments on time and keep great records. After COVID, they filed amended returns that <strong>saved me thousands of dollars.</strong> The whole staff is friendly and helpful!"
-          </blockquote>
-          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">San Diego Business Owner &bull; Yelp</figcaption>
-        </figure>
-
-        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
-          <div class="flex gap-0.5 mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
-            "Working with Pink Payroll was honestly <strong>such a breath of fresh air.</strong> After years with a horrible payroll company, I was scared to switch — but they were so patient and kind. I truly feel Pink Payroll wants their customers to be successful."
-          </blockquote>
-          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">San Diego Business Owner &bull; Yelp, 2026</figcaption>
-        </figure>
-
-        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
-          <div class="flex gap-0.5 mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
-            "I get approached by other payroll service providers on a fairly regular basis, and I always tell them <strong>I would not even consider changing providers.</strong> Their attention to detail and outstanding customer service is unmatched."
-          </blockquote>
-          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">President, Construction Company &bull; Client since 2008</figcaption>
-        </figure>
-
+      <!-- 3 featured quotes -->
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        {[
+          {
+            quote: '"They make all my payments on time and keep great records. After COVID, they filed amended returns that saved me thousands of dollars. The whole staff is friendly and helpful!"',
+            attr: 'San Diego Business Owner',
+            source: 'Yelp, 2025',
+          },
+          {
+            quote: '"Working with Pink Payroll was honestly such a breath of fresh air. After years with a horrible payroll company, I was scared to switch — but they were so patient and kind. I truly feel Pink Payroll wants their customers to be successful."',
+            attr: 'San Diego Business Owner',
+            source: 'Yelp, 2026',
+          },
+          {
+            quote: '"I get approached by other payroll service providers on a fairly regular basis, and I always tell them I would not even consider changing providers. Their attention to detail and outstanding customer service is unmatched."',
+            attr: 'President, Construction Company',
+            source: 'Client since 2008',
+          },
+        ].map(({ quote, attr, source }) => (
+          <figure class="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col">
+            <div class="flex gap-0.5 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="text-gray-300 text-sm leading-relaxed flex-1 mb-5">{quote}</blockquote>
+            <figcaption>
+              <p class="text-white text-xs font-bold">{attr}</p>
+              <p class="text-gray-500 text-xs">{source}</p>
+            </figcaption>
+          </figure>
+        ))}
       </div>
 
-      <!-- Bottom trust line -->
-      <p class="text-center text-brand-gray text-sm">
-        Proudly serving California small businesses since 2008 &mdash; restaurants, law firms, contractors, retail, and more.
+      <!-- 2 more quotes, wider -->
+      <div class="grid md:grid-cols-2 gap-5">
+        {[
+          {
+            quote: '"Pink Payroll is a true local gem. As a restaurant owner, payroll is one of those things you need to be 100% accurate every single time. I\'ve been with Pink Payroll for over 5 years — they have never let me down."',
+            attr: 'Restaurant Owner, San Diego',
+            source: 'Google Review',
+          },
+          {
+            quote: '"I have worked with multiple payroll companies over the years and no one comes close to the quality of service they provide. They go above and beyond — every single time."',
+            attr: 'San Diego Business Owner',
+            source: 'Google Review, 2025',
+          },
+        ].map(({ quote, attr, source }) => (
+          <figure class="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col">
+            <div class="flex gap-0.5 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-3.5 h-3.5 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="text-gray-300 text-sm leading-relaxed flex-1 mb-5">{quote}</blockquote>
+            <figcaption>
+              <p class="text-white text-xs font-bold">{attr}</p>
+              <p class="text-gray-500 text-xs">{source}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="bg-pink text-white">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <p class="text-pink-light text-xs font-bold uppercase tracking-widest mb-4">Ready to Switch?</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-5">We Make the Transition Easy.</h2>
+      <p class="text-pink-light text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Our team has guided hundreds of businesses away from big-box payroll companies. We handle the setup, the data migration, and the compliance details — so you don't have to.
       </p>
-
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-white text-pink font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-base">
+          Get a Payroll Quote
+        </a>
+        <a href="/switching" class="border-2 border-white/60 text-white font-semibold px-8 py-4 rounded-full hover:border-white hover:bg-white/10 transition-colors text-base">
+          How Switching Works
+        </a>
+      </div>
     </div>
   </section>
 
