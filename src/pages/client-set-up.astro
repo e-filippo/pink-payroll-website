@@ -1,13 +1,112 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HelpScout from '../components/HelpScout.astro';
 ---
 <Layout title="New Client Setup — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Get Started</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">New Client Setup</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Begin your onboarding. Full intake form coming soon.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Onboarding form — coming soon
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-3xl mx-auto px-6 py-20">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Get Started</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+        Let's Get Your Account Started.
+      </h1>
+      <p class="text-gray-300 text-xl leading-relaxed">
+        You don't need to have every document perfected to start your partnership with Pink Payroll. We are here to do the heavy lifting for you. Simply provide the basics, and our team will help you fill in the blanks.
+      </p>
     </div>
   </section>
+
+  <!-- ===== SINGLE-COLUMN CARDS ===== -->
+  <section class="max-w-3xl mx-auto px-6 py-20">
+    <div class="grid gap-6">
+
+      <!-- Card 1: New Client Data Form -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10">
+        <div class="flex gap-5 items-start mb-6">
+          <span class="text-4xl flex-shrink-0">📝</span>
+          <div>
+            <h2 class="text-2xl font-extrabold text-brand-black mb-2">The New Client Data Form</h2>
+            <p class="text-brand-gray leading-relaxed">
+              Please download the form below. You can fill it out on your computer or by hand. Don't worry about getting it 100% finished before sending it over — we just need the essentials to get the ball rolling.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-brand-light-gray/50 border border-brand-light-gray rounded-xl px-6 py-5 mb-6">
+          <p class="text-brand-black font-bold text-sm mb-3">The "Must-Haves" to get started:</p>
+          <ul class="space-y-2">
+            {['Your Company Legal Name', 'Primary Contact Information', 'Your Federal Tax ID (EIN)'].map((item) => (
+              <li class="flex gap-3 items-center">
+                <span class="w-4 h-4 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-brand-gray text-sm">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <a
+          href="/new-client-onboarding.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-pink text-white font-semibold px-6 py-3 rounded-full hover:bg-[#C62028] transition-colors text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+          </svg>
+          Download New Client Data Form (PDF)
+        </a>
+      </div>
+
+      <!-- Card 2: Secure Upload -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10">
+        <div class="flex gap-5 items-start mb-6">
+          <span class="text-4xl flex-shrink-0">🛡️</span>
+          <div>
+            <h2 class="text-2xl font-extrabold text-brand-black mb-2">Submit Your Documents Securely</h2>
+            <p class="text-brand-gray leading-relaxed">
+              If you are concerned about emailing sensitive information, we've got you covered. Use our encrypted portal to upload your completed form and any supporting documents.
+            </p>
+          </div>
+        </div>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 bg-pink text-white font-semibold px-6 py-3 rounded-full hover:bg-[#C62028] transition-colors text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3M12 3v13.5"/>
+          </svg>
+          Upload via Secure Link
+        </a>
+      </div>
+
+      <!-- Card 3: Stuck? We're Standing By -->
+      <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-10">
+        <div class="flex gap-5 items-start">
+          <span class="text-4xl flex-shrink-0">📞</span>
+          <div>
+            <h2 class="text-2xl font-extrabold text-brand-black mb-3">Stuck? We're Standing By.</h2>
+            <p class="text-brand-gray leading-relaxed mb-5">
+              If you aren't sure where to find a specific tax ID or form, don't sweat it. Send us what you have, or give us a call and we will finish the setup together.
+            </p>
+            <div class="space-y-2">
+              <p class="text-brand-gray text-sm">
+                <strong class="text-brand-black">Phone:</strong>{' '}
+                <a href="tel:8009950308" class="text-pink font-semibold hover:underline">(800) 995-0308</a>
+              </p>
+              <p class="text-brand-gray text-sm">
+                <strong class="text-brand-black">Support:</strong> Click the <strong class="text-brand-black">"Help"</strong> bubble in the bottom right corner of this page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </Layout>
+
+<HelpScout />
