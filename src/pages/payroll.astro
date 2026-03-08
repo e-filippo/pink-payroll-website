@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Payroll Services — Pink Payroll">
+
+  <!-- Page Header (placeholder until copy is finalized) -->
   <section class="max-w-5xl mx-auto px-6 py-24">
     <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Services</p>
     <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Payroll Services</h1>
@@ -10,4 +12,89 @@ import Layout from '../layouts/Layout.astro';
       Content placeholder
     </div>
   </section>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="bg-brand-light-gray/40 border-t border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+
+      <!-- Header -->
+      <div class="text-center mb-14">
+        <!-- Stars -->
+        <div class="flex justify-center gap-1 mb-4">
+          {[...Array(5)].map(() => (
+            <svg class="w-7 h-7 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <p class="text-4xl font-extrabold text-brand-black mb-2">5.0 / 5.0</p>
+        <p class="text-brand-gray text-base mb-5">Based on 40+ verified reviews</p>
+        <!-- Platform badges -->
+        <div class="flex justify-center items-center gap-4">
+          <span class="inline-flex items-center gap-2 bg-white border border-brand-light-gray rounded-full px-4 py-1.5 text-sm font-semibold text-brand-black shadow-sm">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Google Reviews
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white border border-brand-light-gray rounded-full px-4 py-1.5 text-sm font-semibold text-brand-black shadow-sm">
+            <svg class="w-4 h-4 text-[#FF1A1A]" fill="currentColor" viewBox="0 0 24 24"><path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.59.23-1.163.199-1.593-.109-.265-.195-2.058-1.348-4.428-2.932l-.001-.001c-.004.003-.009.006-.013.01l-1.754 1.578c-.19.172-.38.263-.565.272a.604.604 0 01-.424-.162l.081-3.809-5.993-4.278c-.963-.687-.763-1.75.457-2.494.418-.252.96-.437 1.608-.487l.003-.001 14.516-5.348c1.413-.521 2.71.366 2.499 1.895l-.001.003-1.363 11.015zM9.891 17.96l.05-2.352 9.348-8.41-10.934 7.353 1.536 3.409z"/></svg>
+            Yelp
+          </span>
+        </div>
+      </div>
+
+      <!-- Pull Quotes -->
+      <div class="grid md:grid-cols-3 gap-6 mb-14">
+
+        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
+            "They make all my payments on time and keep great records. After COVID, they filed amended returns that <strong>saved me thousands of dollars.</strong> The whole staff is friendly and helpful!"
+          </blockquote>
+          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">San Diego Business Owner &bull; Yelp</figcaption>
+        </figure>
+
+        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
+            "Working with Pink Payroll was honestly <strong>such a breath of fresh air.</strong> After years with a horrible payroll company, I was scared to switch — but they were so patient and kind. I truly feel Pink Payroll wants their customers to be successful."
+          </blockquote>
+          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">San Diego Business Owner &bull; Yelp, 2026</figcaption>
+        </figure>
+
+        <figure class="bg-white border border-brand-light-gray rounded-2xl p-7 flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-[#F3BD33]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-brand-black text-sm leading-relaxed flex-1 mb-5">
+            "I get approached by other payroll service providers on a fairly regular basis, and I always tell them <strong>I would not even consider changing providers.</strong> Their attention to detail and outstanding customer service is unmatched."
+          </blockquote>
+          <figcaption class="text-xs text-brand-gray font-semibold uppercase tracking-wide">President, Construction Company &bull; Client since 2008</figcaption>
+        </figure>
+
+      </div>
+
+      <!-- Bottom trust line -->
+      <p class="text-center text-brand-gray text-sm">
+        Proudly serving California small businesses since 2008 &mdash; restaurants, law firms, contractors, retail, and more.
+      </p>
+
+    </div>
+  </section>
+
 </Layout>
