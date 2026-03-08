@@ -98,6 +98,12 @@ const { title } = Astro.props;
           <li>
             <a href="/contact" class="hover:text-pink transition-colors">Contact Us</a>
           </li>
+
+          <li>
+            <a href="/book-call" class="bg-pink text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-[#C62028] transition-colors">
+              Book a Call
+            </a>
+          </li>
         </ul>
 
         <!-- Right: Login + Phone + CTA -->
@@ -141,6 +147,26 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
+
+    <!-- Pre-Footer CTA -->
+    <section class="bg-brand-light-gray/50 border-t border-brand-light-gray">
+      <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-brand-black mb-3 leading-tight">
+          Ready to Scale with a Partner Who Knows Your Name?
+        </h2>
+        <p class="text-brand-gray text-lg mb-8 leading-relaxed">
+          Stop settling for Big Box frustration. Let's build your compliance roadmap today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/book-call" class="bg-pink text-white font-bold px-8 py-4 rounded-full hover:bg-[#C62028] transition-colors text-base">
+            Schedule Your Discovery Call
+          </a>
+          <a href="/contact" class="text-brand-gray text-sm hover:text-pink transition-colors underline underline-offset-4">
+            Prefer to email? Contact us here.
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-brand-black text-gray-400">
