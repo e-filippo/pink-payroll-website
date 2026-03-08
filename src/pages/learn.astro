@@ -1,13 +1,149 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const foundations = [
+  {
+    title: 'The New Employer Checklist',
+    body: 'Everything you need before you hire your first California employee.',
+  },
+  {
+    title: 'EIN & Tax ID 101',
+    body: 'Understanding your corporate identity and filing requirements.',
+  },
+  {
+    title: 'S-Corp vs. LLC Payroll',
+    body: 'How to pay yourself (and your team) while optimizing for tax savings.',
+  },
+];
+
+const compliance = [
+  {
+    title: 'Meal & Rest Break Rules',
+    body: 'Avoiding the #1 source of labor audits in California.',
+  },
+  {
+    title: 'Overtime vs. Salary',
+    body: 'The strict "Exempt vs. Non-Exempt" rules you must follow.',
+  },
+  {
+    title: "Workers' Comp Basics",
+    body: 'Protecting your team and your assets from day one.',
+  },
+];
 ---
-<Layout title="Learn About Payroll — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Discover</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Learn More About Payroll</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+<Layout title="Payroll & HR Education — Pink Payroll">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Resource Vault</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-3xl">
+        Professional Payroll<br class="hidden md:block" />
+        <span class="text-pink">&amp; HR Education.</span>
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        We don't believe in "DIY" payroll. We believe in professional standards. This library is designed for the serious California business owner who is moving beyond the "hobbyist" phase and into a high-growth, compliant organization.
+      </p>
     </div>
   </section>
+
+  <!-- ===== FOUNDATIONS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="mb-12">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">📘 Getting Started</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-3">Foundations for Serious Growth</h2>
+      <p class="text-brand-gray text-lg max-w-2xl">
+        The transition from a solo venture to an employer is a legal milestone. These resources ensure you start with a solid foundation.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-6">
+      {foundations.map(({ title, body }) => (
+        <a
+          href="#"
+          class="group flex flex-col gap-4 bg-white border border-brand-light-gray rounded-2xl shadow-sm p-7 transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-pink/40"
+        >
+          <div class="w-10 h-10 rounded-xl bg-pink/10 flex items-center justify-center group-hover:bg-pink transition-colors duration-200">
+            <svg class="w-5 h-5 text-pink group-hover:text-white transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-brand-black group-hover:text-pink transition-colors duration-200 leading-snug">{title}</h3>
+          <p class="text-brand-gray text-sm leading-relaxed flex-1">{body}</p>
+          <span class="inline-flex items-center gap-1 text-pink text-xs font-bold uppercase tracking-widest mt-auto">
+            Read Guide
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== CALIFORNIA COMPLIANCE ===== -->
+  <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="mb-12">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">⚖️ Advanced</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-3">California Compliance Deep-Dives</h2>
+        <p class="text-brand-gray text-lg max-w-2xl">
+          California is the most litigious state in the country for employers. Ignorance is not a legal defense — education is your first line of protection.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        {compliance.map(({ title, body }) => (
+          <a
+            href="#"
+            class="group flex flex-col gap-4 bg-white border border-brand-light-gray rounded-2xl shadow-sm p-7 transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-pink/40"
+          >
+            <div class="w-10 h-10 rounded-xl bg-pink/10 flex items-center justify-center group-hover:bg-pink transition-colors duration-200">
+              <svg class="w-5 h-5 text-pink group-hover:text-white transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97z"/>
+              </svg>
+            </div>
+            <h3 class="font-extrabold text-brand-black group-hover:text-pink transition-colors duration-200 leading-snug">{title}</h3>
+            <p class="text-brand-gray text-sm leading-relaxed flex-1">{body}</p>
+            <span class="inline-flex items-center gap-1 text-pink text-xs font-bold uppercase tracking-widest mt-auto">
+              Read Guide
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOT FOR ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="max-w-2xl mx-auto">
+      <div class="border-l-4 border-[#C62028] bg-[#C62028]/5 rounded-r-2xl px-8 py-7">
+        <p class="text-[#C62028] text-xs font-bold uppercase tracking-widest mb-3">🚫 Important Notice</p>
+        <h2 class="text-2xl font-extrabold text-brand-black mb-4">Who This Is NOT For</h2>
+        <p class="text-brand-gray leading-relaxed">
+          If you are looking for "under the table" advice, DIY software hacks, or "gray area" tax strategies, you are in the wrong place. We only partner with business owners who value <strong class="text-brand-black">compliance and long-term stability.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="bg-pink text-white">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <div class="text-5xl mb-6">🛠️</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Need a Professional Opinion?</h2>
+      <p class="text-pink-light text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Don't guess with your company's future. If you have a specific compliance question or are preparing to scale your team, our leadership is standing by.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-white text-pink font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-base"
+      >
+        Book a Strategic Consultation
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </Layout>
