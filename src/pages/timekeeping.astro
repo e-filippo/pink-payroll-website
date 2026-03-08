@@ -4,175 +4,187 @@ import HelpScout from '../components/HelpScout.astro';
 ---
 <Layout title="Timekeeping Solutions — Pink Payroll">
 
-  <!-- ===== DARK URGENCY HERO ===== -->
+  <!-- ===== HERO ===== -->
   <section class="bg-brand-black text-white">
     <div class="max-w-5xl mx-auto px-6 py-24">
       <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Timekeeping Solutions</p>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-3xl">
-        Stop "Time Theft" Before It Hits<br class="hidden md:block" />
-        <span class="text-pink">Your Bottom Line.</span>
+        Stop "Time Theft" and<br class="hidden md:block" />
+        <span class="text-pink">Reclaim Your Profitability.</span>
       </h1>
-      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed mb-10">
-        Manual timesheets aren't just a headache — they are a leak in your cash flow. Between "buddy punching" and rounding errors, the average business loses 2–5% of their total payroll to inaccurate tracking.
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        Manual timesheets aren't just a headache — they are a leak in your cash flow. If you aren't tracking time digitally, you are likely paying for labor that never happened.
       </p>
-      <!-- Stat bar -->
-      <div class="inline-flex items-center gap-4 bg-white/10 border border-white/20 rounded-2xl px-8 py-5">
-        <p class="text-4xl font-extrabold text-pink">2–5%</p>
-        <p class="text-gray-300 text-sm leading-snug max-w-xs">of total payroll lost on average to inaccurate time tracking. We provide the digital and physical shields to keep your labor costs honest.</p>
-      </div>
     </div>
   </section>
 
-  <!-- ===== HARDWARE: RIGHT CLOCK FOR EVERY JOB ===== -->
+  <!-- ===== CASE STUDIES ===== -->
   <section class="max-w-5xl mx-auto px-6 py-20">
     <div class="text-center mb-14">
-      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Hardware & Software</p>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">The Right Clock for Every Job Site</h2>
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">The Numbers Don't Lie</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">📉 The Real Cost of "Wasted Minutes"</h2>
       <p class="text-brand-gray text-lg max-w-2xl mx-auto">
-        We don't believe in "one size fits all." Whether you have a professional office or a rugged construction site, we have the hardware to match.
+        Small errors add up to massive annual losses. Consider these two common scenarios:
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
 
-      <!-- Digital & Mobile -->
-      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-5">
-        <div class="text-4xl">🤳</div>
-        <div>
-          <h3 class="text-xl font-extrabold text-brand-black mb-1">Digital & Mobile</h3>
-          <p class="text-pink text-xs font-bold uppercase tracking-widest">The Virtual Clock</p>
-        </div>
+      <!-- Case #1 -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-4">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest">Case #1</p>
+        <h3 class="text-xl font-extrabold text-brand-black">The 4-Minute Leak</h3>
         <p class="text-brand-gray leading-relaxed">
-          Perfect for remote teams or desk-based staff. No app store clutter — employees can simply pin our secure browser-based portal to their home screen for instant access.
+          Just 15 employees receiving pay for merely <strong class="text-brand-black">4 minutes of "wasted" time</strong> per day — untracked breaks, extended lunches, or rounded punch times — totals <strong class="text-brand-black">23 hours of additional pay</strong> per month.
         </p>
-        <div class="bg-brand-light-gray/50 border border-brand-light-gray rounded-xl px-5 py-4 flex gap-3 items-start">
-          <span class="text-xl flex-shrink-0">📍</span>
-          <p class="text-brand-gray text-sm leading-relaxed">
-            <strong class="text-brand-black">Geofencing included:</strong> Ensures punches only happen where they are supposed to — no remote clock-ins from the couch.
+        <div class="mt-auto bg-pink/5 border border-pink/20 rounded-xl px-5 py-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-pink mb-1">The Cost</p>
+          <p class="text-brand-black font-semibold text-sm leading-relaxed">
+            At an average pay rate of $20.00/hr, you are losing <strong>$460.00 every single month</strong> to the "void."
           </p>
         </div>
       </div>
 
-      <!-- Biometric & Physical -->
-      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-5">
-        <div class="text-4xl">🧬</div>
-        <div>
-          <h3 class="text-xl font-extrabold text-brand-black mb-1">Biometric & Physical</h3>
-          <p class="text-pink text-xs font-bold uppercase tracking-widest">The Wall Clock</p>
-        </div>
+      <!-- Case #2 -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-4">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest">Case #2</p>
+        <h3 class="text-xl font-extrabold text-brand-black">The Admin Burden</h3>
         <p class="text-brand-gray leading-relaxed">
-          The ultimate defense against buddy punching. Three hardware tiers to match your environment:
+          The average payroll clerk spends <strong class="text-brand-black">7 minutes per time card</strong> verifying totals and reconstructing lost data. Preparing just 25 manual time cards takes nearly <strong class="text-brand-black">3 hours per pay period.</strong>
         </p>
-        <ul class="space-y-3">
-          <li class="flex gap-3">
-            <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-              <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            </span>
-            <p class="text-brand-gray text-sm leading-relaxed">
-              <strong class="text-brand-black">Biometric (Fingerprint/Face):</strong> Verification through unique biological traits ensures the person on the clock is the person on the job.
-            </p>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-              <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            </span>
-            <p class="text-brand-gray text-sm leading-relaxed">
-              <strong class="text-brand-black">Proximity & Key Code:</strong> Use standard key cards, fobs, or custom PINs for high-speed entry.
-            </p>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-              <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            </span>
-            <p class="text-brand-gray text-sm leading-relaxed">
-              <strong class="text-brand-black">Rugged Edition:</strong> Weather-resistant, drop-proof, and mobile-ready for outdoor job sites.
-            </p>
-          </li>
-        </ul>
+        <div class="mt-auto bg-pink/5 border border-pink/20 rounded-xl px-5 py-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-pink mb-1">The Cost</p>
+          <p class="text-brand-black font-semibold text-sm leading-relaxed">
+            At a $25.00/hr clerical wage, you're spending over <strong>$150.00 a month</strong> just on the "act" of counting hours.
+          </p>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ===== BYOT: SEAMLESS IMPORTS ===== -->
+  <!-- ===== SECURE DIGITAL TIMEKEEPING ===== -->
   <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
     <div class="max-w-5xl mx-auto px-6 py-20">
-      <div class="flex flex-col md:flex-row gap-12 items-start">
-        <div class="flex-shrink-0 text-5xl">🔌</div>
-        <div class="flex-1">
-          <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Bring Your Own Tech</p>
-          <h2 class="text-3xl font-extrabold text-brand-black mb-4">Seamless Imports — We Play Well with Others</h2>
-          <p class="text-brand-gray text-lg leading-relaxed mb-8">
-            Already love your current system? No problem. We can create custom imports for the industry's most popular tools:
+      <div class="text-center mb-14">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Platform</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">🧬 Secure Digital Timekeeping</h2>
+        <p class="text-brand-gray text-lg max-w-2xl mx-auto">
+          We utilize the iSolved© platform to bring your timekeeping into the 21st century. No software to buy or install — just secure, cloud-based precision.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Digital & Mobile -->
+        <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-4">
+          <div class="text-4xl">🤳</div>
+          <div>
+            <h3 class="text-xl font-extrabold text-brand-black mb-1">Digital & Mobile</h3>
+            <p class="text-pink text-xs font-bold uppercase tracking-widest">The Virtual Clock</p>
+          </div>
+          <p class="text-brand-gray leading-relaxed">
+            Employees can simply pin our secure browser-based portal to their home screen for instant access. Includes <strong class="text-brand-black">Geofencing</strong> to ensure staff are actually on-site when they clock in.
           </p>
-          <div class="grid sm:grid-cols-3 gap-5">
-            <div class="bg-white border border-brand-light-gray rounded-xl p-5 shadow-sm">
-              <p class="text-brand-black font-extrabold text-sm mb-2">🍽️ Restaurants</p>
-              <p class="text-brand-gray text-sm leading-relaxed">Toast, Aloha, Clover</p>
-            </div>
-            <div class="bg-white border border-brand-light-gray rounded-xl p-5 shadow-sm">
-              <p class="text-brand-black font-extrabold text-sm mb-2">🛍️ Retail & Service</p>
-              <p class="text-brand-gray text-sm leading-relaxed">Homebase, Deputy, QuickBooks Time</p>
-            </div>
-            <div class="bg-white border border-brand-light-gray rounded-xl p-5 shadow-sm">
-              <p class="text-brand-black font-extrabold text-sm mb-2">🔧 Field Services</p>
-              <p class="text-brand-gray text-sm leading-relaxed">Workyard, Clockify</p>
-            </div>
+        </div>
+
+        <!-- Biometric & Physical -->
+        <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 flex flex-col gap-4">
+          <div class="text-4xl">🧬</div>
+          <div>
+            <h3 class="text-xl font-extrabold text-brand-black mb-1">Biometric & Physical</h3>
+            <p class="text-pink text-xs font-bold uppercase tracking-widest">The Wall Clock</p>
+          </div>
+          <p class="text-brand-gray leading-relaxed mb-2">The ultimate defense against "buddy punching."</p>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="text-brand-gray text-sm leading-relaxed">
+                <strong class="text-brand-black">Biometric (Fingerprint/Face):</strong> Verification through unique biological traits ensures the right person is on the clock.
+              </p>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="text-brand-gray text-sm leading-relaxed">
+                <strong class="text-brand-black">Proximity & Key Code:</strong> Use standard key cards, fobs, or custom PINs for high-speed entry.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEAMLESS IMPORTS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="flex flex-col md:flex-row gap-12 items-start max-w-3xl">
+      <div class="flex-shrink-0 text-5xl">🔌</div>
+      <div class="flex-1">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Bring Your Own Tech</p>
+        <h2 class="text-3xl font-extrabold text-brand-black mb-4">Seamless Software Imports</h2>
+        <p class="text-brand-gray text-lg leading-relaxed mb-8">
+          Already love your current system? No problem. We can create custom imports for the industry's most popular tools:
+        </p>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="bg-white border border-brand-light-gray rounded-xl p-5 shadow-sm">
+            <p class="text-brand-black font-extrabold text-sm mb-2">🍽️ Restaurants</p>
+            <p class="text-brand-gray text-sm">Toast, Aloha, Clover</p>
+          </div>
+          <div class="bg-white border border-brand-light-gray rounded-xl p-5 shadow-sm">
+            <p class="text-brand-black font-extrabold text-sm mb-2">🛍️ Retail & Service</p>
+            <p class="text-brand-gray text-sm">Homebase, Deputy, QuickBooks Time</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== BENEFITS TABLE ===== -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
-    <div class="text-center mb-12">
-      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Why It Matters</p>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black">📊 Benefits at a Glance</h2>
-    </div>
-
-    <div class="max-w-3xl mx-auto overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b-2 border-brand-light-gray">
-            <th class="text-left py-4 pr-6 text-brand-gray font-semibold uppercase tracking-wide text-xs w-2/5">Feature</th>
-            <th class="text-left py-4 text-brand-gray font-semibold uppercase tracking-wide text-xs">Benefit to You</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-brand-light-gray">
-          {[
-            { feature: 'Integrated Payroll',    benefit: 'No more manual entry — time flows directly to your gross pay.' },
-            { feature: 'Real-Time Alerts',      benefit: 'Get notified of missed breaks or approaching overtime before it becomes a problem.' },
-            { feature: 'Labor Costing',         benefit: 'Track hours by job, department, or specific project.' },
-            { feature: 'Compliance Shield',     benefit: 'Automated tracking for CA-mandated lunch and rest breaks.' },
-          ].map(({ feature, benefit }) => (
-            <tr>
-              <td class="py-4 pr-6 font-bold text-brand-black">{feature}</td>
-              <td class="py-4 text-brand-gray leading-relaxed">{benefit}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
+  <!-- ===== BENEFITS TABLE + CTA ===== -->
   <section class="bg-pink text-white">
-    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
-      <div class="text-5xl mb-6">🚀</div>
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Get the Demo</h2>
-      <p class="text-pink-light text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-        Want to see the biometric clocks in action or check your software's compatibility? Let's find the right fit for your team.
-      </p>
-      <a
-        href="/contact"
-        class="inline-flex items-center gap-2 bg-white text-pink font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-base"
-      >
-        Request a Timekeeping Demo
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-        </svg>
-      </a>
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-2">📊 Benefits at a Glance</h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto mb-12 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-white/30">
+              <th class="text-left py-4 pr-6 text-pink-light font-semibold uppercase tracking-wide text-xs w-2/5">Feature</th>
+              <th class="text-left py-4 text-pink-light font-semibold uppercase tracking-wide text-xs">Benefit to You</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/20">
+            {[
+              { feature: 'Integrated Payroll', benefit: 'Time flows directly to paychecks — zero manual entry.' },
+              { feature: 'Real-Time Alerts',   benefit: 'Get notified of missed breaks or unauthorized overtime.' },
+              { feature: 'CA Compliance',      benefit: 'Automated tracking for mandated lunch and rest breaks.' },
+            ].map(({ feature, benefit }) => (
+              <tr>
+                <td class="py-4 pr-6 font-bold text-white">{feature}</td>
+                <td class="py-4 text-pink-light leading-relaxed">{benefit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 bg-white text-pink font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-base"
+        >
+          Request a Timekeeping Demo
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
