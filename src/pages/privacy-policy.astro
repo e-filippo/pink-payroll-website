@@ -2,12 +2,151 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Privacy Policy — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Legal</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Privacy Policy</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+
+  <!-- ===== HEADER ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3">Privacy Policy</h1>
+      <p class="text-gray-400 text-sm">Last Updated: March 8, 2026</p>
     </div>
   </section>
+
+  <!-- ===== CONTENT ===== -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+
+    <p class="text-brand-gray text-lg leading-relaxed mb-10">
+      Pink Payroll ("we," "us," or "our") respects your privacy and is committed to protecting the personal data of our clients and their employees. This Privacy Policy explains how we collect, use, and safeguard information across all 50 U.S. states.
+    </p>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 1 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">1. Information We Collect</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        To provide payroll and tax services, we collect "Personally Identifiable Information" (PII), including:
+      </p>
+      <ul class="space-y-3">
+        {[
+          { label: 'Identifiers', text: 'Names, physical addresses, email addresses, and Social Security Numbers (SSNs).' },
+          { label: 'Financial Info', text: 'Bank account numbers, salary data, and tax filing statuses.' },
+          { label: 'Professional Info', text: 'Job titles, hire dates, and benefit elections.' },
+        ].map(({ label, text }) => (
+          <li class="flex gap-3">
+            <span class="mt-1 w-4 h-4 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
+              <svg class="w-2.5 h-2.5 text-brand-gray" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3"/></svg>
+            </span>
+            <p class="text-brand-gray leading-relaxed"><strong class="text-brand-black">{label}:</strong> {text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 2 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">2. How We Use Your Information</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">We use this data strictly for business purposes:</p>
+      <ul class="space-y-3 mb-5">
+        {[
+          'Processing payroll and issuing payments.',
+          'Filing state and federal tax returns on your behalf.',
+          'Providing HR resources and software access.',
+        ].map((item) => (
+          <li class="flex gap-3">
+            <span class="mt-1 w-4 h-4 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
+              <svg class="w-2.5 h-2.5 text-brand-gray" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3"/></svg>
+            </span>
+            <p class="text-brand-gray leading-relaxed">{item}</p>
+          </li>
+        ))}
+      </ul>
+      <div class="border-l-4 border-pink bg-pink/5 rounded-r-xl px-5 py-4">
+        <p class="text-brand-black font-semibold text-sm">We do NOT sell your personal information or your employees' data to third-party advertisers.</p>
+      </div>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 3 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">3. Data Sharing & Third Parties</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">We only share information with third parties necessary to fulfill our service obligations:</p>
+      <ul class="space-y-3">
+        {[
+          { label: 'Taxing Authorities', text: 'IRS and state/local tax agencies.' },
+          { label: 'Service Partners', text: 'iSolved© (our secure portal partner) and insurance/benefit providers as directed by you.' },
+          { label: 'Legal Requirements', text: 'When required by law, subpoena, or government audit.' },
+        ].map(({ label, text }) => (
+          <li class="flex gap-3">
+            <span class="mt-1 w-4 h-4 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
+              <svg class="w-2.5 h-2.5 text-brand-gray" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3"/></svg>
+            </span>
+            <p class="text-brand-gray leading-relaxed"><strong class="text-brand-black">{label}:</strong> {text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 4 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">4. Your Rights (CCPA/CPRA & Multi-State Compliance)</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">Regardless of which state you reside in, Pink Payroll provides the following rights to our clients:</p>
+      <ul class="space-y-3">
+        {[
+          { label: 'Right to Know', text: 'You may request a list of the categories of data we collect.' },
+          { label: 'Right to Delete', text: 'You may request that we delete personal data (subject to IRS and state record-keeping requirements).' },
+          { label: 'Right to Correct', text: 'You may update inaccurate information through our secure portal.' },
+        ].map(({ label, text }) => (
+          <li class="flex gap-3">
+            <span class="mt-1 w-4 h-4 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
+              <svg class="w-2.5 h-2.5 text-brand-gray" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3"/></svg>
+            </span>
+            <p class="text-brand-gray leading-relaxed"><strong class="text-brand-black">{label}:</strong> {text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 5 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">5. Security Standards</h2>
+      <p class="text-brand-gray leading-relaxed">
+        We implement industry-standard security measures, including data encryption and secure socket layer (SSL) technology, to protect sensitive data during transmission and storage.
+      </p>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Section 6 -->
+    <div class="mb-10">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">6. Children's Privacy</h2>
+      <p class="text-brand-gray leading-relaxed">
+        Our services are not intended for individuals under the age of 16. We do not knowingly collect data from children.
+      </p>
+    </div>
+
+    <hr class="border-brand-light-gray mb-10" />
+
+    <!-- Contact -->
+    <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-8">
+      <h2 class="text-xl font-extrabold text-brand-black mb-4">Contact Our Privacy Team</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        If you have questions about this policy or wish to exercise your data rights, please contact us:
+      </p>
+      <div class="space-y-1 text-brand-gray text-sm">
+        <p class="font-bold text-brand-black">Pink Payroll</p>
+        <p><a href="tel:8009950308" class="text-pink hover:underline">(800) 995-0308</a></p>
+        <p class="text-brand-gray/60 italic">[Your Physical Address Here]</p>
+      </div>
+    </div>
+
+  </section>
+
 </Layout>
