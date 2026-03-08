@@ -1,13 +1,107 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const employerDemos = [
+  { title: 'Enter Payroll',        hover: 'See the 3-minute entry process' },
+  { title: 'Process Payroll',      hover: 'Finalize and fund in two clicks' },
+  { title: 'Payroll Reports',      hover: 'Access 100+ real-time reports' },
+  { title: 'Onboard New Employee', hover: 'Fast, paperless employee setup' },
+];
+
+const employeeDemos = [
+  { title: 'Login & Menu Navigation', hover: 'A quick tour of the ESS portal' },
+  { title: 'Access Paystubs & W-2s',  hover: 'How employees pull their own records' },
+];
 ---
 <Layout title="Payroll Software & Demos — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Our Services</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Payroll Software &amp; Demos</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Quick-Look Demos</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-3xl">
+        See Pink Payroll<br class="hidden md:block" />
+        <span class="text-pink">in Action.</span>
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        Our 60-second "Quick-Look" demos show you exactly how easy it is to manage your team. No long webinars, no sales pitches — just the software in action.
+      </p>
     </div>
   </section>
+
+  <!-- ===== EMPLOYER DEMOS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="mb-10">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2">Employer View</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-3">For the Employer</h2>
+      <p class="text-brand-gray text-lg">Simple workflows designed to get you in, out, and back to your business.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {employerDemos.map(({ title, hover }) => (
+        <a
+          href="#"
+          class="group relative flex flex-col items-center justify-center text-center gap-4 bg-white border border-brand-light-gray rounded-2xl shadow-sm p-8 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg hover:border-pink/40"
+        >
+          <!-- Play icon -->
+          <div class="w-14 h-14 rounded-full bg-pink/10 flex items-center justify-center group-hover:bg-pink transition-colors duration-200">
+            <svg class="w-6 h-6 text-pink group-hover:text-white transition-colors duration-200 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <!-- Title -->
+          <p class="font-extrabold text-brand-black text-sm leading-snug group-hover:text-pink transition-colors duration-200">{title}</p>
+          <!-- Hover label -->
+          <p class="text-brand-gray text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-4 left-0 right-0 px-4">{hover}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== EMPLOYEE DEMOS ===== -->
+  <section class="bg-brand-light-gray/40 border-y border-brand-light-gray">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="mb-10">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2">Employee View</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-3">For the Employee</h2>
+        <p class="text-brand-gray text-lg">Empower your team with secure, 24/7 access to their own data.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5 max-w-2xl">
+        {employeeDemos.map(({ title, hover }) => (
+          <a
+            href="#"
+            class="group relative flex flex-col items-center justify-center text-center gap-4 bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg hover:border-pink/40"
+          >
+            <div class="w-14 h-14 rounded-full bg-pink/10 flex items-center justify-center group-hover:bg-pink transition-colors duration-200">
+              <svg class="w-6 h-6 text-pink group-hover:text-white transition-colors duration-200 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <p class="font-extrabold text-brand-black text-sm leading-snug group-hover:text-pink transition-colors duration-200">{title}</p>
+            <p class="text-brand-gray text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-4 left-0 right-0 px-4">{hover}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Ready for a Live Walk-Through?</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">Like what you see?</h2>
+    <p class="text-brand-gray text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+      Our demos are just a snapshot. Book a personalized walk-through and we'll show you exactly how it works for your specific business.
+    </p>
+    <a
+      href="/book-call"
+      class="inline-flex items-center gap-2 bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-[#C62028] transition-colors text-base"
+    >
+      Book a Live Demo
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+      </svg>
+    </a>
+  </section>
+
 </Layout>
