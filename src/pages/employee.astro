@@ -1,13 +1,101 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HelpScout from '../components/HelpScout.astro';
 ---
-<Layout title="Employee Resources — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Resources</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Employee Resources</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+<Layout title="Employee Resource Center — Pink Payroll">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Employee Portal</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+        Employee Resource Center
+      </h1>
+      <p class="text-gray-300 text-xl max-w-xl leading-relaxed">
+        Access your pay stubs, tax forms, and company resources securely.
+      </p>
     </div>
   </section>
+
+  <!-- ===== UTILITY HUB CARDS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid gap-6 max-w-3xl">
+
+      <!-- Card 1: Employee Self-Service -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">🔐</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Employee Self-Service (ESS)</h2>
+          <p class="text-brand-gray leading-relaxed mb-6">
+            View your historical pay stubs, download W-2s, and update your personal information through our secure partner portal.
+          </p>
+          <a
+            href="https://llrx.myisolved.com/UserLogin.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-pink text-white font-semibold px-6 py-3 rounded-full hover:bg-[#C62028] transition-colors text-sm"
+          >
+            Login to Employee Portal
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Common Tax Forms -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">📥</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Common Tax Forms</h2>
+          <p class="text-brand-gray leading-relaxed mb-6">
+            Need to update your withholdings? Download the latest compliance forms directly from the IRS and EDD below.
+          </p>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="https://www.irs.gov/pub/irs-pdf/fw4.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-brand-black font-semibold text-sm border border-brand-light-gray rounded-full px-5 py-2.5 hover:border-pink hover:text-pink transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                </svg>
+                Federal W-4 (PDF)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de4.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-brand-black font-semibold text-sm border border-brand-light-gray rounded-full px-5 py-2.5 hover:border-pink hover:text-pink transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                </svg>
+                California DE-4 (PDF)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: Need Assistance -->
+      <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">🛠️</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Need Assistance?</h2>
+          <p class="text-brand-gray leading-relaxed">
+            If you have trouble logging in or need to verify your records, click the <strong class="text-brand-black">"Help"</strong> bubble in the bottom right corner to submit a support request.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </Layout>
+
+<HelpScout />
