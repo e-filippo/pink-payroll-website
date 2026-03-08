@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GHLQuoteForm from '../components/GHLQuoteForm.astro';
 ---
 <Layout title="Contact — Pink Payroll">
 
@@ -98,21 +99,13 @@ import Layout from '../layouts/Layout.astro';
       <!-- RIGHT: Cols 8–12 -->
       <div class="lg:col-span-5">
         <div class="bg-white border border-brand-light-gray rounded-2xl shadow-lg p-10">
-          <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2">Ready to Get Started?</p>
-          <h3 class="text-2xl font-extrabold text-brand-black mb-2">Contact Form</h3>
-          <p class="text-brand-gray text-sm mb-8">Fill out the form below and a member of our team will be in touch within one business day.</p>
+          <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2 text-center">Ready to Get Started?</p>
+          <h3 class="text-2xl font-extrabold text-brand-black mb-1 text-center">Simplified Payroll Starts Here.</h3>
+          <p class="text-brand-gray text-sm mb-6 text-center">Fill out the form below and a member of our team will be in touch within one business day.</p>
 
-          <!-- GHL Form Placeholder -->
-          <div class="bg-brand-light-gray/50 border-2 border-dashed border-brand-light-gray rounded-xl flex flex-col items-center justify-center py-20 px-6 text-center">
-            <svg class="w-10 h-10 text-brand-gray mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m-7.5 3h15A2.25 2.25 0 0021 15.75V8.25A2.25 2.25 0 0018.75 6H5.25A2.25 2.25 0 003 8.25v7.5A2.25 2.25 0 005.25 18z"/>
-            </svg>
-            <p class="text-brand-gray font-semibold text-sm">HighLevel (GHL) Form</p>
-            <p class="text-brand-gray/70 text-xs mt-1">Embed code goes here</p>
-          </div>
+          <GHLQuoteForm />
 
-          <!-- Trust line -->
-          <p class="text-center text-xs text-brand-gray mt-6">
+          <p class="text-center text-xs text-brand-gray mt-4">
             🔒 Your information is private and never sold. Ever.
           </p>
         </div>

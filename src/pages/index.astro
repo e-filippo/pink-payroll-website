@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GHLQuoteForm from '../components/GHLQuoteForm.astro';
 ---
 
 <Layout title="Pink Payroll — Payroll Services for California Small Businesses">
@@ -80,54 +81,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Right: Get a Quote Box (1/3) -->
-      <div class="bg-white text-brand-black rounded-2xl p-8 shadow-2xl sticky top-24">
-        <h3 class="text-xl font-extrabold mb-1">Get Your Price</h3>
-        <p class="text-brand-gray text-sm mb-6">Fast, no-obligation quote in under 60 seconds.</p>
-
-        <form class="flex flex-col gap-3">
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Full Name</label>
-            <input type="text" placeholder="Jane Smith"
-              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Business Email</label>
-            <input type="email" placeholder="jane@yourbusiness.com"
-              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Phone Number</label>
-            <input type="tel" placeholder="(555) 000-0000"
-              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Company Name</label>
-            <input type="text" placeholder="Acme Co."
-              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Number of Employees</label>
-            <select class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10">
-              <option value="" disabled selected>Select a range</option>
-              <option>1–5</option>
-              <option>6–20</option>
-              <option>21–50</option>
-              <option>51–100</option>
-              <option>100+</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-semibold mb-1 text-brand-black">Current Payroll Provider</label>
-            <input type="text" placeholder="e.g. ADP, Gusto, None"
-              class="w-full border border-brand-light-gray rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-pink focus:ring-2 focus:ring-pink/10" />
-          </div>
-          <button type="submit"
-            class="w-full bg-pink text-white font-semibold py-3 rounded-full hover:bg-pink-dark transition-colors mt-1 text-sm">
-            Get My Free Quote &rarr;
-          </button>
-          <p class="text-center text-xs text-brand-gray">No spam. No pressure. Just a price.</p>
-        </form>
+      <!-- Right: GHL Quote Form (1/3) -->
+      <div class="bg-white text-brand-black rounded-2xl p-8 shadow-2xl">
+        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2 text-center">Get Started</p>
+        <h3 class="text-2xl font-extrabold text-center text-brand-black mb-1">Simplified Payroll Starts Here.</h3>
+        <p class="text-brand-gray text-sm text-center mb-6">Fast, no-obligation quote — we'll reach out within one business day.</p>
+        <GHLQuoteForm />
       </div>
 
     </div>
@@ -172,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
              alt="California Payroll Certification Badge 2026"
              class="h-28 w-auto flex-shrink-0" />
         <div>
-          <h4 class="font-bold text-lg mb-2">California Certified. Nearly 20 Years of Experience.</h4>
+          <h4 class="font-bold text-lg mb-2">California Certified. 18+ Years of Experience.</h4>
           <p class="text-brand-gray text-sm leading-relaxed max-w-2xl">
             Pink Payroll holds current California payroll certification, keeping your business compliant with every state and local requirement — year after year.
           </p>
@@ -192,6 +151,39 @@ import Layout from '../layouts/Layout.astro';
       <a href="/switching" class="bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors inline-block">
         See Our Painless Switch Process
       </a>
+    </div>
+  </section>
+
+
+  <!-- ===== FOUNDER MESSAGE ===== -->
+  <section class="bg-brand-light-gray/40 border-t border-brand-light-gray">
+    <div class="max-w-3xl mx-auto px-6 py-20">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-4 text-center">A Message from Our Founder</p>
+      <h2 class="text-3xl font-extrabold text-brand-black mb-10 text-center">Why Erica Built This Company</h2>
+
+      <div class="bg-white border-l-4 border-pink rounded-xl shadow-sm p-8 mb-8">
+        <blockquote class="text-brand-black text-xl font-semibold leading-relaxed mb-4">
+          "If you call your provider, the person who answers should actually have the answer. No transfers, no case numbers — just help."
+        </blockquote>
+        <figcaption class="text-brand-gray text-sm font-semibold">
+          Erica Filippo &mdash; Founder &amp; CEO, Pink Payroll
+        </figcaption>
+      </div>
+
+      <p class="text-brand-gray text-lg leading-relaxed mb-5">
+        Erica Filippo started Pink Payroll after experiencing the same payroll frustrations you face today. She wanted quick answers — but instead was stuck with 50-digit security codes, endless hold music, and "support" reps who didn't know a payroll report from a bowl of spaghetti.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        Erica believed that if you call your provider, the person who answers should actually have the answer. No transfers, no "case numbers," just help.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-8">
+        Nearly 18 years later, that simple promise is why our very first clients are still with us.
+      </p>
+      <div class="text-center">
+        <a href="/about" class="inline-block bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
+          Meet the Team &rarr;
+        </a>
+      </div>
     </div>
   </section>
 
