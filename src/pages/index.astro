@@ -50,7 +50,7 @@ import GHLQuoteForm from '../components/GHLQuoteForm.astro';
   </div>
 
   <!-- Reality Check + Get a Quote -->
-  <section id="quote" class="bg-[#F9F9F9] py-20 px-6">
+  <section id="quote" class="bg-white py-20 px-6">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-0 items-start">
 
       <!-- Left (40%): Hard Truth copy -->
@@ -84,12 +84,14 @@ import GHLQuoteForm from '../components/GHLQuoteForm.astro';
       <!-- Center (15%): breathing room -->
       <div class="hidden lg:block lg:w-[15%]"></div>
 
-      <!-- Right (35%): GHL Quote Form -->
+      <!-- Right (35%): GHL Quote Form — Pink Box -->
       <div class="w-full lg:w-[35%] mt-12 lg:mt-0">
-        <p class="text-pink text-xs font-bold uppercase tracking-widest mb-2 text-center">Get Started</p>
-        <h3 class="text-2xl font-extrabold text-center text-[#2D2D2D] mb-1">Simplified Payroll Starts Here.</h3>
-        <p class="text-brand-gray text-sm text-center mb-6">Fast, no-obligation quote — we'll reach out within one business day.</p>
-        <div class="bg-white border border-brand-light-gray rounded-2xl shadow-md p-6">
+        <div
+          style="background:#E7365A; border-radius:12px; padding:40px; box-shadow:0 8px 32px rgba(0,0,0,0.10);"
+        >
+          <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-2 text-center">Get Started</p>
+          <h3 class="text-2xl font-extrabold text-center text-white mb-2">Simplified Payroll Starts Here</h3>
+          <p class="text-white/80 text-sm text-center mb-6 leading-relaxed">Fast, no-obligation quote — we'll reach out within one business day.</p>
           <GHLQuoteForm />
         </div>
       </div>
