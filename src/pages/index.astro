@@ -33,15 +33,15 @@ import GHLQuoteForm from '../components/GHLQuoteForm.astro';
     </div>
   </section>
 
-  <!-- Social Proof -->
-  <div class="border-y border-brand-light-gray py-10 bg-white">
+  <!-- Social Proof / Logo Bar -->
+  <div style="background:#F4F4F4; border-top:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; padding:60px 0;">
     <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-xs font-bold uppercase tracking-widest text-brand-gray mb-6">
+      <p class="text-center text-xs font-bold uppercase tracking-widest mb-8" style="color:#2D2D2D; letter-spacing:0.12em;">
         Trusted by California businesses across every industry
       </p>
       <div class="flex flex-wrap items-center justify-center gap-5">
         {Array.from({length: 6}).map(() => (
-          <div class="w-32 h-12 bg-gray-100 border border-brand-light-gray rounded-lg flex items-center justify-center text-xs text-brand-gray font-medium">
+          <div class="w-32 h-12 bg-white border border-[#E1E1E1] rounded-lg flex items-center justify-center text-xs font-medium" style="opacity:0.45; filter:grayscale(100%); color:#808284;">
             Client Logo
           </div>
         ))}
