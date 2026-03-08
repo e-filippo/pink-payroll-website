@@ -1,13 +1,97 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HelpScout from '../components/HelpScout.astro';
 ---
 <Layout title="Partners & Affiliates — Pink Payroll">
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <p class="text-pink text-xs font-bold uppercase tracking-widest mb-3">Discover</p>
-    <h1 class="text-5xl font-extrabold tracking-tight text-brand-black mb-6">Partners &amp; Affiliates</h1>
-    <p class="text-brand-gray text-lg max-w-2xl mb-12">Section content coming soon. Copy will be added here.</p>
-    <div class="h-64 bg-gray-100 border border-brand-light-gray rounded-2xl flex items-center justify-center text-brand-gray text-sm">
-      Content placeholder
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Partners & Affiliates</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+        Let's Grow Together.
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+        We believe in building a stronger California business community. Whether you are a CPA, a Bookkeeper, or a Business Consultant, there's a place for you in the Pink Payroll network.
+      </p>
     </div>
   </section>
+
+  <!-- ===== CARDS ===== -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid gap-6 max-w-3xl">
+
+      <!-- Card 1: Why Partner -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">🤝</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Why Partner with Pink Payroll?</h2>
+          <p class="text-brand-gray leading-relaxed mb-6">
+            We don't just process payroll — we protect your reputation. When you refer a client to us, they receive the same boutique, high-level care you provide.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="text-brand-gray leading-relaxed">
+                <strong class="text-brand-black">White-Glove Onboarding:</strong> We handle the transition so you don't have to.
+              </p>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="text-brand-gray leading-relaxed">
+                <strong class="text-brand-black">Proactive Communication:</strong> We keep you in the loop on tax and compliance updates.
+              </p>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="text-brand-gray leading-relaxed">
+                <strong class="text-brand-black">Mutual Growth:</strong> We love referring our clients to trusted local professionals.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Partner Onboarding -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">📝</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Partner Onboarding & Contact</h2>
+          <p class="text-brand-gray leading-relaxed mb-6">
+            Ready to start a partnership or need to submit new client data? Use our unified onboarding form to get started immediately.
+          </p>
+          <a
+            href="/client-set-up"
+            class="inline-flex items-center gap-2 bg-pink text-white font-semibold px-6 py-3 rounded-full hover:bg-[#C62028] transition-colors text-sm"
+          >
+            Open Onboarding &amp; Contact Form
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Let's Connect -->
+      <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-10 flex flex-col sm:flex-row gap-8 items-start">
+        <div class="text-5xl flex-shrink-0">🚀</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-extrabold text-brand-black mb-3">Let's Connect</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Have questions about our partner approach? Click the <strong class="text-brand-black">"Help"</strong> bubble in the bottom right corner to speak directly with our team.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </Layout>
+
+<HelpScout />
