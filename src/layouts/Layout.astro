@@ -4,9 +4,10 @@ import ReviewBadge from '../components/ReviewBadge.astro';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ const { title } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
     <!-- HelpScout Beacon -->
     <script type="text/javascript" is:inline>!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
     <script type="text/javascript" is:inline>window.Beacon('init', '988a061c-4c82-4448-a4e1-c01d728865f1')</script>
