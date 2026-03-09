@@ -212,3 +212,10 @@
   to = "/"
   status = 301
   force = true
+
+# Redirect all requests for the old PDF directory to Home
+[[redirects]]
+  from = "/PDF/*"
+  to = "/"
+  status = 301
+  force = true
