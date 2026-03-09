@@ -1,3 +1,182 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# Dedicated Service Redirects
+[[redirects]]
+  from = "/services/hr-support"
+  to = "/hr-people/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/wc-pay-as-you-go"
+  to = "/workers-comp/"
+  status = 301
+  force = true
+
+# Timekeeping to Payroll
+[[redirects]]
+  from = "/services/online-time-clock-support"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+# Cities and Locations to /who/
+[[redirects]]
+  from = "/Cities-Served/*"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/san-diego/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/los-angeles/"
+  to = "/who/"
+  status = 301
+  force = true
+
+# Industries to /who/
+[[redirects]]
+  from = "/physicians/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/attorneys/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/restaurants/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/professional-services/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/retail-stores/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/internet-business/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dentists/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/chiropractors/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insurance-agents/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contractors/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trades/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sports-related-companies/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wholesale/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/non-profit/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/manufacturers/"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sales-groups/"
+  to = "/who/"
+  status = 301
+  force = true
+
+# All other legacy services to /payroll/
+[[redirects]]
+  from = "/services/401k"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/employment-screening"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/wotc"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/employee-onboarding"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/group-medical"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/benefit-coordination"
+  to = "/payroll/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/online-payroll"
+  to = "/payroll/"
+  status = 301
+  force = true
