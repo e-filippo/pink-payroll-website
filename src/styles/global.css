@@ -12,7 +12,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { line-height: 1.6; }
+body { line-height: 1.6; overflow-x: hidden; }
 
 /* ── Typography ─────────────────────────────────────────────────────────── */
 /* Safety-net: clamp h1 so it never wraps awkwardly on small screens.

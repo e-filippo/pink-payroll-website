@@ -53,9 +53,8 @@ const { title } = Astro.props;
           <img src="/branding/pinkpayroll standard logo rectangle.png" alt="Pink Payroll" class="h-14 w-auto" />
         </a>
 
-        <!-- Primary Nav Links -->
+        <!-- Desktop Primary Nav -->
         <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-brand-gray">
-
           <li>
             <a href="/why-us" class="hover:text-pink transition-colors">Why Us?</a>
           </li>
@@ -64,17 +63,14 @@ const { title } = Astro.props;
           <li class="relative group">
             <button class="flex items-center gap-1 hover:text-pink transition-colors py-2">
               Our Services
-              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-              </svg>
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
-              <li><a href="/payroll"         class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Services</a></li>
-              <li><a href="/software-demos"  class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software &amp; Demos</a></li>
-              <li><a href="/timekeeping"     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Timekeeping</a></li>
-              <li><a href="/workers-comp"    class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Workers Comp Insurance</a></li>
-              <li><a href="/hr-people"       class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">HR | People</a></li>
+            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <li><a href="/payroll"        class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Services</a></li>
+              <li><a href="/software-demos" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software &amp; Demos</a></li>
+              <li><a href="/timekeeping"    class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Timekeeping</a></li>
+              <li><a href="/workers-comp"   class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Workers Comp Insurance</a></li>
+              <li><a href="/hr-people"      class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">HR | People</a></li>
             </ul>
           </li>
 
@@ -82,26 +78,20 @@ const { title } = Astro.props;
           <li class="relative group">
             <button class="flex items-center gap-1 hover:text-pink transition-colors py-2">
               Discover
-              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-              </svg>
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+            <ul class="absolute left-0 top-full mt-1 w-60 bg-white border border-brand-light-gray rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
               <li><a href="/switching" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">How to Switch</a></li>
               <li><a href="/learn"     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Learn About Payroll</a></li>
               <li><a href="/who"       class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Who We Serve</a></li>
-              <li><a href="/client"   class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Client Resources</a></li>
-              <li><a href="/employee" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Employee Resources</a></li>
-              <li><a href="/partners" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Partners &amp; Affiliates</a></li>
-              <li><a href="/about"    class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Meet the Team</a></li>
+              <li><a href="/client"    class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Client Resources</a></li>
+              <li><a href="/employee"  class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Employee Resources</a></li>
+              <li><a href="/partners"  class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Partners &amp; Affiliates</a></li>
+              <li><a href="/about"     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Meet the Team</a></li>
             </ul>
           </li>
 
-          <li>
-            <a href="/contact" class="hover:text-pink transition-colors">Contact Us</a>
-          </li>
-
+          <li><a href="/contact" class="hover:text-pink transition-colors">Contact Us</a></li>
           <li>
             <a href="/book-call" class="bg-pink text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-[#C62028] transition-colors">
               Book a Call
@@ -109,41 +99,122 @@ const { title } = Astro.props;
           </li>
         </ul>
 
-        <!-- Right: Login + Phone + CTA -->
-        <div class="flex items-center gap-4">
-
+        <!-- Desktop Right: Login + Phone + CTA -->
+        <div class="hidden lg:flex items-center gap-4">
           <!-- Client Login Dropdown -->
-          <div class="relative group hidden lg:block">
+          <div class="relative group">
             <button class="text-sm font-medium text-brand-gray hover:text-pink flex items-center gap-1 transition-colors py-2">
               Client Login
-              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-              </svg>
+              <svg class="w-3.5 h-3.5 mt-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <ul class="absolute right-0 top-full mt-1 w-52 bg-white border border-brand-light-gray rounded-xl shadow-lg
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
-              <li><a href="https://payrollrx.myisolved.com/UserLogin.aspx" target="_blank" rel="noopener noreferrer"
-                     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software</a></li>
-              <li><a href="/client-set-up"
-                     class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">New Client Setup</a></li>
+            <ul class="absolute right-0 top-full mt-1 w-52 bg-white border border-brand-light-gray rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <li><a href="https://payrollrx.myisolved.com/UserLogin.aspx" target="_blank" rel="noopener noreferrer" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">Payroll Software</a></li>
+              <li><a href="/client-set-up" class="block px-4 py-2.5 text-sm text-brand-black hover:bg-gray-50 hover:text-pink transition-colors">New Client Setup</a></li>
             </ul>
           </div>
-
-          <a href="tel:8009950308"
-             class="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-pink transition-colors">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
+          <a href="tel:8009950308" class="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-pink transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             (800) 995-0308
           </a>
-
-          <a href="/contact"
-             class="bg-pink text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-pink-dark transition-colors">
+          <a href="/contact" class="bg-pink text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-pink-dark transition-colors">
             Get Started
           </a>
         </div>
 
+        <!-- Mobile: Phone + Hamburger -->
+        <div class="flex lg:hidden items-center gap-3">
+          <a href="tel:8009950308" aria-label="Call us" class="flex items-center justify-center w-10 h-10 rounded-full text-brand-black hover:text-pink transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"
+            class="flex items-center justify-center w-10 h-10 rounded-lg text-brand-black hover:bg-gray-100 transition-colors">
+            <svg id="icon-hamburger" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
       </nav>
+
+      <!-- Mobile Menu Panel -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-brand-light-gray overflow-y-auto max-h-[80vh]">
+        <div class="px-6 py-5 space-y-1">
+
+          <!-- Top CTAs -->
+          <div class="flex flex-col gap-3 pb-4 mb-2 border-b border-brand-light-gray">
+            <a href="/book-call" class="block text-center bg-pink text-white font-bold px-6 py-3.5 rounded-full hover:bg-[#C62028] transition-colors text-sm">
+              Book a Call
+            </a>
+            <a href="/contact" class="block text-center bg-gray-100 text-brand-black font-semibold px-6 py-3.5 rounded-full hover:bg-brand-light-gray transition-colors text-sm">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Main Links -->
+          <a href="/why-us"  class="block py-3 text-brand-black font-semibold hover:text-pink transition-colors border-b border-gray-50">Why Us?</a>
+          <a href="/contact" class="block py-3 text-brand-black font-semibold hover:text-pink transition-colors border-b border-gray-50">Contact Us</a>
+
+          <!-- Our Services -->
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-gray pt-4 pb-1">Our Services</p>
+          <a href="/payroll"        class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Payroll Services</a>
+          <a href="/software-demos" class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Payroll Software &amp; Demos</a>
+          <a href="/timekeeping"    class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Timekeeping</a>
+          <a href="/workers-comp"   class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Workers Comp Insurance</a>
+          <a href="/hr-people"      class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">HR | People</a>
+
+          <!-- Discover -->
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-gray pt-4 pb-1">Discover</p>
+          <a href="/switching" class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">How to Switch</a>
+          <a href="/learn"     class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Learn About Payroll</a>
+          <a href="/who"       class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Who We Serve</a>
+          <a href="/about"     class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Meet the Team</a>
+
+          <!-- Resources -->
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-gray pt-4 pb-1">Resources</p>
+          <a href="/client"    class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Client Resources</a>
+          <a href="/employee"  class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Employee Resources</a>
+          <a href="/partners"  class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Partners &amp; Affiliates</a>
+          <a href="https://payrollrx.myisolved.com/UserLogin.aspx" target="_blank" rel="noopener noreferrer"
+             class="block py-2.5 pl-3 text-sm text-brand-black hover:text-pink transition-colors">Client Login ↗</a>
+
+          <!-- Click-to-Call -->
+          <div class="pt-4 pb-2 border-t border-brand-light-gray mt-3 space-y-2">
+            <a href="tel:8009950308" class="flex items-center gap-3 py-2.5 text-brand-black font-semibold hover:text-pink transition-colors">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (800) 995-0308 <span class="text-xs text-brand-gray font-normal">Toll Free</span>
+            </a>
+            <a href="tel:8585473599" class="flex items-center gap-3 py-2.5 text-brand-black font-semibold hover:text-pink transition-colors">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (858) 547-3599 <span class="text-xs text-brand-gray font-normal">San Diego</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Menu Toggle Script -->
+      <script is:inline>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-hamburger');
+        const iconClose = document.getElementById('icon-close');
+        btn.addEventListener('click', () => {
+          const isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          iconOpen.classList.toggle('hidden', !isOpen);
+          iconClose.classList.toggle('hidden', isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+        // Close menu when a link is tapped
+        menu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      </script>
+
     </header>
 
     <!-- Page Content -->
