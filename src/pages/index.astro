@@ -7,34 +7,38 @@ import ReviewsHome from '../components/ReviewsHome.astro';
 <Layout title="Pink Payroll — Payroll Services for California Small Businesses" description="Stop being Account #8492. Pink Payroll gives California small businesses expert payroll service with a dedicated manager who knows your name. Get a free quote today.">
 
   <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center gap-16">
-    <div class="flex-1">
-      <div class="inline-flex items-center gap-2 bg-pink-light text-pink-dark text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-        &#9733; California Small Business Specialists
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex-1">
+        <div class="inline-flex items-center gap-2 bg-pink-light text-pink-dark text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          &#9733; California Small Business Specialists
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-brand-black mb-6">
+          You're a<br>business owner,<br><span class="whitespace-nowrap">not <span class="text-pink">Account #8492.</span></span>
+        </h1>
+        <p class="text-xl text-brand-gray max-w-lg leading-relaxed">
+          Stop crossing your fingers every time you hit "Submit." We handle payroll details and the tax math, so you can just focus on your team.
+        </p>
       </div>
-      <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-brand-black mb-6">
-        You're a<br>business owner,<br><span class="whitespace-nowrap">not <span class="text-pink">Account #8492.</span></span>
-      </h1>
-      <p class="text-xl text-brand-gray max-w-lg mb-10 leading-relaxed">
-        Stop crossing your fingers every time you hit "Submit." We handle payroll details and the tax math, so you can just focus on your team.
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-        <a href="#quote" class="inline-flex items-center justify-center bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
-          Get Your Price Now
-        </a>
-        <a href="/contact" class="inline-flex items-center justify-center bg-[#2D2D2D] text-white font-semibold px-8 py-4 rounded-full hover:bg-brand-black transition-colors text-base">
-          Get Started
-        </a>
+
+      <!-- Hero Image -->
+      <div class="flex-1 w-full">
+        <img
+          src="/assets/hero-image.png"
+          alt="Pink Payroll — boutique payroll services"
+          class="w-[90%] h-auto rounded-2xl shadow-lg object-cover"
+        />
       </div>
     </div>
 
-    <!-- Hero Image -->
-    <div class="flex-1 w-full">
-      <img
-        src="/assets/hero-image.png"
-        alt="Pink Payroll — boutique payroll services"
-        class="w-[90%] h-auto rounded-2xl shadow-lg object-cover"
-      />
+    <!-- CTAs centered across full width -->
+    <div class="flex flex-wrap gap-4 justify-center mt-10">
+      <a href="#quote" class="inline-flex items-center justify-center bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
+        Get Your Price Now
+      </a>
+      <a href="/contact" class="inline-flex items-center justify-center bg-[#2D2D2D] text-white font-semibold px-8 py-4 rounded-full hover:bg-brand-black transition-colors text-base">
+        Get Started
+      </a>
     </div>
 
   </section>
