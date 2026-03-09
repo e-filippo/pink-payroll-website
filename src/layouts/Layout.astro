@@ -29,21 +29,27 @@ const { title, description = 'Pink Payroll delivers boutique payroll services fo
   <body class="font-sans text-brand-black bg-white antialiased">
 
     <!-- Top Banner -->
-    <div class="bg-pink text-white text-xs py-2 px-4">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-1 text-center sm:text-left">
-        <!-- New Clients -->
+    <div class="bg-pink text-white py-2 px-4">
+
+      <!-- Mobile: single offer only -->
+      <div class="flex md:hidden items-center justify-center gap-2 text-[11px] font-medium text-center">
+        <span>New Clients: <strong>3 Months FREE</strong> or <strong>30% OFF!</strong></span>
+        <a href="/contact" class="inline-block bg-white text-pink font-bold px-3 py-0.5 rounded-full text-[11px] hover:bg-gray-100 transition-colors flex-shrink-0">Get Started</a>
+      </div>
+
+      <!-- Desktop: both offers -->
+      <div class="hidden md:flex max-w-7xl mx-auto items-center justify-center gap-x-6 text-xs">
         <span class="whitespace-nowrap">
           New Clients: <strong>3 Months FREE</strong> or <strong>30% OFF</strong> — You Decide!&nbsp;
           <a href="/contact" class="inline-block bg-white text-pink font-bold px-3 py-0.5 rounded-full text-xs hover:bg-gray-100 transition-colors ml-1">Get Started</a>
         </span>
-        <!-- Divider -->
-        <span class="hidden sm:inline text-white/50">|</span>
-        <!-- Current Clients -->
+        <span class="text-white/50">|</span>
         <span class="whitespace-nowrap">
           Current Clients:&nbsp;
           <a href="/loyalty" class="inline-block border border-white/70 text-white font-bold px-3 py-0.5 rounded-full text-xs hover:bg-white/10 transition-colors">Claim Your Loyalty Bonus</a>
         </span>
       </div>
+
     </div>
 
     <!-- Header -->
