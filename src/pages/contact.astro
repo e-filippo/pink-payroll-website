@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import GHLQuoteForm from '../components/GHLQuoteForm.astro';
 ---
 <Layout title="Contact — Pink Payroll">
 
@@ -14,101 +13,37 @@ import GHLQuoteForm from '../components/GHLQuoteForm.astro';
     </div>
   </section>
 
-  <!-- 12-Column Grid: 5 | 2 gutter | 5 -->
+  <!-- Triage: Current Clients | Prospective Clients -->
   <section class="max-w-7xl mx-auto px-6 py-20">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-0 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      <!-- LEFT: Cols 1–5 -->
-      <div class="lg:col-span-5">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-black leading-tight mb-6">
-          Let's Build a Partnership That Actually Works.
-        </h2>
-        <p class="text-brand-gray text-lg leading-relaxed mb-10">
-          We want to ensure we are the right team to help your business thrive. Pink Payroll is a specialized boutique agency, and we do our best work for clients who value a structured, expert-led approach.
+      <!-- LEFT: Current Clients -->
+      <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-10">
+        <div class="w-10 h-10 rounded-full bg-brand-black flex items-center justify-center mb-6">
+          <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5M12 12a4 4 0 100-8 4 4 0 000 8z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-extrabold mb-4" style="color:#2D2D2D;">Current Clients</h2>
+        <p class="text-brand-gray leading-relaxed">
+          Need support? Our team is here to help. Contact us using your normal support method, or use the help widget in the bottom right corner of your screen to contact us <strong class="text-brand-black">(new!)</strong>
         </p>
-
-        <!-- Perfect match -->
-        <div class="mb-8">
-          <h3 class="text-xl font-extrabold text-brand-black mb-4">We are a perfect match if:</h3>
-          <ul class="space-y-4">
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">'Set it and Forget it' system:</strong> You're ready to let the experts handle the compliance so you can reclaim your time.
-              </p>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">You value proactive communication:</strong> You prefer a quick call from our team to fix a problem <em>before</em> it becomes a tax penalty.
-              </p>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
-                <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">You want senior oversight:</strong> You value having your account overseen by experts like <strong>Erica (Founder)</strong> and our Senior Managers, <strong>Laura and Sarah</strong>.
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Divider -->
-        <hr class="border-brand-light-gray mb-8" />
-
-        <!-- Not a fit -->
-        <div>
-          <h3 class="text-xl font-extrabold text-brand-black mb-4">We might not be the best fit if:</h3>
-          <ul class="space-y-4">
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">Your payroll runs on your schedule, not a set one:</strong> We're built for businesses that run payroll consistently — weekly, biweekly, or semimonthly. If your payrolls are seasonal, sporadic, or happen just a few times a year, our structured systems aren't the right fit for where you are right now.
-              </p>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">You prefer DIY software:</strong> If you don't value the human oversight and leadership we provide, the 'Big Box' automated platforms may be a better fit.
-              </p>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-brand-light-gray flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              </span>
-              <p class="text-brand-gray leading-relaxed">
-                <strong class="text-brand-black">Your business thrives in 'Real-Time Chaos':</strong> Our systems are built for precision. If your workflow is still highly unpredictable, we might not be the right match for your current stage of growth.
-              </p>
-            </li>
-          </ul>
-        </div>
       </div>
 
-      <!-- MIDDLE: Cols 6–7 — empty gutter (hidden on mobile) -->
-      <div class="hidden lg:block lg:col-span-2"></div>
-
-      <!-- RIGHT: Cols 8–12 -->
-      <div class="lg:col-span-5">
-        <div style="background:#E7365A; border-radius:12px; padding:40px; box-shadow:0 8px 32px rgba(0,0,0,0.10);">
-          <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-2 text-center">Ready to Get Started?</p>
-          <h3 class="text-2xl font-extrabold text-white mb-1 text-center">Simplified Payroll Starts Here.</h3>
-          <p class="text-white/80 text-sm mb-6 text-center leading-relaxed">Fast, no-obligation quote — we'll reach out within one business day.</p>
-
-          <GHLQuoteForm />
-
-          <p class="text-center text-xs text-white/60 mt-4">
-            🔒 Your information is private and never sold. Ever.
-          </p>
+      <!-- RIGHT: Prospective Clients -->
+      <div class="bg-white border border-brand-light-gray rounded-2xl p-10 shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-pink flex items-center justify-center mb-6">
+          <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
         </div>
+        <h2 class="text-2xl font-extrabold mb-4" style="color:#2D2D2D;">Prospective Clients</h2>
+        <p class="text-brand-gray leading-relaxed mb-8">
+          Ready to switch to a boutique payroll experience? Schedule a strategy session with a team leader.
+        </p>
+        <a href="/book-call" class="inline-block bg-pink text-white font-bold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
+          Book a Strategy Session
+        </a>
       </div>
 
     </div>
