@@ -180,3 +180,35 @@
   to = "/payroll/"
   status = 301
   force = true
+
+# Redirect all old media and document folders to Home
+[[redirects]]
+  from = "/images/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/documents/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/payroll-training-videos/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/videos/*"
+  to = "/"
+  status = 301
+  force = true
+
+# Redirect any direct .pdf requests to Home
+[[redirects]]
+  from = "/*.pdf"
+  to = "/"
+  status = 301
+  force = true
