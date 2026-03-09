@@ -1,0 +1,27 @@
+# Pink Payroll — Netlify Redirects
+# Note: Primary 301 redirect rules live in netlify.toml.
+# This file handles HTTPS enforcement and any edge cases.
+
+# Force HTTPS (Netlify handles this automatically when custom domain is set,
+# but this ensures coverage for any direct HTTP requests)
+http://pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
+http://www.pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
+
+# WWW to non-WWW canonical
+https://www.pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
+
+# Legacy Joomla index.php routes (common Joomla URL pattern)
+/index.php  /  301!
+/index.php/*  /  301!
+
+# Common Joomla component paths
+/component/*  /  301!
+/components/*  /  301!
+/modules/*  /  301!
+/plugins/*  /  301!
+/templates/*  /  301!
+/administrator/*  /  301!
+
+# Legacy ?option= query string routes Joomla uses
+# (Netlify _redirects doesn't support query strings natively;
+#  these are caught by the netlify.toml rules above)
