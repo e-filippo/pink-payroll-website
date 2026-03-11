@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import GHLQuoteForm from '../components/GHLQuoteForm.astro';
 import ReviewsHome from '../components/ReviewsHome.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero-image.png';
 ---
 
 <Layout title="Pink Payroll — Payroll Services for California Small Businesses" description="Stop being Account #8492. Pink Payroll gives California small businesses expert payroll service with a dedicated manager who knows your name. Get a free quote today.">
@@ -23,9 +25,12 @@ import ReviewsHome from '../components/ReviewsHome.astro';
 
       <!-- Hero Image -->
       <div class="flex-1 w-full">
-        <img
-          src="/assets/hero-image.png"
+        <Image
+          src={heroImage}
           alt="Pink Payroll — boutique payroll services"
+          width={1400}
+          format="webp"
+          quality={80}
           class="w-[90%] h-auto rounded-2xl shadow-lg object-cover"
         />
       </div>
