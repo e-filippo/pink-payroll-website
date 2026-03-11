@@ -20,23 +20,23 @@ import heroImage from '../../assets/hero-image.png';
     }
   </style>
 
-  <!-- Hero + Grid: one tight flow so grid hits above the fold -->
-  <section class="max-w-4xl mx-auto px-6 pt-6 pb-0 text-center">
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-6 pb-4 text-center">
 
-    <!-- "3 Months Free" rocking callout -->
+    <!-- "3 Months Free" rocking callout — row 3 is the star badge -->
     <div class="rock inline-block bg-pink text-white rounded-2xl px-10 py-4 mb-4 shadow-lg">
       <p class="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Limited Time Offer</p>
-      <p class="text-5xl font-extrabold leading-none">3 Months Free</p>
+      <p class="text-5xl font-extrabold leading-none mb-2">3 Months Free</p>
+      <p class="text-xs font-bold uppercase tracking-widest opacity-80">&#9733; For California Small Businesses</p>
     </div>
 
-    <div class="inline-flex items-center gap-2 bg-pink/10 text-pink font-bold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full mb-4">
-      &#9733; For California Small Businesses
-    </div>
     <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-brand-black mb-8">
       Thinking of Switching?<br>We'll Do the Heavy Lifting.
     </h1>
+  </section>
 
-    <!-- Comparison Grid — pulled tight under headline -->
+  <!-- Comparison Grid -->
+  <section class="max-w-4xl mx-auto px-6 pb-10">
 
     <!-- Column Headers -->
     <div class="grid grid-cols-2 gap-4 mb-4">
@@ -49,7 +49,7 @@ import heroImage from '../../assets/hero-image.png';
     </div>
 
     <!-- Row 1 -->
-    <div class="grid grid-cols-2 gap-4 mb-4 text-left">
+    <div class="grid grid-cols-2 gap-4 mb-4">
       <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
         <span class="text-2xl mt-0.5 flex-shrink-0">😤</span>
         <div>
@@ -67,7 +67,7 @@ import heroImage from '../../assets/hero-image.png';
     </div>
 
     <!-- Row 2 -->
-    <div class="grid grid-cols-2 gap-4 mb-4 text-left">
+    <div class="grid grid-cols-2 gap-4 mb-4">
       <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
         <span class="text-2xl mt-0.5 flex-shrink-0">🤷</span>
         <div>
@@ -85,7 +85,7 @@ import heroImage from '../../assets/hero-image.png';
     </div>
 
     <!-- Row 3 -->
-    <div class="grid grid-cols-2 gap-4 text-left">
+    <div class="grid grid-cols-2 gap-4">
       <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
         <span class="text-2xl mt-0.5 flex-shrink-0">😰</span>
         <div>
@@ -128,13 +128,20 @@ import heroImage from '../../assets/hero-image.png';
         <p class="text-brand-gray text-sm leading-relaxed">We do the heavy lifting of loading your data, you keep the money in your pocket. A truly risk-free switch.</p>
       </div>
 
+      <!-- Rocking CTA button -->
       <a
-        href="/book-call"
-        class="inline-flex items-center justify-center bg-pink text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-[#C62028] transition-colors shadow-md mb-4"
+        href="#calendar"
+        class="rock inline-flex items-center justify-center bg-pink text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-[#C62028] transition-colors shadow-md mb-3"
       >
         Grab a 15-Min Spot on the Calendar
       </a>
-      <p class="text-brand-gray text-sm">Get 3 Months Free upon switching</p>
+      <p class="text-brand-gray text-sm mb-10">Get 3 Months Free upon switching</p>
+
+      <!-- Inline GHL Calendar -->
+      <div id="calendar" class="bg-white border border-brand-light-gray rounded-2xl shadow-sm overflow-hidden">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/gZIYVYUm3txLBKTRjTZd" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="gZIYVYUm3txLBKTRjTZd_1773022815072"></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" is:inline></script>
+      </div>
 
     </div>
   </section>
