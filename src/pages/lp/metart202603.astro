@@ -154,14 +154,42 @@ import bizGuyImage from '../../assets/coffee-clique-biz-guy.png';
         <p class="text-brand-gray text-sm leading-relaxed">We do the heavy lifting of loading your data, you keep the money in your pocket. A truly risk-free switch.</p>
       </div>
 
-      <!-- Rocking CTA button -->
-      <a
-        href="#calendar"
-        class="rock inline-flex items-center justify-center bg-pink text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-[#C62028] transition-colors shadow-md mb-3"
-      >
-        Grab a 15-Min Spot on the Calendar
-      </a>
-      <p class="text-brand-gray text-sm mb-10">Get 3 Months Free upon switching</p>
+      <!-- Rocking CTA button + curved arrow -->
+      <div class="relative inline-block">
+        <a
+          href="#calendar"
+          class="rock inline-flex items-center justify-center bg-pink text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-[#C62028] transition-colors shadow-md mb-3"
+        >
+          Grab a 15-Min Spot on the Calendar
+        </a>
+        <p class="text-brand-gray text-sm mb-4">Get 3 Months Free upon switching</p>
+
+        <!-- Curved arrow pointing down to calendar -->
+        <svg
+          class="absolute -right-20 top-0 w-20 h-28 text-pink"
+          viewBox="0 0 80 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <!-- Curved path from top-left sweeping down-right -->
+          <path
+            d="M10 5 C 50 5, 70 40, 55 95"
+            stroke="currentColor"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            fill="none"
+          />
+          <!-- Arrowhead -->
+          <path
+            d="M55 95 L 42 80 M 55 95 L 68 82"
+            stroke="currentColor"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            fill="none"
+          />
+        </svg>
+      </div>
 
     </div>
   </section>
