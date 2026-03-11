@@ -64,6 +64,18 @@ A multi-page marketing website for **Pink Payroll**, targeting California small 
   3. Ensure no "404 Not Found" errors occur when navigating between the 20+ pages.
 - **Console Check:** Ensure no critical JavaScript errors or CSS 404s appear in the browser console.
 
+## Image Optimization
+
+All images used on the site must be optimized before shipping. Follow these rules every time:
+
+1. **Never serve raw PNGs from `/public/assets/`** for above-the-fold or large images — they are not processed by Astro.
+2. **Move images to `src/assets/`** so Astro's build pipeline can process them.
+3. **Always use Astro's `<Image>` component** (imported from `astro:assets`) instead of a plain `<img>` tag for any content image.
+4. **Required attributes:** `format="webp"`, `quality={80}`, and a reasonable `width` (max 1400px for hero images, 700px for half-width images).
+5. **Use clean, lowercase, hyphenated filenames** when copying to `src/assets/` (e.g. `coffee-clique-biz-guy.png`, not `Coffee Clique Balb Park Biz Guy GreenJckt 20260310-2.png`).
+6. **Target file size:** Under 200 KB after optimization. Astro's WebP conversion typically achieves 90–98% reduction from raw PNG.
+7. **Background/decorative images** that must stay in `/public/` should be sized and compressed before placement.
+
 ## Compliance Section
 
 Every page on the site — including landing pages, orphan pages, and any future pages — **must** include the following in the footer:
