@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/branding/pinkpayroll favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- HelpScout Beacon -->
+    <script type="text/javascript" is:inline>!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+    <script type="text/javascript" is:inline>window.Beacon('init', '988a061c-4c82-4448-a4e1-c01d728865f1')</script>
+  </head>
+  <body class="font-sans text-brand-black bg-white antialiased">
+
+    <!-- Minimal header: logo only, no nav -->
+    <header class="border-b border-brand-light-gray py-4 px-6">
+      <div class="max-w-7xl mx-auto">
+        <a href="/">
+          <img src="/branding/pinkpayroll standard logo rectangle.png" alt="Pink Payroll" class="h-10 w-auto" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Minimal footer: contact info only -->
+    <footer class="border-t border-brand-light-gray mt-24 py-10 px-6 text-center text-sm text-brand-gray">
+      <p class="font-semibold text-brand-black mb-1">Pink Payroll</p>
+      <p>4079 Governor Drive, #5040, San Diego, CA 92122</p>
+      <p class="mt-1">(800) 995-0308 &nbsp;|&nbsp; (858) 547-3599</p>
+      <p class="mt-4 text-xs text-brand-gray/60">&copy; {new Date().getFullYear()} Pink Payroll. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
