@@ -64,6 +64,16 @@ A multi-page marketing website for **Pink Payroll**, targeting California small 
   3. Ensure no "404 Not Found" errors occur when navigating between the 20+ pages.
 - **Console Check:** Ensure no critical JavaScript errors or CSS 404s appear in the browser console.
 
+## Compliance Section
+
+Every page on the site — including landing pages, orphan pages, and any future pages — **must** include the following in the footer:
+
+1. **Copyright line:** `© 2026 Pink Payroll. All rights reserved.`
+2. **Privacy Policy link** pointing to `/privacy-policy`
+3. **Terms of Service link** pointing to `/terms-of-service`
+
+These are required on **100% of pages** regardless of layout (main `Layout.astro`, `LandingLayout.astro`, or any future layout). When creating a new layout, always include these three elements in the footer before shipping.
+
 ## Facts
 
 Pink Payroll was started in 2008 in San Diego, California  

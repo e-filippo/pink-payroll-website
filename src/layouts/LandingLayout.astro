@@ -41,12 +41,16 @@ const { title, description = 'Pink Payroll delivers boutique payroll services fo
       <slot />
     </main>
 
-    <!-- Minimal footer: contact info only -->
+    <!-- Minimal footer: contact info + required compliance links -->
     <footer class="border-t border-brand-light-gray py-10 px-6 text-center text-sm text-brand-gray">
       <p class="font-semibold text-brand-black mb-1">Pink Payroll</p>
       <p>4079 Governor Drive, #5040, San Diego, CA 92122</p>
       <p class="mt-1">(800) 995-0308 &nbsp;|&nbsp; (858) 547-3599</p>
-      <p class="mt-4 text-xs text-brand-gray/60">&copy; {new Date().getFullYear()} Pink Payroll. All rights reserved.</p>
+      <div class="flex justify-center gap-6 mt-4 text-xs">
+        <a href="/privacy-policy" class="hover:text-brand-black transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service" class="hover:text-brand-black transition-colors">Terms of Service</a>
+      </div>
+      <p class="mt-3 text-xs text-brand-gray/60">&copy; 2026 Pink Payroll. All rights reserved.</p>
     </footer>
 
   </body>
