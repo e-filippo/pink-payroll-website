@@ -1,22 +1,139 @@
 ---
 // metart202603 — Meta Retargeting | March 2026
-// Orphan page: no nav, noindex. Copy TBD.
 import LandingLayout from '../../layouts/LandingLayout.astro';
 ---
 
-<LandingLayout title="Pink Payroll — Payroll Done Right for California Small Businesses">
+<LandingLayout title="Thinking of Switching? Pink Payroll Does the Heavy Lifting.">
 
-  <section class="max-w-3xl mx-auto px-6 py-24 text-center">
-    <p class="text-pink font-bold uppercase tracking-widest text-xs mb-4">Copy coming soon</p>
-    <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight text-brand-black mb-6">
-      Headline goes here
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-20 pb-4 text-center">
+    <div class="inline-flex items-center gap-2 bg-pink/10 text-pink font-bold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full mb-6">
+      &#9733; For California Small Businesses
+    </div>
+    <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-brand-black mb-8">
+      Thinking of Switching?<br>We'll Do the Heavy Lifting.
     </h1>
-    <p class="text-xl text-brand-gray leading-relaxed mb-10">
-      Supporting copy goes here.
+
+    <!-- "3 Months Free" hero callout — most prominent element -->
+    <div class="inline-block bg-pink text-white rounded-2xl px-10 py-6 mb-6 shadow-lg">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Limited Offer</p>
+      <p class="text-5xl font-extrabold leading-none mb-1">3 Months Free</p>
+      <p class="text-base font-medium opacity-90">when you move from any corporate provider</p>
+    </div>
+  </section>
+
+  <!-- Comparison Grid -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Column Headers -->
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div class="bg-[#231F20] text-white text-center font-extrabold text-sm uppercase tracking-widest py-4 rounded-xl">
+        The "Big Box" Struggle
+      </div>
+      <div class="bg-pink text-white text-center font-extrabold text-sm uppercase tracking-widest py-4 rounded-xl">
+        The Pink Payroll Way
+      </div>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">😤</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">You're Just a Ticket Number.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Waiting on hold for "the next available agent."</p>
+        </div>
+      </div>
+      <div class="bg-pink/5 border border-pink/20 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">📞</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">Direct Access.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">A real person who knows your business and picks up the phone.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">🤷</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">"DIY" Guesswork.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Software that lets you process payroll even if something looks "off."</p>
+        </div>
+      </div>
+      <div class="bg-pink/5 border border-pink/20 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">👀</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">Human Oversight.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">A second set of eyes to flag the obvious stuff before it's too late.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">😰</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">The Nightmare of Switching.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Worrying about lost data and tax-filing gaps.</p>
+        </div>
+      </div>
+      <div class="bg-pink/5 border border-pink/20 rounded-xl p-6 flex gap-4 items-start">
+        <span class="text-2xl mt-0.5 flex-shrink-0">🚀</span>
+        <div>
+          <p class="font-bold text-brand-black mb-1">We Drive the Transition.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">We handle the data migration so you don't have to.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 15-Min Vibe Check CTA -->
+  <section class="bg-[#231F20] py-20 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+
+      <!-- "15-Minute Zoom Call" — most prominent element in section -->
+      <div class="inline-flex items-center gap-3 bg-white/10 border border-white/20 text-white rounded-2xl px-8 py-4 mb-8">
+        <span class="text-3xl">📹</span>
+        <span class="text-3xl lg:text-4xl font-extrabold tracking-tight">15-Minute Zoom Call</span>
+      </div>
+
+      <h2 class="text-3xl font-extrabold text-white mb-4">
+        Let's Do a "Vibe Check"
+      </h2>
+      <p class="text-white/70 text-lg leading-relaxed mb-10">
+        No high-pressure sales pitches. No office visits. Just a quick, casual Zoom call to see if we're the right fit for your business. We'll show you exactly how the 3-month credit works and how we handle the move for you.
+      </p>
+
+      <!-- Flash Bonus Box -->
+      <div class="bg-[#F3BD33]/15 border border-[#F3BD33]/40 rounded-2xl px-8 py-6 mb-8 text-left">
+        <p class="text-[#F3BD33] font-extrabold uppercase tracking-widest text-xs mb-2">⚡ Flash Bonus</p>
+        <p class="text-white font-bold text-lg mb-1">$0 Switching Fees if you book your Zoom call in the next 24 hours.</p>
+        <p class="text-white/70 text-sm leading-relaxed">We do the heavy lifting of loading your data, you keep the money in your pocket. A truly risk-free switch.</p>
+      </div>
+
+      <a
+        href="/book-call"
+        class="inline-flex items-center justify-center bg-pink text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-[#C62028] transition-colors shadow-lg mb-4"
+      >
+        Grab a 15-Min Spot on the Calendar
+      </a>
+      <p class="text-white/50 text-sm">Get 3 Months Free upon switching</p>
+
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-extrabold text-brand-black mb-6">
+      Our Team: Your Personal Payroll Department
+    </h2>
+    <p class="text-lg text-brand-gray leading-relaxed">
+      We are a boutique payroll agency based in San Diego, specializing in high-touch service for California employers. Instead of a revolving door of call center agents, you get direct access to a dedicated leadership team with decades of tax and payroll expertise. We treat your business like our own — providing the human oversight and "second set of eyes" that big-box corporations simply can't offer.
     </p>
-    <a href="/contact" class="inline-flex items-center justify-center bg-pink text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-dark transition-colors text-base">
-      Get Your Free Quote
-    </a>
   </section>
 
 </LandingLayout>
