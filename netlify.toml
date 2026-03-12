@@ -43,6 +43,19 @@
 
 # Industries to /who/
 [[redirects]]
+  from = "/industries-served"
+  to = "/who/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/industries-served/"
+  to = "/who/"
+  status = 301
+  force = true
+
+
+[[redirects]]
   from = "/physicians/"
   to = "/who/"
   status = 301
