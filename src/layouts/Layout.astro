@@ -5,9 +5,11 @@ import ReviewBadge from '../components/ReviewBadge.astro';
 interface Props {
   title: string;
   description?: string;
+  hideEmailCTA?: boolean;
+  hidePreFooterCTA?: boolean;
 }
 
-const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.' } = Astro.props;
+const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.', hideEmailCTA = false, hidePreFooterCTA = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -234,6 +236,7 @@ const { title, description = 'Pink Payroll delivers boutique payroll services fo
     </main>
 
     <!-- Pre-Footer CTA -->
+    {!hidePreFooterCTA && (
     <section class="bg-brand-light-gray/50 border-t border-brand-light-gray">
       <div class="max-w-3xl mx-auto px-6 py-16 text-center">
         <h2 class="text-2xl md:text-3xl font-extrabold text-brand-black mb-3 leading-tight">
@@ -246,12 +249,15 @@ const { title, description = 'Pink Payroll delivers boutique payroll services fo
           <a href="https://link.pinkpayroll.com/widget/booking/gZIYVYUm3txLBKTRjTZd" target="_blank" rel="noopener noreferrer" class="bg-pink text-white font-bold px-8 py-4 rounded-full hover:bg-[#C62028] transition-colors text-base">
             Schedule Your Discovery Call
           </a>
-          <button type="button" onclick="window.Beacon('navigate', '/ask')" class="text-brand-gray text-sm hover:text-pink transition-colors underline underline-offset-4">
-            Prefer to email? Click here.
-          </button>
+          {!hideEmailCTA && (
+            <button type="button" onclick="window.Beacon('navigate', '/ask')" class="text-brand-gray text-sm hover:text-pink transition-colors underline underline-offset-4">
+              Prefer to email? Click here.
+            </button>
+          )}
         </div>
       </div>
     </section>
+    )}
 
     <!-- Footer -->
     <footer class="bg-brand-black text-gray-400">
