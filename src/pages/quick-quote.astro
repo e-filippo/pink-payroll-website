@@ -1,0 +1,55 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+---
+<LandingLayout title="Book a Strategy Call — Pink Payroll" description="Schedule a free 15-minute discovery call with a Pink Payroll team leader. We'll review your payroll setup and see if we're the right fit for your business.">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-black text-white">
+    <div class="max-w-2xl mx-auto px-6 py-20 text-center">
+      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">15-Minute Discovery Call</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-5">
+        Schedule Your Strategic<br class="hidden md:block" />
+        <span class="text-pink">Payroll Review.</span>
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Ready to move from "Big Box" frustration to boutique service? Choose a time below for a 15-minute discovery call. We'll discuss your current pain points and see if Pink Payroll is the right fit for your team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== GHL CALENDAR WIDGET ===== -->
+  <section class="max-w-2xl mx-auto px-6 py-16">
+    <div class="bg-white border border-brand-light-gray rounded-2xl shadow-sm overflow-hidden">
+
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/gZIYVYUm3txLBKTRjTZd" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="gZIYVYUm3txLBKTRjTZd_1773022815072"></iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" is:inline></script>
+
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE'LL COVER ===== -->
+  <section class="max-w-2xl mx-auto px-6 pb-20">
+    <div class="bg-brand-light-gray/40 border border-brand-light-gray rounded-2xl p-8">
+      <h2 class="text-lg font-extrabold text-brand-black mb-6">🛠️ What we'll cover in 15 minutes:</h2>
+      <ul class="space-y-5">
+        {[
+          { label: 'Current Bottlenecks', text: 'Where is your current system failing you?' },
+          { label: 'Compliance Check', text: 'Are there any immediate "Red Flags" in your CA or WY filings?' },
+          { label: 'The Boutique Roadmap', text: 'How our personalized service model handles your specific industry.' },
+        ].map(({ label, text }) => (
+          <li class="flex gap-4">
+            <span class="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-pink flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            <p class="text-brand-gray leading-relaxed">
+              <strong class="text-brand-black">{label}:</strong> {text}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+</LandingLayout>
