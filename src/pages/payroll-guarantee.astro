@@ -1,19 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import guaranteeBadge from '../assets/payroll-guarantee-badge.png';
 ---
 <Layout title="The Pink Payroll Guarantee — Accuracy. On Time. Every Time." description="Pink Payroll backs every payroll run with our accuracy and on-time guarantee. If we make a mistake, we fix it and cover any resulting penalties — no excuses.">
 
   <!-- ===== HERO ===== -->
   <section class="bg-brand-black text-white">
     <div class="max-w-5xl mx-auto px-6 py-24">
-      <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Our Promise to You</p>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-3xl">
-        The Pink Payroll<br class="hidden md:block" />
-        <span class="text-pink">Guarantee.</span>
-      </h1>
-      <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
-        After 18 years processing payroll for California small businesses, we've built our reputation on one principle: if we touch it, we own it. Accuracy. On time. Every payroll run.
-      </p>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1">
+          <p class="text-pink text-xs font-bold uppercase tracking-widest mb-5">Our Promise to You</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-3xl">
+            The Pink Payroll<br class="hidden md:block" />
+            <span class="text-pink">Guarantee.</span>
+          </h1>
+          <p class="text-gray-300 text-xl max-w-2xl leading-relaxed">
+            After 18 years processing payroll for California small businesses, we've built our reputation on one principle: if we touch it, we own it. Accuracy. On time. Every payroll run.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <Image
+            src={guaranteeBadge}
+            alt="Pink Payroll 90-Day Satisfaction Guarantee Badge — All Base & Per Check Fees Refunded"
+            width={320}
+            format="webp"
+            quality={80}
+            class="w-64 md:w-80 drop-shadow-xl"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
