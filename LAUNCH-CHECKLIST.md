@@ -40,8 +40,8 @@ These are handled by Claude, but verify before pushing:
   - [ ] `https://pinkpayroll.com/` — Request Indexing
   - [ ] `https://pinkpayroll.com/payroll` — Request Indexing
   - [ ] `https://pinkpayroll.com/why-us` — Request Indexing
-  - [ ] `https://pinkpayroll.com/who` — Request Indexing
-  - [ ] `https://pinkpayroll.com/payroll-guarantee` — Request Indexing
+  - [ ] `https://pinkpayroll.com/contact` — Request Indexing
+  - [ ] `https://pinkpayroll.com/book-call` — Request Indexing
   - [ ] *(Add 1–2 more pages specific to the new content if applicable)*
 
 ---
