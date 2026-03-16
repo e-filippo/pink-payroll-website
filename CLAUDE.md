@@ -76,6 +76,70 @@ All images used on the site must be optimized before shipping. Follow these rule
 6. **Target file size:** Under 200 KB after optimization. Astro's WebP conversion typically achieves 90–98% reduction from raw PNG.
 7. **Background/decorative images** that must stay in `/public/` should be sized and compressed before placement.
 
+## SEO & Indexing Standards
+
+These rules apply to every Astro website. Follow them at project setup and verify before every push.
+
+### Required in Every Layout File (`Layout.astro`, `LandingLayout.astro`, any new layout)
+
+1. **Canonical tag** — prevents duplicate indexing across www, non-www, GitHub Pages origins, and trailing-slash variants:
+   ```astro
+   const canonicalURL = new URL(Astro.url.pathname, 'https://yourdomain.com');
+   ---
+   <link rel="canonical" href={canonicalURL} />
+   ```
+2. **noindex for landing pages** — any layout used for paid/campaign landing pages must include:
+   ```html
+   <meta name="robots" content="noindex, nofollow" />
+   ```
+
+### Required Files in `/public/`
+
+- **`robots.txt`** — must exist on every site. Minimum content:
+  ```
+  User-agent: *
+  Allow: /
+  Disallow: /lp/
+
+  Sitemap: https://yourdomain.com/sitemap-index.xml
+  ```
+
+### Required Astro Integration
+
+- **`@astrojs/sitemap`** must be installed and configured in `astro.config.mjs`:
+  ```js
+  import sitemap from '@astrojs/sitemap';
+  export default defineConfig({
+    site: 'https://yourdomain.com',
+    integrations: [
+      sitemap({ filter: (page) => !page.includes('/lp/') }),
+    ],
+  });
+  ```
+- After every build, confirm the log shows: `sitemap-index.xml created at dist`
+
+### Duplicate URL Prevention Checklist
+
+Before pushing any new site or after changing the domain/hosting:
+
+- [ ] Canonical tag present in all layout `<head>` sections
+- [ ] `site:` is set to the production domain in `astro.config.mjs` (no trailing slash)
+- [ ] `robots.txt` exists in `/public/` and references the sitemap URL
+- [ ] `@astrojs/sitemap` installed and sitemap generates on build
+- [ ] Confirm www redirects to non-www (or vice versa) at the DNS/hosting layer
+- [ ] GitHub Pages origin URL (`username.github.io/repo`) is NOT the primary indexed URL
+- [ ] Submit sitemap in Google Search Console after first deploy: `https://yourdomain.com/sitemap-index.xml`
+- [ ] Use URL Inspection in Search Console to request indexing on key pages after launch
+
+### Landing Page Rules (`/lp/` directory)
+
+- All pages in `/lp/` use `LandingLayout.astro` which carries `noindex, nofollow`
+- All `/lp/` pages are excluded from the sitemap via the filter above
+- All `/lp/` paths are disallowed in `robots.txt`
+- Never link to `/lp/` pages from the main navigation
+
+---
+
 ## Compliance Section
 
 Every page on the site — including landing pages, orphan pages, and any future pages — **must** include the following in the footer:
