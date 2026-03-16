@@ -10,6 +10,8 @@ interface Props {
 }
 
 const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.', hideEmailCTA = false, hidePreFooterCTA = false } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://pinkpayroll.com');
 ---
 
 <!DOCTYPE html>
@@ -17,6 +19,7 @@ const { title, description = 'Pink Payroll delivers boutique payroll services fo
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/png" href="/branding/pinkpayroll-favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
