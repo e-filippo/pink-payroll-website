@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pdfPath = '/assets/The Clean Switch Checklist 3 Tax 2026-V1.pdf';
+---
+
+<Layout
+  title="The Clean Switch Checklist — Switch Payroll Providers Without a Tax Mistake"
+  description="A structured payroll transition checklist for California business owners and CPAs. Download free from Pink Payroll."
+>
+
+  <!-- Hero -->
+  <section class="bg-[#F5F4F2] pt-14 pb-10 px-6 text-center">
+    <p class="text-xs font-bold tracking-[0.25em] uppercase text-brand-black mb-4">The Clean Switch Checklist</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-brand-black leading-tight max-w-3xl mx-auto mb-4">
+      Switch Payroll Providers<br />Without Triggering a Tax Mistake
+    </h1>
+    <p class="text-brand-gray text-lg max-w-xl mx-auto mb-8">
+      Structured Payroll Transitions for Business Owners &amp; CPAs
+    </p>
+    <a
+      href={pdfPath}
+      download
+      class="inline-flex items-center gap-2 bg-[#C62028] hover:bg-[#a01820] text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download the Free Checklist (PDF)
+    </a>
+  </section>
+
+  <!-- Checklist Card -->
+  <section class="bg-white py-14 px-6">
+    <div class="max-w-2xl mx-auto">
+
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#C62028] mb-6">Before You Terminate Service</p>
+
+      <!-- Item 1 -->
+      <div class="flex gap-5 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#E7365A] flex items-center justify-center text-white font-extrabold text-lg">1</div>
+        <div>
+          <h3 class="font-extrabold text-brand-black text-lg mb-1">Reconcile Quarter-to-Date Payroll Totals</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Confirm wages, taxes, and deductions match your general ledger.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-[#E4E5E4] mb-8"></div>
+
+      <!-- Item 2 -->
+      <div class="flex gap-5 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#E7365A] flex items-center justify-center text-white font-extrabold text-lg">2</div>
+        <div>
+          <h3 class="font-extrabold text-brand-black text-lg mb-1">Verify All Federal &amp; State Tax Deposits Cleared</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Ensure no pending ACH debits remain.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-[#E4E5E4] mb-8"></div>
+
+      <!-- Item 3 -->
+      <div class="flex gap-5 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#E7365A] flex items-center justify-center text-white font-extrabold text-lg">3</div>
+        <div>
+          <h3 class="font-extrabold text-brand-black text-lg mb-1">Confirm 941 &amp; State Filings Are Complete</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Request proof of filing and payment confirmations.</p>
+        </div>
+      </div>
+
+      <!-- Download link below checklist -->
+      <div class="text-center mt-4">
+        <a href={pdfPath} download class="text-[#C62028] font-semibold text-sm underline underline-offset-4 hover:text-[#a01820] transition-colors">
+          Download the full checklist as a PDF →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="bg-[#F9ECF0] py-14 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-extrabold text-brand-black mb-3">Ready for a Clean Payroll Transition?</h2>
+      <p class="text-brand-gray text-base leading-relaxed mb-8 max-w-lg mx-auto">
+        Let Pink Payroll handle your transition from start to finish — including reconciliation, tax verification, and final filings.
+      </p>
+      <a
+        href="/quote"
+        class="inline-block bg-[#E7365A] hover:bg-[#c52d4c] text-white font-extrabold px-10 py-4 rounded-lg text-lg transition-colors shadow"
+      >
+        Get a Quote Now
+      </a>
+      <div class="mt-8 text-sm text-brand-gray space-y-1">
+        <p><span class="font-semibold text-brand-black">(800) 995-0308</span> &nbsp;|&nbsp; <span class="font-semibold text-brand-black">(858) 547-3599</span></p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
