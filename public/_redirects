@@ -1,27 +1,589 @@
 # Pink Payroll — Netlify Redirects
-# Note: Primary 301 redirect rules live in netlify.toml.
-# This file handles HTTPS enforcement and any edge cases.
+# Full Joomla-to-Astro 301 mapping generated from SQL backup (2026-03)
 
-# Force HTTPS (Netlify handles this automatically when custom domain is set,
-# but this ensures coverage for any direct HTTP requests)
+# -------------------------------------------------------
+# HTTPS enforcement + www-to-non-www canonical
+# -------------------------------------------------------
 http://pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
 http://www.pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
-
-# WWW to non-WWW canonical
 https://www.pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
 
-# Legacy Joomla index.php routes (common Joomla URL pattern)
-/index.php  /  301!
-/index.php/*  /  301!
-
-# Common Joomla component paths
+# -------------------------------------------------------
+# Joomla system paths (wildcard catch-alls, must stay above specific rules)
+# -------------------------------------------------------
 /component/*  /  301!
 /components/*  /  301!
 /modules/*  /  301!
 /plugins/*  /  301!
-/templates/*  /  301!
 /administrator/*  /  301!
 
-# Legacy ?option= query string routes Joomla uses
-# (Netlify _redirects doesn't support query strings natively;
-#  these are caught by the netlify.toml rules above)
+# -------------------------------------------------------
+# Joomla core / index.php
+# -------------------------------------------------------
+/index.php  /  301
+/index.php/*  /  301
+
+# -------------------------------------------------------
+# Joomla default sample-data & system slugs → Home
+# -------------------------------------------------------
+/title  /  301
+/title.html  /  301
+/Beginners  /  301
+/Beginners.html  /  301
+/Authentication  /  301
+/Authentication.html  /  301
+/Content  /  301
+/Content.html  /  301
+/Directions  /  301
+/Directions.html  /  301
+/Editors  /  301
+/Editors.html  /  301
+/Editors-xtd  /  301
+/Editors-xtd.html  /  301
+/Joomla!  /  301
+/Joomla!.html  /  301
+/Koala  /  301
+/Koala.html  /  301
+/Parameters  /  301
+/Parameters.html  /  301
+/Phyllopteryx  /  301
+/Phyllopteryx.html  /  301
+/Pinnacles  /  301
+/Pinnacles.html  /  301
+/Professionals  /  301
+/Professionals.html  /  301
+/Search  /  301
+/Search.html  /  301
+/System  /  301
+/System.html  /  301
+/Typography  /  301
+/Typography.html  /  301
+/Upgraders  /  301
+/Upgraders.html  /  301
+/User  /  301
+/User.html  /  301
+/Users  /  301
+/Users.html  /  301
+/Weblinks  /  301
+/Weblinks.html  /  301
+/Wobbegone  /  301
+/Wobbegone.html  /  301
+/PARTNERS  /  301
+/PARTNERS.html  /  301
+/RESOURCES  /  301
+/RESOURCES.html  /  301
+/TESTIMONIALS  /  301
+/TESTIMONIALS.html  /  301
+/401K  /  301
+/401K.html  /  301
+/Victorville  /  301
+/Victorville.html  /  301
+/Bakersfield  /  301
+/Bakersfield.html  /  301
+/__404__  /  301
+/__404__.html  /  301
+/ingin  /  301
+/ingin.html  /  301
+/alias  /  301
+/alias.html  /  301
+/Banners  /  301
+/Banners.html  /  301
+/Categories  /  301
+/Categories.html  /  301
+/Clients  /  301
+/Clients.html  /  301
+/Tracks  /  301
+/Tracks.html  /  301
+/Contacts  /  301
+/Contacts.html  /  301
+/Messaging  /  301
+/Messaging.html  /  301
+/Feeds  /  301
+/Feeds.html  /  301
+/Redirect  /  301
+/Redirect.html  /  301
+/Links  /  301
+/Links.html  /  301
+
+# -------------------------------------------------------
+# Old site pages → Home (no equivalent on new site)
+# -------------------------------------------------------
+/home  /  301
+/home.html  /  301
+/blue-color-2  /  301
+/blue-color-2.html  /  301
+/your-profile  /  301
+/your-profile.html  /  301
+/blue-color-4  /  301
+/blue-color-4.html  /  301
+/red-color-3  /  301
+/red-color-3.html  /  301
+/joomlaorg  /  301
+/joomlaorg.html  /  301
+/category-list  /  301
+/category-list.html  /  301
+/extplorer  /  301
+/extplorer.html  /  301
+
+# -------------------------------------------------------
+# sh404SEF admin paths → Home
+# -------------------------------------------------------
+/com-sh404sef-pageid-manager  /  301
+/com-sh404sef-pageid-manager.html  /  301
+/com-sh404sef-404-req-manager  /  301
+/com-sh404sef-404-req-manager.html  /  301
+/com-sh404sef-title-metas-manager  /  301
+/com-sh404sef-title-metas-manager.html  /  301
+/com-sh404sef-analytics-manager  /  301
+/com-sh404sef-analytics-manager.html  /  301
+/com-sh404sef-documentation  /  301
+/com-sh404sef-documentation.html  /  301
+/com-sh404sef-control-panel  /  301
+/com-sh404sef-control-panel.html  /  301
+/com-sh404sef-url-manager  /  301
+/com-sh404sef-url-manager.html  /  301
+/com-sh404sef-aliases-manager  /  301
+/com-sh404sef-aliases-manager.html  /  301
+/com-sh404sef  /  301
+/com-sh404sef.html  /  301
+
+# -------------------------------------------------------
+# Phoca Maps admin paths → Home
+# -------------------------------------------------------
+/com-phocamaps-info  /  301
+/com-phocamaps-info.html  /  301
+/com-phocamaps-markers  /  301
+/com-phocamaps-markers.html  /  301
+/com-phocamaps-icons  /  301
+/com-phocamaps-icons.html  /  301
+/com-phocamaps  /  301
+/com-phocamaps.html  /  301
+/com-phocamaps-controlpanel  /  301
+/com-phocamaps-controlpanel.html  /  301
+/com-phocamaps-maps  /  301
+/com-phocamaps-maps.html  /  301
+
+# -------------------------------------------------------
+# Phoca Gallery admin paths → Home
+# -------------------------------------------------------
+/com-phocagallery-fb  /  301
+/com-phocagallery-fb.html  /  301
+/com-phocagallery-tags  /  301
+/com-phocagallery-tags.html  /  301
+/com-phocagallery-info  /  301
+/com-phocagallery-info.html  /  301
+/com-phocagallery-imagecomments  /  301
+/com-phocagallery-imagecomments.html  /  301
+/com-phocagallery-users  /  301
+/com-phocagallery-users.html  /  301
+/com-phocagallery-categoryrating  /  301
+/com-phocagallery-categoryrating.html  /  301
+/com-phocagallery-imagerating  /  301
+/com-phocagallery-imagerating.html  /  301
+/com-phocagallery-categorycomments  /  301
+/com-phocagallery-categorycomments.html  /  301
+/com-phocagallery-images  /  301
+/com-phocagallery-images.html  /  301
+/com-phocagallery-categories  /  301
+/com-phocagallery-categories.html  /  301
+/com-phocagallery-themes  /  301
+/com-phocagallery-themes.html  /  301
+/com-phocagallery  /  301
+/com-phocagallery.html  /  301
+/com-phocagallery-controlpanel  /  301
+/com-phocagallery-controlpanel.html  /  301
+
+# -------------------------------------------------------
+# RSForm / RSInstaller / Acymailing / JNews → Home
+# -------------------------------------------------------
+/statistics  /  301
+/statistics.html  /  301
+/queue  /  301
+/queue.html  /  301
+/configuration  /  301
+/configuration.html  /  301
+/lists  /  301
+/lists.html  /  301
+/subscribers  /  301
+/subscribers.html  /  301
+/newsletters  /  301
+/newsletters.html  /  301
+/com-rsform-updates  /  301
+/com-rsform-updates.html  /  301
+/com-rsform-plugins  /  301
+/com-rsform-plugins.html  /  301
+/com-rsinstaller  /  301
+/com-rsinstaller.html  /  301
+/jnews  /  301
+/jnews.html  /  301
+/com-rsform-manage-submissions  /  301
+/com-rsform-manage-submissions.html  /  301
+/com-rsform-configuration  /  301
+/com-rsform-configuration.html  /  301
+/com-rsform-backup-restore  /  301
+/com-rsform-backup-restore.html  /  301
+/rsformpro  /  301
+/rsformpro.html  /  301
+/com-rsform-manage-forms  /  301
+/com-rsform-manage-forms.html  /  301
+/acymailing  /  301
+/acymailing.html  /  301
+
+# -------------------------------------------------------
+# Industry pages → Home (no dedicated page on new site)
+# -------------------------------------------------------
+/sales-groups  /  301
+/sales-groups.html  /  301
+/manufacturers  /  301
+/manufacturers.html  /  301
+/wholesale  /  301
+/wholesale.html  /  301
+/non-profit  /  301
+/non-profit.html  /  301
+/trades  /  301
+/trades.html  /  301
+/insurance-agents  /  301
+/insurance-agents.html  /  301
+/contractors  /  301
+/contractors.html  /  301
+/chiropractors  /  301
+/chiropractors.html  /  301
+/dentists  /  301
+/dentists.html  /  301
+/internet-business  /  301
+/internet-business.html  /  301
+/retail-stores  /  301
+/retail-stores.html  /  301
+/restaurants  /  301
+/restaurants.html  /  301
+/attorneys  /  301
+/attorneys.html  /  301
+/physicians  /  301
+/physicians.html  /  301
+
+# -------------------------------------------------------
+# Industry pages → specific new pages
+# -------------------------------------------------------
+/sports-related-companies  /workers-comp/  301
+/sports-related-companies.html  /workers-comp/  301
+/industries-served-services  /payroll/  301
+/industries-served-services.html  /payroll/  301
+/professional-services  /payroll/  301
+/professional-services.html  /payroll/  301
+
+# -------------------------------------------------------
+# City / location pages → Home
+# -------------------------------------------------------
+/oakland  /  301
+/oakland.html  /  301
+/sonoma-napa  /  301
+/sonoma-napa.html  /  301
+/santa-cruz  /  301
+/santa-cruz.html  /  301
+/san-francisco  /  301
+/san-francisco.html  /  301
+/fresno  /  301
+/fresno.html  /  301
+/san-luis-obispo  /  301
+/san-luis-obispo.html  /  301
+/bakersfield  /  301
+/bakersfield.html  /  301
+/chula-vista  /  301
+/chula-vista.html  /  301
+/victorville  /  301
+/victorville.html  /  301
+/phoenix  /  301
+/phoenix.html  /  301
+/los-angeles  /  301
+/los-angeles.html  /  301
+/del-mar  /  301
+/del-mar.html  /  301
+/santa-barbara  /  301
+/santa-barbara.html  /  301
+/las-vegas  /  301
+/las-vegas.html  /  301
+/riverside  /  301
+/riverside.html  /  301
+/rancho-bernardo  /  301
+/rancho-bernardo.html  /  301
+/ventura  /  301
+/ventura.html  /  301
+/san-diego  /  301
+/san-diego.html  /  301
+/orange-county  /  301
+/orange-county.html  /  301
+
+# -------------------------------------------------------
+# K2 component (blog/CMS) → Home or /learn/
+# -------------------------------------------------------
+/comk2  /  301
+/comk2.html  /  301
+/k2items  /  301
+/k2items.html  /  301
+/k2categories  /  301
+/k2categories.html  /  301
+/k2tags  /  301
+/k2tags.html  /  301
+/k2comments  /  301
+/k2comments.html  /  301
+/k2users  /  301
+/k2users.html  /  301
+/k2usergroups  /  301
+/k2usergroups.html  /  301
+/k2extrafields  /  301
+/k2extrafields.html  /  301
+/k2extrafieldgroups  /  301
+/k2extrafieldgroups.html  /  301
+/k2mediamanager  /  301
+/k2mediamanager.html  /  301
+/k2information  /  301
+/k2information.html  /  301
+/k2-style  /  301
+/k2-style.html  /  301
+/blog-category  /learn/  301
+/blog-category.html  /learn/  301
+/user-k2-blog  /learn/  301
+/user-k2-blog.html  /learn/  301
+
+# -------------------------------------------------------
+# JCE / Wf editor admin → Home
+# -------------------------------------------------------
+/wf-menu-install  /  301
+/wf-menu-install.html  /  301
+/wf-menu-profiles  /  301
+/wf-menu-profiles.html  /  301
+/wf-menu-config  /  301
+/wf-menu-config.html  /  301
+/jce  /  301
+/jce.html  /  301
+/wf-menu-cpanel  /  301
+/wf-menu-cpanel.html  /  301
+
+# -------------------------------------------------------
+# Akeeba / AdminTools / Xmap / Jumi → Home
+# -------------------------------------------------------
+/com-akeeba  /  301
+/com-akeeba.html  /  301
+/com-admintools  /  301
+/com-admintools.html  /  301
+/com-xmap-title  /  301
+/com-xmap-title.html  /  301
+/com-jumi-menu  /  301
+/com-jumi-menu.html  /  301
+
+# -------------------------------------------------------
+# Misc Joomla admin/template/layout slugs → Home
+# -------------------------------------------------------
+/templates  /  301
+/templates.html  /  301
+/portfolio  /  301
+/portfolio.html  /  301
+/2011-06-04-07-15-06  /  301
+/2011-06-04-07-15-06.html  /  301
+/left-content  /  301
+/left-content.html  /  301
+/homepage  /  301
+/homepage.html  /  301
+/go-green  /  301
+/go-green.html  /  301
+/sample-sites-2  /  301
+/sample-sites-2.html  /  301
+/typography  /  301
+/typography.html  /  301
+/red-color-2  /  301
+/red-color-2.html  /  301
+/red-color  /  301
+/red-color.html  /  301
+/blue-color  /  301
+/blue-color.html  /  301
+/default-color-2  /  301
+/default-color-2.html  /  301
+/submit-an-article  /  301
+/submit-an-article.html  /  301
+/submit-a-web-link  /  301
+/submit-a-web-link.html  /  301
+/content--right-default  /  301
+/content--right-default.html  /  301
+/explore  /  301
+/explore.html  /  301
+/layout  /  301
+/layout.html  /  301
+/pages  /  301
+/pages.html  /  301
+/system  /  301
+/system.html  /  301
+/joomla-article  /  301
+/joomla-article.html  /  301
+/menu-showcase  /  301
+/menu-showcase.html  /  301
+/split-menu  /  301
+/split-menu.html  /  301
+/mega-menu  /  301
+/mega-menu.html  /  301
+/css-menu  /  301
+/css-menu.html  /  301
+/dropline-menu  /  301
+/dropline-menu.html  /  301
+/moo-menu  /  301
+/moo-menu.html  /  301
+/colors  /  301
+/colors.html  /  301
+/default-color  /  301
+/default-color.html  /  301
+/joomla-extensions  /  301
+/joomla-extensions.html  /  301
+/single-article  /  301
+/single-article.html  /  301
+/the-joomla-project  /  301
+/the-joomla-project.html  /  301
+/archived-article  /  301
+/archived-article.html  /  301
+/ja-ext-manager  /  301
+/ja-ext-manager.html  /  301
+/users  /  301
+/users.html  /  301
+/blue-color-3  /  301
+/blue-color-3.html  /  301
+/default-color-3  /  301
+/default-color-3.html  /  301
+/2011-06-03-08-49-18  /  301
+/2011-06-03-08-49-18.html  /  301
+/2011-06-03-08-50-08  /  301
+/2011-06-03-08-50-08.html  /  301
+/2011-06-03-08-50-47  /  301
+/2011-06-03-08-50-47.html  /  301
+/2011-06-03-08-51-29  /  301
+/2011-06-03-08-51-29.html  /  301
+/2011-06-03-08-52-14  /  301
+/2011-06-03-08-52-14.html  /  301
+/list-of-all-category  /  301
+/list-of-all-category.html  /  301
+/featured-articles  /  301
+/featured-articles.html  /  301
+/weblinks-categories  /  301
+/weblinks-categories.html  /  301
+/webl-links-single-category  /  301
+/webl-links-single-category.html  /  301
+/new-feed-categories  /  301
+/new-feed-categories.html  /  301
+/news-feed-category  /  301
+/news-feed-category.html  /  301
+/single-news-feed  /  301
+/single-news-feed.html  /  301
+/user-profile  /  301
+/user-profile.html  /  301
+/edit-user-profile  /  301
+/edit-user-profile.html  /  301
+/registration-form  /  301
+/registration-form.html  /  301
+/username-reminder  /  301
+/username-reminder.html  /  301
+/password-reset  /  301
+/password-reset.html  /  301
+/search  /  301
+/search.html  /  301
+/tags-page  /  301
+/tags-page.html  /  301
+/giving-back  /  301
+/giving-back.html  /  301
+/partners  /  301
+/partners.html  /  301
+/client-forms  /  301
+/client-forms.html  /  301
+/client-stories  /  301
+/client-stories.html  /  301
+/faqs  /  301
+/faqs.html  /  301
+/getting-started  /  301
+/getting-started.html  /  301
+/industries-served  /  301
+/industries-served.html  /  301
+/locations-served  /  301
+/locations-served.html  /  301
+/news  /  301
+/news.html  /  301
+/timekeeping  /  301
+/timekeeping.html  /  301
+/2012-12-19-04-17-24  /  301
+/2012-12-19-04-17-24.html  /  301
+/resources  /  301
+/resources.html  /  301
+/testimonials  /  301
+/testimonials.html  /  301
+/401k  /  301
+/401k.html  /  301
+/2013-01-17-03-18-19  /  301
+/2013-01-17-03-18-19.html  /  301
+/2013-01-17-03-18-46  /  301
+/2013-01-17-03-18-46.html  /  301
+/san-diego-location  /  301
+/san-diego-location.html  /  301
+/sitemap  /  301
+/sitemap.html  /  301
+/joomla-component  /workers-comp/  301
+/joomla-component.html  /workers-comp/  301
+
+# -------------------------------------------------------
+# Pages with equivalents on new site
+# -------------------------------------------------------
+/about  /about/  301
+/about.html  /about/  301
+/updateabout  /about/  301
+/updateabout.html  /about/  301
+/contacts-page  /contact/  301
+/contacts-page.html  /contact/  301
+/contacts-us  /contact/  301
+/contacts-us.html  /contact/  301
+/contact-us  /contact/  301
+/contact-us.html  /contact/  301
+/com-foxcontact-menu  /contact/  301
+/com-foxcontact-menu.html  /contact/  301
+/contact-us-contractor-sandiego  /contact/  301
+/contact-us-contractor-sandiego.html  /contact/  301
+/contact-us-yelp-san-diego  /contact/  301
+/contact-us-yelp-san-diego.html  /contact/  301
+/contact-us-yelp-sacramento  /contact/  301
+/contact-us-yelp-sacramento.html  /contact/  301
+/contact-us-yelp-los-angeles  /contact/  301
+/contact-us-yelp-los-angeles.html  /contact/  301
+/contact-us-nanny-california  /contact/  301
+/contact-us-nanny-california.html  /contact/  301
+/services  /payroll/  301
+/services.html  /payroll/  301
+/online-payroll  /payroll/  301
+/online-payroll.html  /payroll/  301
+/hfm-tax-law-payroll-udate-2013  /payroll/  301
+/hfm-tax-law-payroll-udate-2013.html  /payroll/  301
+/hr-support  /hr-people/  301
+/hr-support.html  /hr-people/  301
+/workers-comp-pay-as-you-go  /workers-comp/  301
+/workers-comp-pay-as-you-go.html  /workers-comp/  301
+/quick-quote  /quick-quote/  301
+/quick-quote.html  /quick-quote/  301
+/login-form  /client/  301
+/login-form.html  /client/  301
+/employee-login  /employee/  301
+/employee-login.html  /employee/  301
+/category-blog-layout  /learn/  301
+/category-blog-layout.html  /learn/  301
+/services/hr-support  /hr-people/  301
+/services/wc-pay-as-you-go  /workers-comp/  301
+/services/online-payroll  /payroll/  301
+/services/401k  /  301
+/services/employment-screening  /  301
+/services/wotc  /  301
+/services/employee-onboarding  /  301
+/services/group-medical  /  301
+/services/benefit-coordination  /  301
+/services/online-time-clock-support  /payroll/  301
+
+# -------------------------------------------------------
+# NOTE: /privacy-policy is intentionally NOT redirected
+# — the new Astro site has a live /privacy-policy page.
+# -------------------------------------------------------
+
+# -------------------------------------------------------
+# Catch-all: any URL not matched above → Home
+# Must be the LAST rule in this file.
+# -------------------------------------------------------
+/*  /  301
