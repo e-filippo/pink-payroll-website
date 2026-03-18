@@ -20,7 +20,8 @@ const pdfPath = '/assets/The Clean Switch Checklist 3 Tax 2026-V1.pdf';
     </p>
     <a
       href={pdfPath}
-      download
+      target="_blank"
+      rel="noopener noreferrer"
       class="inline-flex items-center gap-2 bg-[#C62028] hover:bg-[#a01820] text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -69,7 +70,7 @@ const pdfPath = '/assets/The Clean Switch Checklist 3 Tax 2026-V1.pdf';
 
       <!-- Download link below checklist -->
       <div class="text-center mt-4">
-        <a href={pdfPath} download class="text-[#C62028] font-semibold text-sm underline underline-offset-4 hover:text-[#a01820] transition-colors">
+        <a href={pdfPath} target="_blank" rel="noopener noreferrer" class="text-[#C62028] font-semibold text-sm underline underline-offset-4 hover:text-[#a01820] transition-colors">
           Download the full checklist as a PDF →
         </a>
       </div>
