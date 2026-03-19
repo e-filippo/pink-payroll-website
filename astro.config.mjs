@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       // Exclude landing pages and utility pages from sitemap
-      filter: (page) => !page.includes('/lp/'),
+      filter: (page) => !page.includes('/lp/metart202603'),
     }),
   ],
   vite: {

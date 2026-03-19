@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Block landing pages from indexing (these use noindex meta tag as well)
-Disallow: /lp/
+# Block non-indexed landing pages from crawling
+Disallow: /lp/metart202603
 
 Sitemap: https://pinkpayroll.com/sitemap-index.xml
