@@ -133,10 +133,18 @@ Before pushing any new site or after changing the domain/hosting:
 
 ### Landing Page Rules (`/lp/` directory)
 
-- All pages in `/lp/` use `LandingLayout.astro` which carries `noindex, nofollow`
-- All `/lp/` pages are excluded from the sitemap via the filter above
-- All `/lp/` paths are disallowed in `robots.txt`
+- All pages in `/lp/` use `LandingLayout.astro` which carries `noindex, nofollow` by default
 - Never link to `/lp/` pages from the main navigation
+
+**Default behavior (thin promo/campaign LPs):**
+- `noindex, nofollow` via `LandingLayout` default — no `robots` prop needed
+- Excluded from sitemap via the `astro.config.mjs` filter
+- Use `Disallow` in `robots.txt` for individual pages (e.g., `Disallow: /lp/metart202603`), NOT `Disallow: /lp/` — blocking the entire directory prevents Google from seeing future redirects
+
+**Exception — high-value resource pages (e.g., `/lp/payroll-exit-guide`):**
+- Pass `robots="index, follow"` explicitly to `LandingLayout`
+- Add the page to the sitemap by ensuring the `astro.config.mjs` filter does NOT exclude it
+- Do NOT add a `Disallow` for this path in `robots.txt`
 
 ---
 
