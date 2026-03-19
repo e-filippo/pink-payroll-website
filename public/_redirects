@@ -2,6 +2,16 @@
 # Full Joomla-to-Astro 301 mapping generated from SQL backup (2026-03)
 
 # -------------------------------------------------------
+# Client portal aliases
+# -------------------------------------------------------
+/client-login/  /client/  301
+/client-login   /client/  301
+/login/         /client/  301
+/login          /client/  301
+/portal/        /client/  301
+/portal         /client/  301
+
+# -------------------------------------------------------
 # HTTPS enforcement + www-to-non-www canonical
 # -------------------------------------------------------
 http://pinkpayroll.com/*  https://pinkpayroll.com/:splat  301!
