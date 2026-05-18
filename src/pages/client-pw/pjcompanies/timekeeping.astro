@@ -153,23 +153,23 @@ const videos = [
         <h2 class="text-xl font-bold text-brand-black">Video Tutorials</h2>
       </div>
 
-      <div class="space-y-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {videos.map((video, i) => (
-          <div class="bg-white border border-brand-light-gray rounded-2xl overflow-hidden">
-            <!-- Video label -->
-            <div class="flex items-center gap-3 px-5 py-4 border-b border-brand-light-gray">
-              <span class="w-6 h-6 rounded-full bg-[#8752A0] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+          <div class="bg-white rounded-2xl border border-brand-light-gray shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
+            <!-- Title bar -->
+            <div class="px-4 py-3 border-b border-brand-light-gray flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#8752A0] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0">
                 {i + 1}
               </span>
               <div>
-                <p class="font-semibold text-brand-black text-sm">{video.title}</p>
-                <p class="text-xs text-brand-gray">{video.duration}</p>
+                <p class="font-bold text-brand-black text-sm leading-snug">{video.title}</p>
+                <p class="text-[11px] text-brand-gray mt-0.5">{video.duration}</p>
               </div>
             </div>
             <!-- Loom embed -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
               <iframe
-                src={`https://www.loom.com/embed/${video.embedId}`}
+                src={`https://www.loom.com/embed/${video.embedId}?hide_title=true`}
                 frameborder="0"
                 allowfullscreen
                 class="absolute inset-0 w-full h-full"
