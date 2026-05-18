@@ -81,8 +81,12 @@ const steps = [
     title: "Test the System with a Test Employee",
     items: [
       {
-        label: "Recommended: Manager tests first",
-        note: "The easiest way is for the Facility Manager to enroll their own fingerprint (after adding their Clock ID and consent form), then run test punches.",
+        label: "Your Test Employee is ready",
+        note: 'We have created an employee called "Test Time" with Timeclock ID 1234. When you are done testing, please change the employee status to Inactive. If you use the iSolved software to manually add time for the test, you will not need to upload the Biometric Consent PDF.',
+      },
+      {
+        label: "Why not the Facility Manager's profile?",
+        note: "Because the Facility Manager is not an Hourly employee, they cannot test timekeeping with their own profile. Use the Test Time employee instead.",
       },
       {
         label: "How to access the Timecard",
@@ -90,15 +94,23 @@ const steps = [
       },
       {
         label: "What to do in the Timecard",
-        note: "Add time manually to see what clocked time looks like, how to edit punches, and how to add missing punches. Spend some time here to get comfortable reviewing and managing time entries. You may want to complete the Orientation steps first before diving in.",
+        note: "Add time manually to see what clocked time looks like, how to edit punches, and how to add missing punches. Spend some time here to get comfortable. You may want to complete the full Orientation first before diving in.",
+      },
+      {
+        label: "Tip: clicking on the timecard",
+        note: 'You can click anywhere on a timecard row to add time — including the Notes field.',
+      },
+      {
+        label: "Tip: Verification vs. Show Results",
+        note: 'After adding or editing time, the upper-left button changes from "Verification" to "Show Results" (white text on a black background). Click it to refresh and see updated totals. You can also toggle between Calendar and Spreadsheet view — try both and use whichever you prefer.',
       },
       {
         label: "What to test",
         subitems: [
-          "Test overnight clocking.",
-          "Test daily and weekly overtime.",
-          "Test double time: daily, weekly, and 7th-day rules.",
-          "For these tests, enter time directly in the iSolved software — do not use the physical clock.",
+          "Overnight clocking.",
+          "Daily and weekly overtime.",
+          "Double time: daily, weekly, and 7th-day rules.",
+          "Enter all test time directly in the iSolved software — do not use the physical clock for these tests.",
           "Time entries can be deleted afterwards — no permanent impact.",
         ],
       },
