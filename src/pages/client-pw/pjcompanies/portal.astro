@@ -12,8 +12,13 @@ const pages = [
     color: "#8752A0",
     icon: "clock",
   },
-  // Future pages go here:
-  // { title: "Payroll Overview", description: "...", href: "/client-pw/pjcompanies/payroll", color: "#C62028", icon: "payroll" },
+  {
+    title: "Payroll Processing Instructions",
+    description: "How to process payroll in iSolved.",
+    href: "/client-pw/pjcompanies/payroll",
+    color: "#C62028",
+    icon: "payroll",
+  },
 ];
 ---
 
@@ -58,6 +63,13 @@ const pages = [
                   <svg class="w-5 h-5" style={`color: ${page.color};`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                )}
+                {page.icon === 'payroll' && (
+                  <svg class="w-5 h-5" style={`color: ${page.color};`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <path stroke-linecap="round" d="M2 10h20"/>
+                    <path stroke-linecap="round" d="M6 15h4M14 15h4"/>
                   </svg>
                 )}
               </div>
