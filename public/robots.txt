@@ -4,4 +4,7 @@ Allow: /
 # Block non-indexed landing pages from crawling
 Disallow: /lp/metart202603
 
+# Block private client portals from crawling
+Disallow: /client-pw/
+
 Sitemap: https://pinkpayroll.com/sitemap-index.xml

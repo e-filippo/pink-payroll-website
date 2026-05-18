@@ -158,6 +158,63 @@ Every page on the site — including landing pages, orphan pages, and any future
 
 These are required on **100% of pages** regardless of layout (main `Layout.astro`, `LandingLayout.astro`, or any future layout). When creating a new layout, always include these three elements in the footer before shipping.
 
+## Client-Specific Password-Protected Pages (`/client-pw/`)
+
+### Overview
+
+These are private instruction/resource pages built for individual clients. They are **not linked anywhere in the navigation** — the client must be given the direct URL. Access to the client's subdirectory and all of its subpages is protected by a client-side JavaScript password gate.
+
+### Password Convention
+
+- Password = **last 4 digits of the client's iSolved PK# (Client ID)**
+- The iSolved Client ID format is `PK-#######`. The password is the last 4 digits of that number.
+
+### URL / File Path Structure
+
+- Directory pattern: `/client-pw/[clientslug]/`
+- Subpage pattern: `/client-pw/[clientslug]/[topic]`
+- **Slug rules:** All lowercase, no special characters. Replace `&` and spaces with nothing or a hyphen. Example: "P&J Troy" → `pjtroy`
+
+**Example:**
+- Gate page: `/client-pw/pjtroy/` → `src/pages/client-pw/pjtroy/index.astro`
+- Subpage: `/client-pw/pjtroy/timekeeping` → `src/pages/client-pw/pjtroy/timekeeping.astro`
+
+### How to Create a New Client (`/client-pw/`)
+
+1. Create a new directory: `src/pages/client-pw/[clientslug]/`
+2. Copy the gate page pattern from `src/pages/client-pw/pjtroy/index.astro` and update:
+   - `COMPANY_NAME` — the display name (e.g., `"P&J Troy"`)
+   - `CLIENT_PASSWORD` — the last 4 digits of their PK# (e.g., `"1262"`)
+   - `SESSION_KEY` — a unique key per client (e.g., `"auth_pjtroy"`)
+3. Copy the timekeeping page (or create a new topic page) from `src/pages/client-pw/pjtroy/timekeeping.astro` and update the `SESSION_KEY` and content.
+4. Every subpage must check `sessionStorage` for the auth token on load and redirect to the gate if missing.
+
+### How to Add a New Subpage for an Existing Client
+
+1. Create `src/pages/client-pw/[clientslug]/[topic].astro`
+2. At the top of the `<script>` block, include the session check (copy from an existing subpage):
+   ```js
+   const SESSION_KEY = 'auth_[clientslug]';
+   if (!sessionStorage.getItem(SESSION_KEY)) {
+     window.location.replace('/client-pw/[clientslug]/');
+   }
+   ```
+3. Add the content below the standard Layout header/footer.
+
+### Current Clients
+
+| Client Slug | Company Name | Password | Gate URL |
+|-------------|-------------|----------|----------|
+| `pjtroy`    | P&J Troy    | `1262`   | `/client-pw/pjtroy/` |
+
+### SEO / Indexing
+
+- All `/client-pw/` pages must include `<meta name="robots" content="noindex, nofollow" />` in `<head>`.
+- Add `Disallow: /client-pw/` to `robots.txt`.
+- Never add these pages to the sitemap.
+
+---
+
 ## Facts
 
 Pink Payroll was started in 2008 in San Diego, California  
