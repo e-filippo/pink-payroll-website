@@ -176,17 +176,17 @@ These are private instruction/resource pages built for individual clients. They 
 - **Slug rules:** All lowercase, no special characters. Replace `&` and spaces with nothing or a hyphen. Example: "P&J Troy" → `pjtroy`
 
 **Example:**
-- Gate page: `/client-pw/pjtroy/` → `src/pages/client-pw/pjtroy/index.astro`
-- Subpage: `/client-pw/pjtroy/timekeeping` → `src/pages/client-pw/pjtroy/timekeeping.astro`
+- Gate page: `/client-pw/pjcompanies/` → `src/pages/client-pw/pjcompanies/index.astro`
+- Subpage: `/client-pw/pjcompanies/timekeeping` → `src/pages/client-pw/pjcompanies/timekeeping.astro`
 
 ### How to Create a New Client (`/client-pw/`)
 
 1. Create a new directory: `src/pages/client-pw/[clientslug]/`
-2. Copy the gate page pattern from `src/pages/client-pw/pjtroy/index.astro` and update:
+2. Copy the gate page pattern from `src/pages/client-pw/pjcompanies/index.astro` and update:
    - `COMPANY_NAME` — the display name (e.g., `"P&J Troy"`)
    - `CLIENT_PASSWORD` — the last 4 digits of their PK# (e.g., `"1262"`)
    - `SESSION_KEY` — a unique key per client (e.g., `"auth_pjtroy"`)
-3. Copy the timekeeping page (or create a new topic page) from `src/pages/client-pw/pjtroy/timekeeping.astro` and update the `SESSION_KEY` and content.
+3. Copy the timekeeping page (or create a new topic page) from `src/pages/client-pw/pjcompanies/timekeeping.astro` and update the `SESSION_KEY` and content.
 4. Every subpage must check `sessionStorage` for the auth token on load and redirect to the gate if missing.
 
 ### How to Add a New Subpage for an Existing Client
@@ -205,7 +205,7 @@ These are private instruction/resource pages built for individual clients. They 
 
 | Client Slug | Company Name | Password | Gate URL |
 |-------------|-------------|----------|----------|
-| `pjtroy`    | P&J Troy    | `1262`   | `/client-pw/pjtroy/` |
+| `pjcompanies` | P&J Troy  | `1262` or `1263` | `/client-pw/pjcompanies/` |
 
 ### SEO / Indexing
 
