@@ -7,9 +7,10 @@ interface Props {
   description?: string;
   hideEmailCTA?: boolean;
   hidePreFooterCTA?: boolean;
+  hideBanner?: boolean;
 }
 
-const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.', hideEmailCTA = false, hidePreFooterCTA = false } = Astro.props;
+const { title, description = 'Pink Payroll delivers boutique payroll services for California small businesses. Expert-led, compliant, and personal — we know your name, not just your account number.', hideEmailCTA = false, hidePreFooterCTA = false, hideBanner = false } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, 'https://pinkpayroll.com');
 ---
@@ -34,7 +35,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://pinkpayroll.com');
   <body class="font-sans text-brand-black bg-white antialiased">
 
     <!-- Top Banner -->
-    <div class="bg-pink text-white py-2 px-4">
+    {!hideBanner && <div class="bg-pink text-white py-2 px-4">
 
       <!-- Mobile: single offer only -->
       <div class="flex md:hidden items-center justify-center gap-2 text-[11px] font-medium text-center">
@@ -57,7 +58,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://pinkpayroll.com');
         -->
       </div>
 
-    </div>
+    </div>}
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-brand-light-gray">
