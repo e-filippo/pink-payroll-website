@@ -1,0 +1,333 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const ACCENT = "#E7365A";
+
+const steps = [
+  {
+    title: "Login to iSolved & Learn the Software",
+    items: [
+      {
+        label: "Dashboard",
+        note: "Your home screen overview — see the guide below.",
+        doc: { text: "My Dashboard Guide", href: "https://drive.google.com/file/d/1wmKv5v1HOXdAp9FLUVQQG5sTf2t-dkd5/view?usp=sharing" },
+      },
+      {
+        label: "Menus",
+        note: "Use the search bar in the upper-left to find any menu by keyword.",
+      },
+      {
+        label: "Setting Up a New Employee",
+        note: 'Use the "Quick Hire" menu to add new employees.',
+      },
+      {
+        label: "Reports",
+        subitems: [
+          "Report Archive — browse reports organized by payroll run.",
+          "Continuous Report Archive — check the boxes for the reports you want; they download as one document per payroll instead of separately.",
+          "Client Reports — customize date ranges and find additional report types.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Mount & Connect Your Time Clocks",
+    items: [
+      {
+        label: "Installation",
+        note: "Mount clocks on the wall and confirm each one is connected to your network before moving on.",
+        video: { text: "Timekeeping Videos", href: "/client-pw/pjcompanies/timekeeping" },
+      },
+    ],
+  },
+  {
+    title: "Add a Clock ID for Each Employee",
+    items: [
+      {
+        label: "Decide your standard",
+        note: "Common choice: last 4 digits of SSN. Confirm with your team before enrolling. ___________",
+      },
+      {
+        label: "How to enter the Clock ID in iSolved",
+        note: 'Type "General" in the upper-left menu to access the employee list. Open the individual employee record and find the "Timeclock ID" field in the center of the screen. Enter the number.',
+        video: { text: "See Video", href: "/client-pw/pjcompanies/timekeeping" },
+      },
+    ],
+  },
+  {
+    title: "Upload a Digital Biometric Consent Form for Each Employee",
+    items: [
+      {
+        label: "Required before fingerprint enrollment",
+        note: "Each employee must have a signed digital consent form on file before their fingerprint is enrolled.",
+        doc: { text: "Consent Form (English)", href: "https://drive.google.com/file/d/1SbtrV8XXull6nMqoFFAnRNmrTOaUkBFo/view?usp=sharing" },
+        doc2: { text: "Consent Form (Spanish)", href: "https://drive.google.com/file/d/197hU3o5Li6m8M-xxIgVtzkxYx-sUrKfN/view?usp=sharing" },
+        video: { text: "See Video", href: "/client-pw/pjcompanies/timekeeping" },
+      },
+    ],
+  },
+  {
+    title: "Enroll Employee Fingerprints",
+    items: [
+      {
+        label: "Instructions",
+        note: "Detailed enrollment steps are in the printed manuals that came in the box, and in your Timekeeping page below.",
+        doc: { text: "V850 Enrollment Guide", href: "https://drive.google.com/file/d/1uCAvkNT0-vhvXlGgzgIHv1FJJSQqacXO/view?usp=sharing" },
+        video: { text: "See Video", href: "/client-pw/pjcompanies/timekeeping" },
+      },
+    ],
+  },
+  {
+    title: "Test the System with a Test Employee",
+    items: [
+      {
+        label: "Recommended: Manager tests first",
+        note: "The easiest way is for the Facility Manager to enroll their own fingerprint (after adding their Clock ID and consent form), then run test punches.",
+      },
+      {
+        label: "What to test",
+        subitems: [
+          "Add time manually using the timecard.",
+          "Test overnight clocking.",
+          "Test daily and weekly overtime.",
+          "Test double time: daily, weekly, and 7th-day rules.",
+          "Time entries can be deleted afterwards — no permanent impact.",
+        ],
+      },
+      {
+        label: "Note",
+        note: "Each center was set up separately but should be configured identically.",
+        video: { text: "See Video", href: "/client-pw/pjcompanies/timekeeping" },
+      },
+    ],
+  },
+  {
+    title: "Review & Edit Time Daily",
+    items: [
+      {
+        label: "Run paper timekeeping in parallel",
+        note: "Use paper timesheets side by side with the system until all employees are comfortable and trained.",
+      },
+      {
+        label: "Verify overtime closely",
+        note: "California has complex overtime rules. Your system has a custom workweek and overnight schedule programmed in — always verify until you are confident everything is calculating correctly.",
+      },
+      {
+        label: "Premium Pay",
+        note: "Add Premium Pay (e.g., lunch times worked) manually — this is not automatic.",
+      },
+      {
+        label: "Settings to decide",
+        subitems: [
+          "Minute rounding — currently none set.",
+          "Express clock in/out — on or off?",
+          "Lunch minimum: 30 minutes.",
+          "Break minimum: 10 minutes.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Set Up the Manager Dashboard",
+    items: [
+      {
+        label: "What managers can do",
+        subitems: [
+          "Review missing punches.",
+          "Monitor alerts.",
+          "Approve time.",
+          "Edit punches.",
+          "View overtime.",
+          "Handle time-off requests.",
+          "Click directly into individual employee timecards.",
+          "Add or edit punches manually.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Configure Alerts",
+    items: [
+      {
+        label: "Recommended: Missing Punch — Critical severity",
+        note: "This alert appears on the manager dashboard, helps prevent payroll oversights, and lets managers click directly into the timecard from the alert.",
+      },
+      {
+        label: "Optional",
+        note: "Approaching Overtime alert — useful once your team is comfortable with the system.",
+      },
+    ],
+  },
+  {
+    title: "Finalize Payroll Approval",
+    items: [
+      {
+        label: "Workflow",
+        note: "Center admins review and approve their center's time. Once complete, they notify the Controller, who finalizes by processing the payroll in iSolved.",
+        doc: { text: "Payroll Processing Guide", href: "https://drive.google.com/file/d/1zuct7h8lSyA-bMxS73ixRXBXognF_b5X/view?usp=sharing" },
+      },
+    ],
+  },
+  {
+    title: "Informational Notes",
+    items: [
+      {
+        label: "Who can clock in",
+        note: "Currently all employees are allowed to clock. This can be restricted to Hourly employees only — let us know if you'd like that change.",
+      },
+      {
+        label: "Punch type",
+        note: "Decide: Quick Punch (one tap) or In/Out punch required (two taps per shift).",
+      },
+      {
+        label: "Rounding",
+        note: "No rounding is currently set — left off due to California compliance risk.",
+      },
+      {
+        label: "Lunch clocking",
+        note: "Employees may be restricted from clocking back in until 30 minutes have elapsed.",
+      },
+      {
+        label: "Break clocking",
+        note: "10-minute breaks. Not currently configured or in use at facilities.",
+      },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Orientation & Getting Started — P&J Troy | Pink Payroll"
+  description="Private orientation guide for P&J Troy and P&J Magnolia."
+  hidePreFooterCTA={true}
+>
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <!-- Auth check -->
+  <script is:inline>
+    const SESSION_KEY = 'auth_pjcompanies';
+    if (sessionStorage.getItem(SESSION_KEY) !== 'granted') {
+      window.location.replace('/client-pw/pjcompanies/');
+    }
+  </script>
+
+  <div class="max-w-4xl mx-auto px-6 py-14">
+
+    <!-- Back link -->
+    <a href="/client-pw/pjcompanies/portal" class="inline-flex items-center gap-1.5 text-xs text-brand-gray hover:text-pink transition-colors mb-10">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+      P&amp;J Troy | P&amp;J Magnolia — Client Home
+    </a>
+
+    <!-- Page header -->
+    <div class="mb-12">
+      <span class="inline-block bg-[#E7365A]/10 text-[#E7365A] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+        Getting Started
+      </span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-brand-black leading-tight mb-3">
+        Orientation &amp; Getting Started
+      </h1>
+      <p class="text-brand-gray text-lg">
+        Follow these steps in order to get your time clocks, payroll software, and team fully set up.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <ol class="space-y-6">
+      {steps.map((step, si) => (
+        <li class="bg-white border border-brand-light-gray rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.06)] overflow-hidden">
+
+          <!-- Step header -->
+          <div class="flex items-center gap-4 px-6 py-4 border-b border-brand-light-gray bg-gray-50/60">
+            <span
+              class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0"
+              style={`background-color: ${ACCENT};`}
+            >
+              {si + 1}
+            </span>
+            <h2 class="font-bold text-brand-black text-base leading-snug">{step.title}</h2>
+          </div>
+
+          <!-- Step body -->
+          <ul class="divide-y divide-brand-light-gray/60">
+            {step.items.map((item) => (
+              <li class="px-6 py-4">
+                <p class="font-semibold text-brand-black text-sm mb-1">{item.label}</p>
+
+                {item.note && (
+                  <p class="text-sm text-brand-gray leading-relaxed mb-2">{item.note}</p>
+                )}
+
+                {item.subitems && (
+                  <ul class="mt-1.5 space-y-1.5 pl-4">
+                    {item.subitems.map((sub) => (
+                      <li class="flex items-start gap-2 text-sm text-brand-gray">
+                        <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E7365A] flex-shrink-0"></span>
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <!-- Link badges -->
+                {(item.doc || item.doc2 || item.video) && (
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    {item.doc && (
+                      <a
+                        href={item.doc.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 bg-[#E7365A]/8 text-[#E7365A] text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-[#E7365A]/15 transition-colors"
+                      >
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+                        {item.doc.text} ↗
+                      </a>
+                    )}
+                    {item.doc2 && (
+                      <a
+                        href={item.doc2.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 bg-[#E7365A]/8 text-[#E7365A] text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-[#E7365A]/15 transition-colors"
+                      >
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+                        {item.doc2.text} ↗
+                      </a>
+                    )}
+                    {item.video && (
+                      <a
+                        href={item.video.href}
+                        class="inline-flex items-center gap-1.5 bg-[#8752A0]/8 text-[#8752A0] text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-[#8752A0]/15 transition-colors"
+                      >
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        {item.video.text}
+                      </a>
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+        </li>
+      ))}
+    </ol>
+
+    <!-- Help callout -->
+    <div class="mt-14 bg-brand-light-gray/50 border border-brand-light-gray rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <div class="w-10 h-10 rounded-full bg-pink/10 flex items-center justify-center flex-shrink-0">
+        <svg class="w-5 h-5 text-pink" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div>
+        <p class="font-semibold text-brand-black text-sm mb-0.5">Need help?</p>
+        <p class="text-sm text-brand-gray">Call your Pink Payroll team at <a href="tel:8009950308" class="text-pink font-semibold hover:underline">(800) 995-0308</a> or use the chat button on this page.</p>
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
